@@ -223,6 +223,14 @@
           </div>
         </div>
     </section>
+    
+    <section class="what_doctor_can">
+      <div class="container">
+        <h2 class="section_title">Что лечит гинеколог</h2>
+        <div class="section_text">В нашей клинике принимают высококвалифицированные врачи-гинекологи, имеющие большой опыт лечения заболеваний женской репродуктивной сферы: воспалительных и гормональных заболеваний, половых инфекций, патологий внутренних органов, возрастных изменений в женском организме и многих других.</div>
+        <div class="section_list"></div>
+      </div>
+    </section>
 
     <?php  
         $vrachi_price_list = get_field('vrachi_price_list'); 
@@ -285,6 +293,51 @@
             ?>
           </div>
         </div>
+    </section>
+
+    <section class="doctors_slider">
+      <div class="container">
+        <h2 class="section_title">Врачи-гинекологи, ведущие прием в «Витакор»</h2>
+        <div class="doctors_slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <?php 
+        
+        $nashi_liczenzii = get_field('nashi_liczenzii', 'option');
+      ?>
+    <section class="licenses">
+      <div class="container">
+        <h2 class="section_title"><?php echo $nashi_liczenzii['block_title'] ?></h2>
+        <div class="block_wrap">
+          <div class="licenses_slider swiper">
+            <div class="swiper-wrapper">
+              <?php 
+                foreach($nashi_liczenzii['licenses_list'] as $license){
+                  ?>
+                    <figure>
+                      <img src="<?php echo $license['license_image'] ?>" alt="">
+                    </figure>
+                  <?php
+                }
+              ?>
+            </div>
+          </div>
+          <div class="block_buttons">
+            <div class="theme_button">
+              <a href="#">Перейти в раздел лицензии</a>
+            </div>
+            <div class="theme_button white">
+              <a href="#">Перейти в раздел Контролирующие организации</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </main>
