@@ -1,0 +1,11 @@
+<svg id="Noimage_news.svg" xmlns="http://www.w3.org/2000/svg" width="148" height="98" viewBox="0 0 148 98">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ecf2f4;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Ellipse_217_copy" data-name="Ellipse 217 copy" class="cls-1" d="M537,1151H401a6,6,0,0,1-6-6v-86a6,6,0,0,1,6-6H537a6,6,0,0,1,6,6v86A6,6,0,0,1,537,1151Zm-25-4-49-49-49,49h98Zm27-33-35-35-23.544,23.54-3-3L504,1072.99,539,1108v-49a2,2,0,0,0-2-2H401a2,2,0,0,0-2,2v86a2,2,0,0,0,2,2h7L463,1092l55.005,55h19a2,2,0,0,0,2-2v-31Zm-111-14a15,15,0,1,1,15-15A15,15,0,0,1,428,1100Zm0-26a11,11,0,1,0,11,11A11,11,0,0,0,428,1074Z" transform="translate(-395 -1053)"/>
+</svg>

@@ -1,0 +1,500 @@
+.main-stoma {
+    background: url("../images/bgr.jpg") center center no-repeat;
+    background-size: cover;
+    padding: 140px 0;
+}
+
+.main-stoma h1 {
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    text-transform: uppercase;
+}
+
+.under_box {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    color: #FFFFFF;
+}
+
+.under_box span {
+    background: #5BD2C7;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+.form_wrapper {
+    width: 100%;
+    max-width: 420px;
+    background: #FFFFFF;
+    box-shadow: 0 0 60px rgba(155, 181, 183, 0.2);
+    border-radius: 10px;
+    margin-left: auto;
+    padding: 50px 41px;
+}
+
+@media screen and (max-width: 992px) {
+    .form_wrapper {
+        margin: 30px auto 0 auto;
+    }
+    .main-stoma {
+        padding: 80px 0;
+    }
+    .main-stoma h1, .main-stoma .under_box {
+        text-align: center;
+    }
+}
+
+.form_title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #585858;
+    margin-bottom: 15px;
+}
+
+.form_wrapper ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.form_wrapper ul li {
+    padding-left: 25px;
+}
+
+.form_wrapper ul li::before {
+    content: "";
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: 0;
+    background: #5BD2C7;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form_wrapper form {
+    margin-top: 20px;
+}
+
+.form_wrapper form label {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #585858;
+}
+
+.form_wrapper form input {
+    background: #F0FAF9;
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.form_wrapper form textarea {
+    background: #F0FAF9;
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    height: 157px !important;
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-top: 20px;
+    resize: none;
+}
+
+.form_wrapper form button {
+    width: 100%;
+    background: #FE7E01;
+    border-radius: 10px;
+    margin-top: 9px;
+    border: none;
+    box-shadow: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 15px 0;
+    transition: all .4s;
+}
+
+.form_wrapper form button:hover {
+    background: #FE2F01;
+    transition: all .4s;
+}
+
+.form_wrapper .form_descr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #AAAAAA;
+    margin-top: 10px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #C4D6D4;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #C4D6D4;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #C4D6D4;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #C4D6D4;
+}
+
+.const {
+    background-color: #F9FBFA;
+    padding: 135px 0;
+}
+
+.const-grid {
+    display: grid;
+    grid-template-columns: repeat(4, [col] 1fr ) ;
+    grid-template-rows: repeat(1, [row] auto  );
+    gap: 30px;
+}
+
+.const-new {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr ) ;
+    gap: 30px;
+    padding: 0 100px;
+    margin-top: 60px;
+}
+
+.const_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.const_box .const_img_wrap {
+    width: 70px;
+    height: 70px;
+    background: #5BD2C7;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.const_box p {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #585858;
+    margin-top: 19px;
+    padding: 0 20px;
+}
+
+.radial {
+    background-image: url("../images/stoma/Ellipse 1.png"), url("../images/stoma/Ellipse 2.png");
+    background-color: #F9FBFA;
+    background-repeat: no-repeat;
+    background-position: right center, center left;
+    padding-bottom: 136px;
+}
+
+.radial h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    text-align: center;
+    color: #585858;
+    margin-bottom: 85px;
+}
+
+.menu-container {
+    text-align: center;
+}
+
+.menu-container svg{
+    width: 100%;
+}
+
+.radial-menu-item:hover .menu-word{
+    stroke: #585858;
+    stroke-width: 0.7px;
+}
+
+.heal {
+    padding: 136px 0;
+    background-color: #F9FBFA;
+}
+
+.heal h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    text-align: center;
+    color: #585858;
+}
+
+.heal h3 span {
+    color: #5BD2C7;
+}
+
+.stoma-slider {
+    padding: 136px 0;
+}
+
+.stoma-slider h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    text-align: center;
+    color: #585858;
+}
+
+.heal-wrapper {
+    margin-top: 85px;
+}
+
+.heal-box {
+    text-align: center;
+}
+
+.heal-img {
+    width: 150px;
+    height: 150px;
+    background: #5BD2C7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.heal-img span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.heal-box p {
+    margin-top: 33px;
+    padding: 0 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+}
+
+#overlay-map  {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    min-height: 720px;
+    width: 100%;
+}
+
+.stoma-map {
+    position: relative;
+}
+
+.stoma-map .form_wrapper {
+    margin-top: 85px;
+    margin-bottom: 85px;
+}
+
+.dentist-slide {
+    text-align: center;
+    padding: 60px 88px;
+}
+
+.dentist-slide p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #4F4F4F;
+    padding: 0 10px;
+}
+
+.dentist-slide:hover {
+    box-shadow: 0 0 60px rgba(155, 181, 183, 0.2);
+    border-radius: 10px;
+}
+
+.dentist-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.dentist-img img {
+    width: 100%;
+    height: auto;
+}
+
+.stoma-slider .swiper-pagination-bullet-active {
+    background: #5BD2C7;
+}
+
+.stoma-slider .swiper-button-next, .swiper-button-prev {
+    color: #5BD2C7;
+}
+
+.stoma-slider .swiper-button-prev {
+    left: -20px;
+}
+
+.stoma-slider .swiper-button-next {
+    right: -20px;
+}
+
+.dentist-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #4F4F4F;
+    margin-top: 40px;
+}
+
+.stoma-slider .swiper-wrapper {
+    padding: 40px 0;
+}
+
+.menu-container ul {
+    display: none;
+}
+
+@media screen and (max-width: 1385px){
+    .stoma-slider .swiper-button-prev {
+        left: 0;
+    }
+
+    .stoma-slider .swiper-button-next {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1007px) {
+    .stoma-map {
+        background-color: #F9FBFA;
+    }
+     #overlay-map {
+         position: relative;
+         z-index: 0;
+     }
+    .col-md-offset-7 {
+        margin: 0 auto;
+    }
+    .stoma-map .form_wrapper {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .const-grid {
+        grid-template-columns: repeat(2, [col] 1fr ) ;
+        grid-template-rows: repeat(1, [row] auto  );
+    }
+    .const-new {
+        grid-template-columns: repeat(2, 1fr ) ;
+        padding: 0;
+        margin-top: 60px;
+    }
+    .heal {
+        padding: 60px 0;
+    }
+
+    .heal-box {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-container svg{
+        display: none;
+    }
+
+    .menu-container ul{
+        display: block;
+    }
+
+    .menu-container ul li{
+        list-style: none;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .menu-container ul li::before{
+        content: "";
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        margin-left: 0;
+        background: #5BD2C7;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .radial {
+        background-image: none;
+        padding: 60px 0;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .main-stoma h1 br{
+        display: none;
+    }
+    .main-stoma h1 {
+        font-size: 36px;
+        word-wrap: break-word;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .const-grid {
+        grid-template-columns: repeat(1, [col] 1fr ) ;
+        grid-template-rows: repeat(1, [row] auto  );
+    }
+    .const-new {
+        margin-top: 30px;
+        grid-template-columns: repeat(1, 1fr ) ;
+    }
+
+    .const {
+        padding: 60px 0;
+    }
+    .heal-wrapper {
+        margin-top: 50px;
+    }
+}

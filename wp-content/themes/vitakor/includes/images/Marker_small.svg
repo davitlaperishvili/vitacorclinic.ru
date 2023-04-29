@@ -1,0 +1,19 @@
+<svg id="Marker_small.svg" xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Ellipse_217_copy_7" data-name="Ellipse 217 copy 7" class="cls-1" d="M1051.38,736.487l0.03,0.012L1049,740h-1l-2.41-3.5,0.03-.015A3.5,3.5,0,1,1,1051.38,736.487ZM1048.5,733a1.5,1.5,0,1,0,1.5,1.5A1.5,1.5,0,0,0,1048.5,733Z" transform="translate(-1036 -731)"/>
+  <path id="Ellipse_217_copy_8" data-name="Ellipse 217 copy 8" class="cls-2" d="M1036,740v-5.5a3.474,3.474,0,0,0,.62,1.984l-0.03.015L1039,740h1l2.41-3.5-0.03-.012A3.5,3.5,0,0,0,1039.5,731h3.5v9h-7Zm5-5.5a1.5,1.5,0,1,1-1.5-1.5A1.5,1.5,0,0,1,1041,734.5Zm-5,0V731h3.5A3.5,3.5,0,0,0,1036,734.5Z" transform="translate(-1036 -731)"/>
+</svg>

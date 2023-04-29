@@ -1,0 +1,14 @@
+<svg id="Arrows_rolldown_small.svg" xmlns="http://www.w3.org/2000/svg" width="38" height="5" viewBox="0 0 38 5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_702_copy_2" data-name="Rounded Rectangle 702 copy 2" class="cls-1" d="M674,773v-3.925a0.973,0.973,0,0,0,.277.621l3.016,3a1,1,0,0,0,1.414,0l2.985-3a0.994,0.994,0,0,0-.706-1.7H682v5h-8Zm4-2.418-2.3-2.291a1,1,0,0,0-.705-0.291h6a1,1,0,0,0-.7.291Zm-3.719-2.291a0.975,0.975,0,0,0-.277.621V768h0.982A1,1,0,0,0,674.277,768.291Z" transform="translate(-674 -768)"/>
+  <path id="Rounded_Rectangle_702_copy_3" data-name="Rounded Rectangle 702 copy 3" class="cls-1" d="M691.692,769.7l-2.985,3a1,1,0,0,1-1.414,0l-3.016-3a0.988,0.988,0,0,1,0-1.4,1,1,0,0,1,1.414,0l2.3,2.291,2.282-2.291a1,1,0,0,1,1.414,0A0.99,0.99,0,0,1,691.692,769.7Z" transform="translate(-674 -768)"/>
+  <path id="Rounded_Rectangle_702_copy_5" data-name="Rounded Rectangle 702 copy 5" class="cls-1" d="M700.986,773a0.994,0.994,0,0,0,.706-1.7l-2.985-3a1,1,0,0,0-1.414,0l-3.016,3a0.973,0.973,0,0,0-.277.621V768h8v5h-1.014Zm-6.709-.291a1,1,0,0,0,.7.291H694v-0.912A0.975,0.975,0,0,0,694.277,772.709ZM698,770.418l2.282,2.291a1,1,0,0,0,.7.291h-6a1,1,0,0,0,.705-0.291Z" transform="translate(-674 -768)"/>
+  <path id="Rounded_Rectangle_702_copy_4" data-name="Rounded Rectangle 702 copy 4" class="cls-1" d="M711.692,771.3l-2.985-3a1,1,0,0,0-1.414,0l-3.016,3a0.988,0.988,0,0,0,0,1.4,1,1,0,0,0,1.414,0l2.3-2.291,2.282,2.291a1,1,0,0,0,1.414,0A0.99,0.99,0,0,0,711.692,771.3Z" transform="translate(-674 -768)"/>
+</svg>

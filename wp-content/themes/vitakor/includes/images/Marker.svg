@@ -1,0 +1,11 @@
+<svg id="Marker.svg" xmlns="http://www.w3.org/2000/svg" width="50" height="65" viewBox="0 0 50 65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0dbc91;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Ellipse_196_copy_4" data-name="Ellipse 196 copy 4" class="cls-1" d="M1015.99,776.977L1016,777l-18,23h-1l2.178-15.041A20.016,20.016,0,1,1,1015.99,776.977ZM1000,754a11,11,0,1,0,11,11A11,11,0,0,0,1000,754Z" transform="translate(-975 -740)"/>
+</svg>

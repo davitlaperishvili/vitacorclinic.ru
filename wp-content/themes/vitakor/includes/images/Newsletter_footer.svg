@@ -1,0 +1,11 @@
+<svg id="Newsletter_footer.svg" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Rectangle_93_copy_3" data-name="Rectangle 93 copy 3" class="cls-1" d="M559,5782H541a3,3,0,0,1-3-3v-12a3,3,0,0,1,3-3h18a3,3,0,0,1,3,3v12A3,3,0,0,1,559,5782Zm-18.664-2.26a0.983,0.983,0,0,0,.664.26h18a1.013,1.013,0,0,0,.634-0.24l-5.314-4.44,1.736-1.32,3.944,3.26v-8.89l-10.008,7.62L540,5768.38v8.89l3.944-3.26,1.716,1.31ZM541,5766a0.943,0.943,0,0,0-.52.17l9.52,7.3,9.507-7.31A0.987,0.987,0,0,0,559,5766H541Z" transform="translate(-538 -5764)"/>
+</svg>

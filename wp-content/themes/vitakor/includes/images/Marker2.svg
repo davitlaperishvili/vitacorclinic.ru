@@ -1,0 +1,24 @@
+<svg id="Marker2.svg" xmlns="http://www.w3.org/2000/svg" width="46" height="61.156" viewBox="0 0 46 61.156">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        opacity: 0.7;
+      }
+
+      .cls-3 {
+        fill: #0dbc91;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="23" cy="23" r="12"/>
+  <path class="cls-2" d="M1000,742a23,23,0,1,1-23,23A23,23,0,0,1,1000,742Zm17,30,2,6s-18.31,23.26-19,24a4.464,4.464,0,0,1-4,1c-0.76-.313-2.159-0.161-2-4s3-23,3-23Z" transform="translate(-977 -742)"/>
+  <path id="Ellipse_196_copy_4" data-name="Ellipse 196 copy 4" class="cls-3" d="M1015.99,776.977L1016,777l-18,23h-1l2.178-15.041A20.016,20.016,0,1,1,1015.99,776.977ZM1000,754a11,11,0,1,0,11,11A11,11,0,0,0,1000,754Z" transform="translate(-977 -742)"/>
+</svg>

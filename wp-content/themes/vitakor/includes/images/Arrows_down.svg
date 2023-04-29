@@ -1,0 +1,20 @@
+<svg id="Arrows_down.svg" xmlns="http://www.w3.org/2000/svg" width="19" height="3" viewBox="0 0 19 3">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #666;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Rectangle_323_copy_18" data-name="Rectangle 323 copy 18" class="cls-1" d="M237,502h5l-2.515,3Z" transform="translate(-237 -502)"/>
+  <path id="Rectangle_323_copy_19" data-name="Rectangle 323 copy 19" class="cls-2" d="M244,502h5l-2.515,3Z" transform="translate(-237 -502)"/>
+  <path id="Rectangle_323_copy_20" data-name="Rectangle 323 copy 20" class="cls-3" d="M251,502h5l-2.515,3Z" transform="translate(-237 -502)"/>
+</svg>

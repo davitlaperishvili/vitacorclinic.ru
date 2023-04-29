@@ -1,0 +1,11 @@
+<svg id="Success.svg" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0dbc91;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_688_copy_2" data-name="Rounded Rectangle 688 copy 2" class="cls-1" d="M780,333a40,40,0,1,1,40-40A40,40,0,0,1,780,333Zm0-78a38,38,0,1,0,38,38A38,38,0,0,0,780,255Zm-6.289,51.708a1,1,0,0,1-1.412,0L761.293,295.63a1,1,0,0,1,1.412-1.408l10.288,10.355,24.3-25.3a1,1,0,1,1,1.412,1.408Z" transform="translate(-740 -253)"/>
+</svg>

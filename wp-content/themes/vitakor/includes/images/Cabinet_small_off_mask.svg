@@ -1,0 +1,11 @@
+<svg id="Cabinet_small_off_mask.svg" xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f7f9fa;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Ellipse_63_copy_5" data-name="Ellipse 63 copy 5" class="cls-1" d="M1504,20.989A1.991,1.991,0,1,1,1505.99,19,1.99,1.99,0,0,1,1504,20.989Zm0,3.01a6.365,6.365,0,0,0-6,3.982V15h6a4,4,0,1,0,.01,0H1510V27.983A6.365,6.365,0,0,0,1504,24Zm-3.94,4a4.881,4.881,0,0,1,7.88,0h-7.88Z" transform="translate(-1498 -15)"/>
+</svg>

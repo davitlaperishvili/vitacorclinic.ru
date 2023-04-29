@@ -1,0 +1,19 @@
+<svg id="Close.svg" xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #333;
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_568_copy_4" data-name="Rounded Rectangle 568 copy 4" class="cls-1" d="M1835.4,74l6.32,6.315a0.987,0.987,0,0,1,0,1.4,1,1,0,0,1-1.41,0L1834,75.4l-6.31,6.315a1,1,0,0,1-1.41,0,0.987,0.987,0,0,1,0-1.4L1832.6,74l-6.32-6.315a0.987,0.987,0,0,1,0-1.4,1,1,0,0,1,1.41,0L1834,72.6l6.31-6.315a1,1,0,0,1,1.41,0,0.987,0.987,0,0,1,0,1.4Z" transform="translate(-1826 -66)"/>
+  <path id="Rounded_Rectangle_568_copy_2" data-name="Rounded Rectangle 568 copy 2" class="cls-2" d="M1853.4,74l6.32,6.315a0.987,0.987,0,0,1,0,1.4,1,1,0,0,1-1.41,0L1852,75.4l-6.31,6.315a1,1,0,0,1-1.41,0,0.987,0.987,0,0,1,0-1.4L1850.6,74l-6.32-6.315a0.987,0.987,0,0,1,0-1.4,1,1,0,0,1,1.41,0L1852,72.6l6.31-6.315a1,1,0,0,1,1.41,0,0.987,0.987,0,0,1,0,1.4Z" transform="translate(-1826 -66)"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg id="Searh_small_mask.svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f7f9fa;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_11_copy_2" data-name="Rounded Rectangle 11 copy 2" class="cls-1" d="M1550,56h20V76h-20V56Zm16.74,15.739a1.007,1.007,0,0,1-1.42,0l-2.71-2.71a5.434,5.434,0,0,1-3.11.971,5.507,5.507,0,1,1,4.53-2.386l2.71,2.71A1,1,0,0,1,1566.74,71.739ZM1559.5,61a3.5,3.5,0,1,0,3.5,3.5A3.5,3.5,0,0,0,1559.5,61Z" transform="translate(-1550 -56)"/>
+</svg>

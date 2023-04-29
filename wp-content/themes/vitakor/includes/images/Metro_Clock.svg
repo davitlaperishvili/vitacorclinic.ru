@@ -1,0 +1,12 @@
+<svg id="Metro_Clock.svg" xmlns="http://www.w3.org/2000/svg" width="26" height="11" viewBox="0 0 26 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #999;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Rectangle_530_copy" data-name="Rectangle 530 copy" class="cls-1" d="M524.306,1198.97v-0.68h0.965l-1.1-2.62L522.5,1199h0l-1.667-3.33-1.1,2.62h0.965v0.68H516v-0.68h0.806l3.416-8.29,2.278,4.69,2.278-4.69,3.416,8.29H529v0.68h-4.694Z" transform="translate(-516 -1189)"/>
+  <path id="Ellipse_214_copy_2" data-name="Ellipse 214 copy 2" class="cls-1" d="M536.5,1200a5.5,5.5,0,1,1,5.5-5.5A5.5,5.5,0,0,1,536.5,1200Zm0-9a3.5,3.5,0,1,0,3.5,3.5A3.5,3.5,0,0,0,536.5,1191Zm1.562,4H537.68a1.281,1.281,0,1,1-1.68-1.68V1192a0.5,0.5,0,0,1,1,0v1.32a1.275,1.275,0,0,1,.68.68h0.382A0.5,0.5,0,0,1,538.062,1195Z" transform="translate(-516 -1189)"/>
+</svg>

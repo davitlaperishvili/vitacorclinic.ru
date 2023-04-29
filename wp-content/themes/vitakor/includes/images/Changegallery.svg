@@ -1,0 +1,21 @@
+<svg id="Changegallery.svg" xmlns="http://www.w3.org/2000/svg" width="72" height="15" viewBox="0 0 72 15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_670_copy" data-name="Rounded Rectangle 670 copy" class="cls-1" d="M1318,1149h-3a2.006,2.006,0,0,1-2-2v-5h5a2,2,0,0,1,2,2v3A2.006,2.006,0,0,1,1318,1149Zm0-5h-3v3h3v-3Zm0-3h-5v-5a2,2,0,0,1,2-2h3a2,2,0,0,1,2,2v3A2.006,2.006,0,0,1,1318,1141Zm0-5h-3v3h3v-3Zm-8,13h-3a2.006,2.006,0,0,1-2-2v-3a2,2,0,0,1,2-2h5v5A2.006,2.006,0,0,1,1310,1149Zm0-5h-3v3h3v-3Zm-1.5-3H1307a2.006,2.006,0,0,1-2-2v-3a2,2,0,0,1,2-2h3a2,2,0,0,1,2,2v5h-3.5Zm1.5-5h-3v3h3v-3Z" transform="translate(-1305 -1134)"/>
+  <path id="Rounded_Rectangle_670_copy_2" data-name="Rounded Rectangle 670 copy 2" class="cls-2" d="M1337,1149a2.006,2.006,0,0,0,2-2v2h-2Zm-3-5h3v3h-3v-3Zm5,0a2,2,0,0,0-2-2h-5v5a2.006,2.006,0,0,0,2,2h-5a2.006,2.006,0,0,0,2-2v-5h-5a2,2,0,0,0-2,2v-5a2.006,2.006,0,0,0,2,2h5v-5a2,2,0,0,0-2-2h5a2,2,0,0,0-2,2v5h5a2.006,2.006,0,0,0,2-2v5Zm0-8a2,2,0,0,0-2-2h2v2Zm-5,0h3v3h-3v-3Zm-8,0h3v3h-3v-3Zm-2,0v-2h2A2,2,0,0,0,1324,1136Zm2,8h3v3h-3v-3Zm0,5h-2v-2A2.006,2.006,0,0,0,1326,1149Z" transform="translate(-1305 -1134)"/>
+  <path id="Rounded_Rectangle_668_copy" data-name="Rounded Rectangle 668 copy" class="cls-1" d="M1356,1149h-11a2.006,2.006,0,0,1-2-2v-11a2,2,0,0,1,2-2h11a2,2,0,0,1,2,2v11A2.006,2.006,0,0,1,1356,1149Zm0-13h-11v11h11v-11Z" transform="translate(-1305 -1134)"/>
+  <path id="Rounded_Rectangle_668_copy_2" data-name="Rounded Rectangle 668 copy 2" class="cls-2" d="M1362,1134h15v15h-15v-15Zm13,15h-11a2.006,2.006,0,0,1-2-2v-11a2,2,0,0,1,2-2h11a2,2,0,0,1,2,2v11A2.006,2.006,0,0,1,1375,1149Zm0-13h-11v11h11v-11Z" transform="translate(-1305 -1134)"/>
+</svg>

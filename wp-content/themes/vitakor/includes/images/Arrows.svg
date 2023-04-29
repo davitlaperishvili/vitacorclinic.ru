@@ -1,0 +1,21 @@
+<svg id="Arrows.svg" xmlns="http://www.w3.org/2000/svg" width="38" height="14" viewBox="0 0 38 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #333;
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_10_copy_21" data-name="Rounded Rectangle 10 copy 21" class="cls-1" d="M1638.28,1779.7l6.02,6.02a1.014,1.014,0,0,0,1.41,0,1,1,0,0,0,0-1.41l-5.32-5.31,5.32-5.32a0.984,0.984,0,0,0,0-1.4,1,1,0,0,0-1.41,0l-6.02,6.02A0.984,0.984,0,0,0,1638.28,1779.7Z" transform="translate(-1638 -1772)"/>
+  <path id="Rounded_Rectangle_10_copy_21-2" data-name="Rounded Rectangle 10 copy 21" class="cls-1" d="M1655.72,1779.7l-6.02,6.02a1.014,1.014,0,0,1-1.41,0,1,1,0,0,1,0-1.41l5.32-5.31-5.32-5.32a0.984,0.984,0,0,1,0-1.4,1,1,0,0,1,1.41,0l6.02,6.02A0.984,0.984,0,0,1,1655.72,1779.7Z" transform="translate(-1638 -1772)"/>
+  <path id="Rounded_Rectangle_10_copy_21-3" data-name="Rounded Rectangle 10 copy 21" class="cls-2" d="M1675.72,1779.7l-6.02,6.02a1.014,1.014,0,0,1-1.41,0,1,1,0,0,1,0-1.41l5.32-5.31-5.32-5.32a0.984,0.984,0,0,1,0-1.4,1,1,0,0,1,1.41,0l6.02,6.02A0.984,0.984,0,0,1,1675.72,1779.7Z" transform="translate(-1638 -1772)"/>
+  <path id="Rounded_Rectangle_10_copy_21-4" data-name="Rounded Rectangle 10 copy 21" class="cls-2" d="M1658.28,1779.7l6.02,6.02a1.014,1.014,0,0,0,1.41,0,1,1,0,0,0,0-1.41l-5.32-5.31,5.32-5.32a0.984,0.984,0,0,0,0-1.4,1,1,0,0,0-1.41,0l-6.02,6.02A0.984,0.984,0,0,0,1658.28,1779.7Z" transform="translate(-1638 -1772)"/>
+</svg>

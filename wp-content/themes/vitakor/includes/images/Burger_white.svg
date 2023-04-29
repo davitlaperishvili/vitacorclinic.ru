@@ -1,0 +1,11 @@
+<svg id="Burger_white.svg" xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_81_copy_2" data-name="Rounded Rectangle 81 copy 2" class="cls-1" d="M279,149H265a1,1,0,0,1-1-1h0a1,1,0,0,1,1-1h14a1,1,0,0,1,1,1h0A1,1,0,0,1,279,149Zm0-5H265a1,1,0,1,1,0-2h14A1,1,0,1,1,279,144Zm0-5H265a1,1,0,1,1,0-2h14A1,1,0,1,1,279,139Z" transform="translate(-264 -137)"/>
+</svg>
