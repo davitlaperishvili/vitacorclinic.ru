@@ -11,14 +11,15 @@ if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
-$dl_inc_dir = get_template_directory() . '/inc';
+$dl_inc_dir = get_template_directory() . '/custom-inc';
 
 // Array of files to include
 $dl_includes = array(
-	'/setup.php',
-	'/widgets.php',
+	// '/setup.php',
+	// '/widgets.php',
 	'/enqueue.php',
 	'/menus.php',
+	'/post_types.php',
 	'/options-page.php'
 );
 

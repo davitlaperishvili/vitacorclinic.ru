@@ -1,4 +1,5 @@
-input[type="date"],
+.dl_page{
+  input[type="date"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="email"],
@@ -481,4 +482,5 @@ div.form_item{
 			display: block;
 		}
 	}
+}
 }
