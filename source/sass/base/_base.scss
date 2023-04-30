@@ -2,6 +2,16 @@
   .print-link{
     display: none;
   }
+  .page-top{
+    margin-bottom: 60px;
+  }
+  ul{
+    li{
+      &:before{
+        display: none;
+      }
+    }
+  }
   // Tags
   body{
     color: $cbase;
@@ -144,9 +154,53 @@
       display: grid;
       grid-gap: 16px;
       grid-template-columns: 240px 1fr;
+      aside{
+        background-color: $cread;
+      }
+    }
+  }
+
+  .theme_button{
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 50px;
+      background-color: $ccorp;
+      color: $cwhite;
+      border-radius: 8px;
+      font-size: 18px;
     }
   }
 
 
-
+  .block_title,
+  .section_title{
+    margin-bottom: 50px;
+    font-size: 32px;
+    color: $cbase;
+    font-weight: 400;
+  }
+  .text_block{
+    margin-bottom: 60px;
+  }
+  .section_text{
+    blockquote{
+      padding: 25px;
+      border-radius: 10px;
+      background-color: $cgray;
+      color: $cbase;
+      margin-bottom: 50px;
+      &:before,
+      &:after{
+        display: none;
+      }
+    }
+    h3{
+      font-size: 19px;
+      margin-bottom: 25px;
+      color: $cbase;
+      font-weight: 400;
+    }
+  }
 }

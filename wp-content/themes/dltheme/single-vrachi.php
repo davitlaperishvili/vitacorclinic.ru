@@ -108,85 +108,89 @@
           <section class="services">
               <h2 class="block_title">Услуги</h2>
               <div class="services_list">
-                <div class="service_list_item">
-                  <div class="list_title">Ведение беременности</div>
-                  <ul>
-                    <li>
-                      <a href="">Подготовка к беременности</a>
-                    </li>
-                    <li>
-                      <a href="">Пренатальный скрининг Astraiа</a>
-                    </li>
-                    <li>
-                      <a href="">Программы ведения беременности отдельно по триместрам</a>
-                    </li>
-                    <li>
-                      <a href="">Психологическая помощь беременным женщинам</a>
-                    </li>
-                    <li>
-                      <a href="">Психологическая помощь беременным женщинам</a>
-                    </li>
-                  </ul>
+                <div class="sub_wrap">
+                  <div class="service_list_item">
+                    <div class="list_title">Ведение беременности</div>
+                    <ul>
+                      <li>
+                        <a href="">Подготовка к беременности</a>
+                      </li>
+                      <li>
+                        <a href="">Пренатальный скрининг Astraiа</a>
+                      </li>
+                      <li>
+                        <a href="">Программы ведения беременности отдельно по триместрам</a>
+                      </li>
+                      <li>
+                        <a href="">Психологическая помощь беременным женщинам</a>
+                      </li>
+                      <li>
+                        <a href="">Психологическая помощь беременным женщинам</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="service_list_item">
+                    <div class="list_title">Ведение беременности</div>
+                    <ul>
+                      <li>
+                        <a href="">Подготовка к беременности</a>
+                      </li>
+                      <li>
+                        <a href="">Пренатальный скрининг Astraiа</a>
+                      </li>
+                      <li>
+                        <a href="">Программы ведения беременности отдельно по триместрам</a>
+                      </li>
+                      <li>
+                        <a href="">Психологическая помощь беременным женщинам</a>
+                      </li>
+                      <li>
+                        <a href="">Психологическая помощь беременным женщинам</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="service_list_item">
-                  <div class="list_title">Ведение беременности</div>
-                  <ul>
-                    <li>
-                      <a href="">Подготовка к беременности</a>
-                    </li>
-                    <li>
-                      <a href="">Пренатальный скрининг Astraiа</a>
-                    </li>
-                    <li>
-                      <a href="">Программы ведения беременности отдельно по триместрам</a>
-                    </li>
-                    <li>
-                      <a href="">Психологическая помощь беременным женщинам</a>
-                    </li>
-                    <li>
-                      <a href="">Психологическая помощь беременным женщинам</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="service_list_item">
-                  <div class="list_title">Ведение беременности</div>
-                  <ul>
-                    <li>
-                      <a href="">Подготовка к беременности</a>
-                    </li>
-                    <li>
-                      <a href="">Пренатальный скрининг Astraiа</a>
-                    </li>
-                    <li>
-                      <a href="">Программы ведения беременности отдельно по триместрам</a>
-                    </li>
-                    <li>
-                      <a href="">Психологическая помощь беременным женщинам</a>
-                    </li>
-                    <li>
-                      <a href="">Психологическая помощь беременным женщинам</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="service_list_item">
-                  <div class="list_title">Ведение беременности</div>
-                  <ul>
-                    <li>
-                      <a href="">Подготовка к беременности</a>
-                    </li>
-                    <li>
-                      <a href="">Пренатальный скрининг Astraiа</a>
-                    </li>
-                    <li>
-                      <a href="">Программы ведения беременности отдельно по триместрам</a>
-                    </li>
-                    <li>
-                      <a href="">Психологическая помощь беременным женщинам</a>
-                    </li>
-                    <li>
-                      <a href="">Психологическая помощь беременным женщинам</a>
-                    </li>
-                  </ul>
+                <div class="sub_wrap">
+                  <div class="service_list_item">
+                    <div class="list_title">Ведение беременности</div>
+                    <ul>
+                      <li>
+                        <a href="">Подготовка к беременности</a>
+                      </li>
+                      <li>
+                        <a href="">Пренатальный скрининг Astraiа</a>
+                      </li>
+                      <li>
+                        <a href="">Программы ведения беременности отдельно по триместрам</a>
+                      </li>
+                      <li>
+                        <a href="">Психологическая помощь беременным женщинам</a>
+                      </li>
+                      <li>
+                        <a href="">Психологическая помощь беременным женщинам</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="service_list_item">
+                    <div class="list_title">Ведение беременности</div>
+                    <ul>
+                      <li>
+                        <a href="">Подготовка к беременности</a>
+                      </li>
+                      <li>
+                        <a href="">Пренатальный скрининг Astraiа</a>
+                      </li>
+                      <li>
+                        <a href="">Программы ведения беременности отдельно по триместрам</a>
+                      </li>
+                      <li>
+                        <a href="">Психологическая помощь беременным женщинам</a>
+                      </li>
+                      <li>
+                        <a href="">Психологическая помощь беременным женщинам</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
           </section>
@@ -285,7 +289,10 @@
               foreach($vrachi_faq['faq_list'] as $faq) {
                 ?>
                   <div class="faq_item">
-                    <div class="faq_question"><?php echo $faq['question'] ?></div>
+                    <div class="faq_question">
+                      <span><?php echo $faq['question'] ?> </span>
+                      <i class="ri-arrow-down-s-fill"></i>
+                    </div>
                     <div class="faq_answer"><?php echo $faq['answer'] ?></div>
                   </div>
                 <?php 

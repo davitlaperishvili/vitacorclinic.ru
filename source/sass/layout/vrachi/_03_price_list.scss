@@ -1,0 +1,49 @@
+section.vrachi_price{
+  margin-bottom: 40px;
+  .price_table{
+    .table_title{
+      padding: 20px 10px;
+      color: $cwhite;
+      font-size: 18px;
+      background-color: #A2A1A1;
+    }
+    table{
+      width: 100%;
+      thead{
+        tr{
+          display: flex;
+          justify-content: space-between;
+          padding-left: 40px;
+          border-bottom: 1px solid $cdark;
+          th{
+            display: flex;
+            align-items: center;
+            height: 60px;
+            font-weight: 700;
+            &:last-child{
+              text-align: end;
+            }
+          }
+        }
+      }
+      tbody{
+        padding-left: 40px;
+        tr{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          padding-left: 40px;
+          td{
+            height: 60px;
+            display: flex;
+            align-items: center;
+            &:last-child{
+              font-weight: 700;
+              text-align: end;
+            }
+          }
+        }
+      }
+    }
+  }
+}

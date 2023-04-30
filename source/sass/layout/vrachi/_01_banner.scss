@@ -1,0 +1,85 @@
+section.vrachi_banner{
+  margin-bottom: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  .banner_main{
+    padding: 32px 35px;
+    figure{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .banner_content{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 2;
+      .banner_title{
+        margin-bottom: 180px;
+        font-size: 36px;
+        font-weight: 400;
+      }
+      .banner_buttons{
+        display: flex;
+        align-items: center;
+        gap: 37px;
+        .banner_prices{
+          display: flex;
+          align-items: center;
+          gap: 21px;
+          .price_item{
+            display: flex;
+            flex-direction: column;
+            padding: 15px 30px 15px 10px;
+            background-color: $cwhite;
+            border-radius: 10px;
+            .title{
+              margin-bottom: 15px;
+              font-size: 16px;
+              color: $cbase;
+            }
+            .value{
+              font-size: 40px;
+              color: $ccorp;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+  .banner_nav{
+    padding: 25px 35px;
+    background-color: $cgray;
+    nav{
+      ul{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        li{
+          a{
+            display: flex;
+            font-size: 16px;
+            color: $cdark;
+            &:after{
+              content: '';
+              display: block;
+              position: absolute;
+              height: 1px;
+              width: 100%;
+              bottom: -1px;
+              background-color: $cdark;
+            }
+          }
+        }
+      }
+    }
+  }
+}
