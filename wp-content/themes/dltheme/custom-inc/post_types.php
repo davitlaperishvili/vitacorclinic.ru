@@ -32,55 +32,62 @@ function vrachi_post_type(){
 }
 add_action('init', 'vrachi_post_type');
 
-function staff_post_type(){
-	register_post_type('staff', [
-		'label'  => null,
-		'labels' => [
-			'name'				=> 'Специалисты',
-			'singular_name'		=> 'Специалисты',
-			'add_new'			=> 'Добавить Специалиста',
-			'add_new_item'		=> 'Добавить Специалиста',
-			'edit_item'			=> 'Редактировать Специалиста',
-			'new_item'			=> 'New Специалисты',
-			'view_item'			=> 'Watch Специалисты',
-			'search_items'		=> 'Search Специалисты',
-			'not_found'			=> 'Not found',
+function staff_post_type() {
+	register_post_type( 'staff', [
+		'label'               => null,
+		'labels'              => [
+			'name'          => 'Специалисты',
+			'singular_name' => 'Специалисты',
+			'add_new'       => 'Добавить Специалиста',
+			'add_new_item'  => 'Добавить Специалиста',
+			'edit_item'     => 'Редактировать Специалиста',
+			'new_item'      => 'New Специалисты',
+			'view_item'     => 'Watch Специалисты',
+			'search_items'  => 'Search Специалисты',
+			'not_found'     => 'Not found',
 		],
-		'description'		=> 'Post for Специалисты',
-		'public'			=> true,
-		'show_in_menu'		=> true,
-		'show_in_rest'		=> true,
-		'rest_base'			=> true,
-		'menu_position'		=> true,
-		'menu_icon'			=> 'dashicons-megaphone',
-		'hierarchical'		=> true,
-		'supports'			=> ['title', 'thumbnail', 'editor'],
-		'taxonomies'		=> [],
-		'has_archive'		=> true,
-		'rewrite'			=> array( 'slug' => 'staff/%rubriki%' ),
-		'query_var'			=> true,
-	]);
-  // Now register the taxonomy
-  register_taxonomy('rubriki',[ 'staff' ], array(
-    "label" => 'Рубрики',
-    'hierarchical' => true,
-    'show_ui' => true,
-    'show_in_rest' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'rubriki' ),
-  ));
-  add_filter('post_type_link', 'replace_post_link', 1, 3);
-	function replace_post_link($link, $post = 0) {
-		if ($post->post_type == 'staff') {
-			$terms = wp_get_object_terms($post->ID, 'rubriki');
-			if ($terms) {
-				return str_replace('%rubriki%', $terms[0]->slug, $link);
-			} else {
-				return str_replace('%rubriki%/', '', $link);
-			}
-		}
-		return $link;
-	}
+		'description'         => 'Post for Специалисты',
+		'public'              => true,
+		'show_in_menu'        => true,
+		'show_in_rest'        => true,
+		'rest_base'           => true,
+		'menu_position'       => true,
+		'menu_icon'           => 'dashicons-megaphone',
+		'hierarchical'        => true,
+		'supports'            => [ 'title', 'thumbnail', 'editor' ],
+		'taxonomies'          => [ 'rubriki' ],
+		'has_archive'         => true,
+		'rewrite'             => [ 'slug' => 'staff', 'with_front' => false ],
+		'query_var'           => true,
+		'ep_mask'             => EP_PERMALINK | EP_PAGES,
+	] );
+
+	// Now register the taxonomy
+	register_taxonomy( 'rubriki', [ 'staff' ], [
+		"label"              => 'Рубрики',
+		'hierarchical'       => true,
+    'public'                => true,
+		'show_ui'            => true,
+		'show_in_rest'       => true,
+		'show_admin_column'  => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+	] );
 }
-add_action('init', 'staff_post_type');
+add_action( 'init', 'staff_post_type' );
+
+// Filter the post type link to include the taxonomy term in the URL
+add_filter( 'post_type_link', 'replace_post_link', 1, 3 );
+function replace_post_link( $link, $post = 0 ) {
+	if ( $post->post_type == 'staff' ) {
+		$terms = wp_get_object_terms( $post->ID, 'rubriki' );
+		if ( $terms ) {
+			$link = str_replace( '%rubriki%', $terms[0]->slug, $link );
+      echo "Replaced";
+		} else {
+      echo "NOT Replaced";
+			$link = str_replace( '%rubriki%/', '', $link );
+		}
+	}
+	return $link;
+}
