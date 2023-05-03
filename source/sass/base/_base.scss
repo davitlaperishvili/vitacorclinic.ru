@@ -162,7 +162,7 @@
 
   .theme_button{
     a{
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       padding: 15px 50px;
@@ -170,6 +170,12 @@
       color: $cwhite;
       border-radius: 8px;
       font-size: 18px;
+    }
+    &.white{
+      a{
+        background-color: $cwhite;
+        color: $cbase;
+      }
     }
   }
 

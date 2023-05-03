@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-
+<?php 
+  $pageID = get_the_ID();
+?>
 <main class="directions_page dl_page">
   <section class="page-top maxwidth-theme ">
       <div class="row">
@@ -108,92 +110,40 @@
           <section class="services">
               <h2 class="block_title">Услуги</h2>
               <div class="services_list">
-                <div class="sub_wrap">
-                  <div class="service_list_item">
-                    <div class="list_title">Ведение беременности</div>
-                    <ul>
-                      <li>
-                        <a href="">Подготовка к беременности</a>
-                      </li>
-                      <li>
-                        <a href="">Пренатальный скрининг Astraiа</a>
-                      </li>
-                      <li>
-                        <a href="">Программы ведения беременности отдельно по триместрам</a>
-                      </li>
-                      <li>
-                        <a href="">Психологическая помощь беременным женщинам</a>
-                      </li>
-                      <li>
-                        <a href="">Психологическая помощь беременным женщинам</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="service_list_item">
-                    <div class="list_title">Ведение беременности</div>
-                    <ul>
-                      <li>
-                        <a href="">Подготовка к беременности</a>
-                      </li>
-                      <li>
-                        <a href="">Пренатальный скрининг Astraiа</a>
-                      </li>
-                      <li>
-                        <a href="">Программы ведения беременности отдельно по триместрам</a>
-                      </li>
-                      <li>
-                        <a href="">Психологическая помощь беременным женщинам</a>
-                      </li>
-                      <li>
-                        <a href="">Психологическая помощь беременным женщинам</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="sub_wrap">
-                  <div class="service_list_item">
-                    <div class="list_title">Ведение беременности</div>
-                    <ul>
-                      <li>
-                        <a href="">Подготовка к беременности</a>
-                      </li>
-                      <li>
-                        <a href="">Пренатальный скрининг Astraiа</a>
-                      </li>
-                      <li>
-                        <a href="">Программы ведения беременности отдельно по триместрам</a>
-                      </li>
-                      <li>
-                        <a href="">Психологическая помощь беременным женщинам</a>
-                      </li>
-                      <li>
-                        <a href="">Психологическая помощь беременным женщинам</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="service_list_item">
-                    <div class="list_title">Ведение беременности</div>
-                    <ul>
-                      <li>
-                        <a href="">Подготовка к беременности</a>
-                      </li>
-                      <li>
-                        <a href="">Пренатальный скрининг Astraiа</a>
-                      </li>
-                      <li>
-                        <a href="">Программы ведения беременности отдельно по триместрам</a>
-                      </li>
-                      <li>
-                        <a href="">Психологическая помощь беременным женщинам</a>
-                      </li>
-                      <li>
-                        <a href="">Психологическая помощь беременным женщинам</a>
-                      </li>
-                    </ul>
-                  </div>
+                <div class="service_list_item">
+                  <ul>
+                    <?php
+                      // параметры по умолчанию
+                      $servicesPosts = get_posts( array(
+                        'numberposts' => -1,
+                        'category'    => 5,
+                        'post_type'   => 'post',
+                        'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+                    ) );
+
+                    foreach( $servicesPosts as $post ){
+                        setup_postdata( $post );
+                        $servicesDirections = get_post_meta(get_the_ID(), "napravleniya", true);
+                        if($servicesDirections && in_array(strval($pageID), $servicesDirections)){
+                          ?>
+                            <li>
+                              <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+                            </li>
+                          <?php
+                        }
+                    }
+                    wp_reset_postdata(); // сброс
+                    ?>
+                  </ul>
                 </div>
               </div>
           </section>
+          <script>
+            const services = document.querySelectorAll(".services .service_list_item ul li");
+            if(services.length === 0) {
+              document.querySelector(".services").remove()
+            }
+          </script>
         </div>
       </div>
     </div>
@@ -204,7 +154,7 @@
     <section class="vrachi_banner_list">
         <div class="container">
           <div class="banners_slider swiper">
-            <div class="swiper-wrappr">
+            <div class="swiper-wrapper">
               <?php 
                 foreach($banner_list['banner_list'] as $banner){
                   ?>
@@ -224,6 +174,7 @@
                 }
               ?>
             </div>
+            <div class="swiper-pagination-banner_list"></div>
           </div>
         </div>
     </section>
@@ -305,11 +256,43 @@
     <section class="doctors_slider">
       <div class="container">
         <h2 class="section_title">Врачи-гинекологи, ведущие прием в «Витакор»</h2>
-        <div class="doctors_slider swiper">
+        <div class="doctors_slider_wrap swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <?php
+              // параметры по умолчанию
+              $doctorsPosts = get_posts( array(
+                'numberposts' => -1,
+                'category'    => 0,
+                'orderby'     => 'date',
+                'order'       => 'DESC',
+                'include'     => array(),
+                'exclude'     => array(),
+                'meta_key'    => '',
+                'meta_value'  =>'',
+                'post_type'   => 'staff',
+                'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+            ) );
 
-            </div>
+            foreach( $doctorsPosts as $post ){
+                setup_postdata( $post );
+                $directions = get_post_meta(get_the_ID(), "napravleniya", true);
+                if($directions && in_array(strval($pageID), $directions)){
+                  ?>
+                    <div class="swiper-slide">
+                        <div class="doctor_item">
+                          <figure>
+                            <?php the_post_thumbnail() ?>
+                          </figure>
+                          <div class="doctor_name"><?php the_title() ?></div>
+                          <div class="doctor_direction"><?php echo get_post_meta(get_the_ID(), "dolzhnost", true); ?></div>
+                        </div>
+                    </div>
+                  <?php
+                }
+            }
+            
+            wp_reset_postdata(); // сброс
+            ?>
           </div>
         </div>
       </div>
@@ -327,9 +310,11 @@
               <?php 
                 foreach($nashi_liczenzii['licenses_list'] as $license){
                   ?>
-                    <figure>
-                      <img src="<?php echo $license['license_image'] ?>" alt="">
-                    </figure>
+                    <div class="swiper-slide">
+                      <figure>
+                        <img src="<?php echo $license['license_image']['url'] ?>" alt="<?php echo $license['license_image']['alt'] ?>">
+                      </figure>
+                    </div>
                   <?php
                 }
               ?>

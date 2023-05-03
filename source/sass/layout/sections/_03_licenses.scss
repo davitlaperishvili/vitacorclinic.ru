@@ -1,0 +1,34 @@
+section.licenses{
+  margin-bottom: 50px;
+  .block_wrap{
+    padding: 65px 75px;
+    border-radius: 10px;
+    background-color: $cgray;
+    .licenses_slider{
+      .swiper-slide{
+        figure{
+          width: 100%;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    .block_buttons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+      .theme_button{
+        &.white{
+          a{
+            color: $ccorp;
+          }
+        }
+      }
+    }
+  }
+}

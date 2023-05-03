@@ -83,9 +83,7 @@ function replace_post_link( $link, $post = 0 ) {
 		$terms = wp_get_object_terms( $post->ID, 'rubriki' );
 		if ( $terms ) {
 			$link = str_replace( '%rubriki%', $terms[0]->slug, $link );
-      echo "Replaced";
 		} else {
-      echo "NOT Replaced";
 			$link = str_replace( '%rubriki%/', '', $link );
 		}
 	}
