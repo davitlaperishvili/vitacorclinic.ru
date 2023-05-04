@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php 
   $pageID = get_the_ID();
+  $fieldsGroup = get_field("vrachi_fileds_group");
 ?>
 <main class="directions_page dl_page">
   <section class="page-top maxwidth-theme ">
@@ -255,7 +256,7 @@
 
     <section class="doctors_slider">
       <div class="container">
-        <h2 class="section_title">Врачи-гинекологи, ведущие прием в «Витакор»</h2>
+        <h2 class="section_title"><?php echo $fieldsGroup['doctors_section_title'] ?></h2>
         <div class="doctors_slider_wrap swiper">
           <div class="swiper-wrapper">
             <?php

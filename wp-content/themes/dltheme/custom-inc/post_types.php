@@ -52,7 +52,7 @@ function staff_post_type() {
 		'show_in_rest'        => true,
 		'rest_base'           => true,
 		'menu_position'       => true,
-		'menu_icon'           => 'dashicons-megaphone',
+		'menu_icon'           => 'dashicons-groups',
 		'hierarchical'        => true,
 		'supports'            => [ 'title', 'thumbnail', 'editor' ],
 		'taxonomies'          => [ 'rubriki' ],
@@ -89,3 +89,34 @@ function replace_post_link( $link, $post = 0 ) {
 	}
 	return $link;
 }
+
+function zabolevania_post_type(){
+	register_post_type('zabolevania', [
+		'label'  => null,
+		'labels' => [
+			'name'				=> 'Заболевания',
+			'singular_name'		=> 'Заболевания',
+			'add_new'			=> 'Добавить Заболевания',
+			'add_new_item'		=> 'Добавить Заболевания',
+			'edit_item'			=> 'Редактировать Заболевания',
+			'new_item'			=> 'New Заболевания',
+			'view_item'			=> 'Watch Заболевания',
+			'search_items'		=> 'Search Заболевания',
+			'not_found'			=> 'Not found',
+		],
+		'description'		=> 'Post for Заболевания',
+		'public'			=> true,
+		'show_in_menu'		=> true,
+		'show_in_rest'		=> true,
+		'rest_base'			=> true,
+		'menu_position'		=> true,
+		'menu_icon'			=> 'dashicons-megaphone',
+		'hierarchical'		=> true,
+		'supports'			=> ['title', 'thumbnail', 'editor'],
+		'taxonomies'		=> [],
+		'has_archive'		=> true,
+		'rewrite'			=> true,
+		'query_var'			=> true,
+	]);
+}
+add_action('init', 'zabolevania_post_type');

@@ -14,6 +14,7 @@ export default function plugindParameters() {
   // Slider
   let mySwiper = new Swiper(".banners_slider", {
     slidesPerView: 1,
+    loop: false,
     pagination: {
       clickable: true,
       el: ".swiper-pagination-banner_list",
