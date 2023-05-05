@@ -1,5 +1,5 @@
 //Swiper Slider
-import Swiper from "swiper/bundle";
+// import Swiper from "swiper/bundle";
 
 export default function plugindParameters() {
   // Selector styling
@@ -12,9 +12,10 @@ export default function plugindParameters() {
     });
   });
   // Slider
-  let mySwiper = new Swiper(".banners_slider", {
+  let mySwiperBanners = new Swiper(".custom_banners_slider", {
     slidesPerView: 1,
     loop: false,
+    spaceBetween: 5,
     pagination: {
       clickable: true,
       el: ".swiper-pagination-banner_list",

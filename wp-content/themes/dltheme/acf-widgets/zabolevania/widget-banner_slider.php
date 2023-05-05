@@ -6,7 +6,7 @@
     
     <section class="vrachi_banner_list">
         <div class="container">
-          <div class="banners_slider swiper">
+          <div class="banners_slider custom_banners_slider custom_swiper">
             <div class="swiper-wrapper">
               <?php 
                 foreach($banner_list as $banner){
@@ -26,9 +26,10 @@
                   <?php
                 }
               ?>
-              <div class="swiper-pagination-banner_list"></div>
             </div>
+          <div class="swiper-pagination-banner_list"></div>
           </div>
         </div>
+
     </section>
 

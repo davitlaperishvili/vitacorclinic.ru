@@ -12,6 +12,10 @@
       }
     }
   }
+
+  .custom_swiper{
+    overflow: hidden;
+  }
   // Tags
   body{
     color: $cbase;
@@ -154,8 +158,59 @@
       display: grid;
       grid-gap: 16px;
       grid-template-columns: 240px 1fr;
+      @media(max-width: 1024px){
+        grid-template-columns: 1fr;
+      }
       aside{
-        background-color: $cread;
+        .diseases_list{
+          background-color: $cread;
+          padding: 20px;
+          border-radius: 3px;
+        }
+        ul{
+          display: flex;
+          flex-direction: column;
+          gap: 35px;
+          @media(max-width: 1024px){
+            gap: 10px;
+          }
+          li{
+            a{
+              color: $cdark;
+              &:hover{
+                color: $cbase;
+              }
+            }
+          }
+        }
+        .question_form{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin: 40px 0;
+          padding: 35px 50px 35px 35px;
+          border-radius: 3px;
+          background-color: $cread;
+          @media(max-width: 1024px){
+            display: none;
+          }
+          figure{
+            margin-bottom: 13px;
+          }
+          .desc{
+            margin-bottom: 35px;
+            font-size: 13px;
+            text-align: center;
+          }
+          .theme_button{
+            width: 100%;
+            a{
+              padding: 15px 0;
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
@@ -170,6 +225,10 @@
       color: $cwhite;
       border-radius: 8px;
       font-size: 18px;
+      @media(max-width: 1024px){
+        padding: 10px 35px;
+        font-size: 15px;
+      }
     }
     &.white{
       a{
@@ -186,11 +245,18 @@
     font-size: 32px;
     color: $cbase;
     font-weight: 400;
+    @media(max-width: 1024px){
+      font-size: 20px;
+    }
   }
   .text_block{
     margin-bottom: 60px;
   }
   .section_text{
+    font-size: 15px;
+    @media(max-width: 1024px){
+      font-size: 14px;
+    }
     blockquote{
       padding: 25px;
       border-radius: 10px;
@@ -200,6 +266,9 @@
       &:before,
       &:after{
         display: none;
+      }
+      strong{
+        font-size: 32px;
       }
     }
     h3{

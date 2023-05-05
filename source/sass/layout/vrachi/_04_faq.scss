@@ -12,6 +12,9 @@ section.faq{
         span{
           font-size: 26px;
           color: $ccorp;
+          @media(max-width: 1024px){
+            font-size: 18px;
+          }
         }
         i{
           display: flex;
@@ -21,7 +24,17 @@ section.faq{
           height: 38px;
           background-color: $ccorp;
           color: $cdark;
-          transition: 0.4s;
+          font-size: 20px;
+          &:before{
+            transition: 0.4s;
+          }
+        }
+        &.is-active{
+          i{
+            &:before{
+              transform: rotate(180deg);
+            }
+          }
         }
       }
       .faq_answer{

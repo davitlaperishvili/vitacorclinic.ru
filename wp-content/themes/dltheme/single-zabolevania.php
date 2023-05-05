@@ -48,6 +48,15 @@
               </li>
             </ul>
           </div>
+          <div class="question_form">
+            <figure>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/letter.png" alt="letter">
+            </figure>
+            <div class="desc">Наши администраторы ответят на любой интересующий вопрос по услуге</div>
+            <div class="theme_button">
+              <a href="#">Задать вопрос</a>
+            </div>
+          </div>
         </aside>
         <div class="main_content">
           <section class="text_block">
@@ -73,7 +82,8 @@
                     
                 elseif( get_row_layout() == 'text_block' ):
                     include(TEMPLATEPATH.'/acf-widgets/zabolevania/widget-text_block.php');
-                elseif( get_row_layout() == 'zabolevania_faq' ):
+
+                elseif( get_row_layout() == 'vrachi_faq' ):
                   include(TEMPLATEPATH.'/acf-widgets/zabolevania/widget-faq.php');
                 endif;
             endwhile;
@@ -86,7 +96,7 @@
     <section class="doctors_slider">
       <div class="container">
         <h2 class="section_title"><?php echo $fieldsGroup['doctors_section_title'] ?></h2>
-        <div class="doctors_slider_wrap swiper">
+        <div class="doctors_slider_wrap custom_swiper">
           <div class="swiper-wrapper">
             <?php
               // параметры по умолчанию
@@ -135,7 +145,7 @@
       <div class="container">
         <h2 class="section_title"><?php echo $nashi_liczenzii['block_title'] ?></h2>
         <div class="block_wrap">
-          <div class="licenses_slider swiper">
+          <div class="licenses_slider custom_swiper">
             <div class="swiper-wrapper">
               <?php 
                 foreach($nashi_liczenzii['licenses_list'] as $license){

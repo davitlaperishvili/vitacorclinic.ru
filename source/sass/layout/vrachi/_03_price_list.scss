@@ -15,6 +15,9 @@ section.vrachi_price{
           justify-content: space-between;
           padding-left: 40px;
           border-bottom: 1px solid $cdark;
+          @media(max-width: 1024px){
+            padding-left: 0;
+          }
           th{
             display: flex;
             align-items: center;
@@ -28,15 +31,26 @@ section.vrachi_price{
       }
       tbody{
         padding-left: 40px;
+        @media(max-width: 1024px){
+          padding-left: 0;
+        }
         tr{
           display: flex;
           justify-content: space-between;
           width: 100%;
           padding-left: 40px;
+          @media(max-width: 1024px){
+            padding-left: 0;
+            border-bottom: 1px solid rgba($cbase, 0.3);
+          }
           td{
-            height: 60px;
+            // height: 60px;
             display: flex;
             align-items: center;
+            padding: 10px 0;
+            @media(max-width: 1024px){
+              font-size: 14px;
+            }
             &:last-child{
               font-weight: 700;
               text-align: end;

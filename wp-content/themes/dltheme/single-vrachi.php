@@ -154,7 +154,7 @@
     ?>
     <section class="vrachi_banner_list">
         <div class="container">
-          <div class="banners_slider swiper">
+          <div class="banners_slider custom_banners_slider custom_swiper">
             <div class="swiper-wrapper">
               <?php 
                 foreach($banner_list['banner_list'] as $banner){
@@ -257,7 +257,7 @@
     <section class="doctors_slider">
       <div class="container">
         <h2 class="section_title"><?php echo $fieldsGroup['doctors_section_title'] ?></h2>
-        <div class="doctors_slider_wrap swiper">
+        <div class="doctors_slider_wrap custom_swiper">
           <div class="swiper-wrapper">
             <?php
               // параметры по умолчанию
@@ -306,7 +306,7 @@
       <div class="container">
         <h2 class="section_title"><?php echo $nashi_liczenzii['block_title'] ?></h2>
         <div class="block_wrap">
-          <div class="licenses_slider swiper">
+          <div class="licenses_slider custom_swiper">
             <div class="swiper-wrapper">
               <?php 
                 foreach($nashi_liczenzii['licenses_list'] as $license){

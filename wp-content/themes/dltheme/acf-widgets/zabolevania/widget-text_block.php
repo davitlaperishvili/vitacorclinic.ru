@@ -1,12 +1,12 @@
 
    <?php  
-        $text_block = get_sub_field('text_block'); 
+        $text_block = get_sub_field('text'); 
         $rowIndex = get_row_index();
     ?>
     
     <section class="text_block">
         <div class="container">
-          <div class="section_text"><?php echo $text_block['text'] ?></div>
+          <div class="section_text"><?php echo $text_block ?></div>
         </div>
     </section>
 
