@@ -8,7 +8,7 @@
     
     <section class="faq">
         <div class="container">
-          <h2 class="section_title"><?php echo $vrachi_faq['block_title'] ?></h2>
+          <h2 class="section_title"><?php echo $block_title ?></h2>
           <div class="faq_list">
             <?php
               foreach($faq_list as $faq) {

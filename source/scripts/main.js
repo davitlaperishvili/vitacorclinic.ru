@@ -32,4 +32,25 @@ $(window).on("load", function () {
       }
     });
   });
+
+  // custom table of content
+
+  const tableContentWrap = document.querySelector("#tableOfContent");
+
+  if (tableContentWrap) {
+    const allTitles = document.querySelectorAll(
+      ".dl_page .main_wraper h2, .dl_page .main_wraper h3"
+    );
+    let contentLi = "";
+    allTitles.forEach((title, index) => {
+      title.setAttribute("id", `title${index}`);
+      contentLi += `<li><a href="#title${index}">${title.innerText}</a></li>`;
+    });
+    const contentHTML = `
+      <div class="content_list">
+        <ul>${contentLi}</ul>
+      </div>
+    `;
+    tableContentWrap.innerHTML = contentHTML;
+  }
 });

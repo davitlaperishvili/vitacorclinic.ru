@@ -1,0 +1,36 @@
+.custom_table_of_content{
+
+  .content_list{
+    margin-bottom: 30px;
+    ul{
+      margin: 0;
+      display: grid;
+      grid-gap: 0 15px;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 25px 50px;
+      background-color: $cgray;
+      border-radius: 10px;
+      @media(max-width: 1024px){
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media(max-width: 768px){
+        grid-template-columns: 1fr;
+        padding: 20px;
+        grid-gap: 10px;
+      }
+      li{
+        a{
+          display: inline-flex;
+          padding: 2px 4px;
+          border-radius: 10px;
+          color: $cdark;
+          font-size: 15px;
+          transition: 0.4s;
+          &:hover{
+            background-color: $ccorp;
+          }
+        }
+      }
+    }
+  }
+}

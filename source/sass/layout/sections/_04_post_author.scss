@@ -1,0 +1,46 @@
+section.post_author_section{
+  margin-bottom: 40px;
+  @media(max-width: 1024px){
+    display: none;
+  }
+  .post_author_wrap{
+    display: grid;
+    grid-gap: 23px;
+    grid-template-columns: 170px 1fr;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: $cgray;
+    figure{
+      width: 100%;
+      height: 170px;
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .author_info{
+      width: max-content;
+      .title{
+        margin-bottom: 10px;
+        font-size: 13px;
+      }
+      .name{
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: $ccorp;
+      }
+      .spec{
+        margin-bottom: 10px;  
+        padding-bottom: 20px;
+        font-size: 15px;
+        color: $cbase;
+        border-bottom: 1px solid $cdark;
+      }
+      .years{
+        font-size: 13px;
+        color: #8795A6;
+      }
+    }
+  }
+}

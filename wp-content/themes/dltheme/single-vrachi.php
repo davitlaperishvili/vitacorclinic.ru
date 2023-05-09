@@ -62,7 +62,7 @@
                     <h2 class="banner_title"><?php echo $vrachi_banner['banner_title'] ?></h2>
                     <div class="banner_buttons">
                       <div class="theme_button">
-                        <a href="#">Записаться</a>
+                        <a href="#" class="pop1 btn btn-default btn-lg pum-trigger">Записаться</a>
                       </div>
                       <div class="banner_prices">
                         <?php
@@ -93,58 +93,68 @@
                 <nav>
                   <ul>
                     <li>
-                      <a href="">Услуги</a>
+                      <a href="#uslugi">Услуги</a>
                     </li>
                     <li>
-                      <a href="">Заболевания</a>
+                      <a href="#zabolevania">Заболевания</a>
                     </li>
                     <li>
-                      <a href="">Цены</a>
+                      <a href="#ceni">Цены</a>
                     </li>
                     <li>
-                      <a href="">Врачи</a>
+                      <a href="#vrachi">Врачи</a>
                     </li> 
                   </ul>
                 </nav>
               </div>
           </section>
-          <section class="services">
-              <h2 class="block_title">Услуги</h2>
-              <div class="services_list">
-                <div class="service_list_item">
-                  <ul>
-                    <?php
-                      // параметры по умолчанию
-                      $servicesPosts = get_posts( array(
-                        'numberposts' => -1,
-                        'category'    => 5,
-                        'post_type'   => 'post',
-                        'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-                    ) );
-
-                    foreach( $servicesPosts as $post ){
-                        setup_postdata( $post );
-                        $servicesDirections = get_post_meta(get_the_ID(), "napravleniya", true);
-                        if($servicesDirections && in_array(strval($pageID), $servicesDirections)){
-                          ?>
-                            <li>
-                              <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
-                            </li>
+          <?php 
+            $servicesPosts = get_posts( array(
+              'numberposts' => -1,
+              'category'    => 5,
+              'post_type'   => 'post',
+              'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+            ) );
+          ?>
+          <?php 
+            if(count($servicesPosts) == 0) {
+              ?>
+                
+                <section class="services" id="uslugi">
+                    <h2 class="block_title">Услуги</h2>
+                    <div class="services_list">
+                      <div class="service_list_item">
+                        <ul>
                           <?php
-                        }
-                    }
-                    wp_reset_postdata(); // сброс
-                    ?>
-                  </ul>
-                </div>
-              </div>
-          </section>
-          <script>
+                            // параметры по умолчанию
+                            
+
+                          foreach( $servicesPosts as $post ){
+                              setup_postdata( $post );
+                              $servicesDirections = get_post_meta(get_the_ID(), "napravleniya", true);
+                              if($servicesDirections && in_array(strval($pageID), $servicesDirections)){
+                                ?>
+                                  <li>
+                                    <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+                                  </li>
+                                <?php
+                              }
+                          }
+                          wp_reset_postdata(); // сброс
+                          ?>
+                        </ul>
+                      </div>
+                    </div>
+                </section>
+              <?php
+            }
+          ?>
+          <!-- <script>
             const services = document.querySelectorAll(".services .service_list_item ul li");
             if(services.length === 0) {
               document.querySelector(".services").remove()
             }
-          </script>
+          </script> -->
         </div>
       </div>
     </div>
@@ -180,7 +190,7 @@
         </div>
     </section>
     
-    <section class="what_doctor_can">
+    <section class="what_doctor_can" id="zabolevania">
       <div class="container">
         <h2 class="section_title">Что лечит гинеколог</h2>
         <div class="section_text">В нашей клинике принимают высококвалифицированные врачи-гинекологи, имеющие большой опыт лечения заболеваний женской репродуктивной сферы: воспалительных и гормональных заболеваний, половых инфекций, патологий внутренних органов, возрастных изменений в женском организме и многих других.</div>
@@ -191,7 +201,7 @@
     <?php  
         $vrachi_price_list = get_field('vrachi_price_list'); 
     ?>
-    <section class="vrachi_price">
+    <section class="vrachi_price" id="ceni">
         <div class="container">
           <h2 class="section_title"><?php echo $vrachi_price_list['block_title'] ?></h2>
           <div class="price_table">
@@ -254,7 +264,7 @@
         </div>
     </section>
 
-    <section class="doctors_slider">
+    <section class="doctors_slider" id="vrachi">
       <div class="container">
         <h2 class="section_title"><?php echo $fieldsGroup['doctors_section_title'] ?></h2>
         <div class="doctors_slider_wrap custom_swiper">

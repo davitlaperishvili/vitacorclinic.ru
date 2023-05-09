@@ -1,9 +1,14 @@
 .dl_page{
+  scroll-behavior: smooth;
   .print-link{
     display: none;
   }
   .page-top{
     margin-bottom: 60px;
+    @media(max-width: 1024px){
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
   }
   ul{
     li{
@@ -162,17 +167,38 @@
         grid-template-columns: 1fr;
       }
       aside{
+        @media(max-width: 1024px){
+          display: none;
+        }
         .diseases_list{
           background-color: $cread;
           padding: 20px;
           border-radius: 3px;
+          @media(max-width: 1024px){
+            padding: 10px;
+          }
+        }
+        .list_title{
+          margin-bottom: 35px;
+          a{
+            color: $cdark;
+            font-weight: 700;
+            &:hover{
+              color: $cbase;
+            }
+          }
         }
         ul{
           display: flex;
           flex-direction: column;
-          gap: 35px;
+          gap: 25px;
+          margin: 0;
+          margin-bottom: 25px;
           @media(max-width: 1024px){
             gap: 10px;
+          }
+          &:last-child{
+            margin-bottom: 0;
           }
           li{
             a{
@@ -228,6 +254,7 @@
       @media(max-width: 1024px){
         padding: 10px 35px;
         font-size: 15px;
+        text-align: center;
       }
     }
     &.white{
@@ -246,11 +273,15 @@
     color: $cbase;
     font-weight: 400;
     @media(max-width: 1024px){
+      margin-bottom: 25px;
       font-size: 20px;
     }
   }
   .text_block{
     margin-bottom: 60px;
+    @media(max-width: 1024px){
+      margin-bottom: 20px;
+    }
   }
   .section_text{
     font-size: 15px;
@@ -263,12 +294,19 @@
       background-color: $cgray;
       color: $cbase;
       margin-bottom: 50px;
+      @media(max-width: 1024px){
+        padding: 15px;
+        margin-bottom: 20px;
+      }
       &:before,
       &:after{
         display: none;
       }
       strong{
         font-size: 32px;
+        @media(max-width: 1024px){
+          font-size: 20px;
+        }
       }
     }
     h3{
@@ -276,6 +314,84 @@
       margin-bottom: 25px;
       color: $cbase;
       font-weight: 400;
+    }
+    &.diseases{
+      h3{
+        font-size: 32px;
+      }
+      ol{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        counter-reset: ol-counter 0;
+        margin-bottom: 25px;
+        @media(max-width: 1024px){
+          margin-bottom: 15px;
+          margin-left: 10px;
+        }
+        li{
+          counter-increment: ol-counter 1;
+          &::before{
+            content: counter(ol-counter);
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: $ccorp;
+            color: $cwhite;
+          }
+          strong{
+            &:first-of-type{
+              display: block;
+              margin-bottom: 20px;
+              margin-left: 50px;
+              top: 10px;
+            }
+          }
+        }
+      }
+      ul{
+        padding: 10px 20px 10px 40px;
+        background-color: $cgray;
+        margin: 0;
+        margin-bottom: 25px;
+        list-style-type: disc;
+        li{
+          all: unset;
+          display: list-item;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  .who_works{
+    margin-top: 20px;
+    .who_works_wrap{
+      display: inline-block;
+      align-items: center;
+      padding: 4px 10px;
+      background: #F2F6F7;
+      box-shadow: 0px 2px 4px rgba(22, 84, 69, 0.15);
+      border-radius: 10px;
+      font-size: 15px;
+      @media(max-width: 1024px){
+        // flex-wrap: wrap;
+      }
+      .inc{
+        margin-right: 10px;
+      }
+      .text{
+        margin-right: 4px;
+        color: $cdark;
+      }
+      .list{
+        a{
+          color: $ccorp;
+        }
+      }
     }
   }
 }

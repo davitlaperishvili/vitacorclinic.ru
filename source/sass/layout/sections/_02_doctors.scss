@@ -1,5 +1,8 @@
 section.doctors_slider{
   margin-bottom: 50px;
+  @media(max-width: 1024px){
+    margin-bottom: 25px;
+  }
   .doctors_slider_wrap{
     .doctor_item{
       display: flex;

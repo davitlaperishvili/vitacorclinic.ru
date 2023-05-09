@@ -38,6 +38,17 @@ section.vrachi_banner_list{
           margin-bottom: 35px;
           font-size: 16px;
           color: $cdark;
+          @media(max-width: 1024px){
+            margin-bottom: 20px;
+          }
+        }
+        .theme_button{
+          a{
+            @media(max-width: 1024px){
+              width: 100%;
+            }
+            
+          }
         }
       }
     }

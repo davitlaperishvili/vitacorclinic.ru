@@ -1,5 +1,8 @@
 section.faq{
   margin-bottom: 40px;
+  @media(max-width: 1024px){
+    margin-bottom: 25px;
+  }
   .faq_list{
     .faq_item{
       border-bottom: 1px solid rgba($cdark, 0.2);
@@ -13,7 +16,7 @@ section.faq{
           font-size: 26px;
           color: $ccorp;
           @media(max-width: 1024px){
-            font-size: 18px;
+            font-size: 16px;
           }
         }
         i{
@@ -25,6 +28,11 @@ section.faq{
           background-color: $ccorp;
           color: $cdark;
           font-size: 20px;
+          @media(max-width: 1024px){
+            width: 20px;
+            height: 20px;
+            font-size: 18px;
+          }
           &:before{
             transition: 0.4s;
           }
@@ -42,6 +50,9 @@ section.faq{
         display: none;
         font-size: 14px;
         color: $cdark;
+        @media(max-width: 1024px){
+          padding-top: 15px;
+        }
       }
       &.is-active{
         .faq_question{

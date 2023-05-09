@@ -22,14 +22,38 @@ export default function plugindParameters() {
     },
   });
   let licenses_slider = new Swiper(".licenses_slider", {
-    slidesPerView: 4,
-    spaceBetween: 50,
+    slidesPerView: 1,
+    spaceBetween: 10,
     loop: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
   });
   let doctors_slider = new Swiper(".doctors_slider_wrap", {
-    slidesPerView: 3,
-    spaceBetween: 50,
+    slidesPerView: 1,
+    spaceBetween: 20,
     loop: false,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
   });
 
   // Gallery
