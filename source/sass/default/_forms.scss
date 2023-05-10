@@ -37,12 +37,13 @@ button,
 a{
 	&.gilaki{
 		@extend .flex;
-		height: 45px;
+		height: 53px;
 		padding: 0 20px;
 		color: $cwhite;
 		text-align: center;
-		background-color: $ccorp;
-		border-radius: $bdrm;
+		background-color: #ED7453;
+		border-radius: 40px;
+    font-size: 16px;
 		cursor: pointer;
 		&.red{
 			background-color: $cdanger;

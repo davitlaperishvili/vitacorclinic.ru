@@ -133,6 +133,9 @@
 
                 elseif( get_row_layout() == 'vrachi_faq' ):
                   include(TEMPLATEPATH.'/acf-widgets/zabolevania/widget-faq.php');
+
+                elseif( get_row_layout() == 'sign_in' ):
+                  include(TEMPLATEPATH.'/acf-widgets/zabolevania/widget-sign.php');
                 endif;
             endwhile;
         

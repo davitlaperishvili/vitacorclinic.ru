@@ -1,0 +1,64 @@
+section.what_doctor_can{
+  padding: 60px 0;
+  background-color: $cgray;
+  margin-bottom: 40px;
+  @media(max-width: 1024px){
+    padding: 20px 0;
+  }
+  .section_list{
+    margin-top: 50px;
+    @media(max-width: 1024px){
+      margin-top: 30px;
+    }
+  }
+}
+.alfabet_list{
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  @media(max-width: 1280px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media(max-width: 1024px){
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media(max-width: 768px){
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+  }
+  .alfabet_item{
+    .alfabet_title{
+      .letter{
+        margin-bottom: 30px;
+        font-size: 30px;
+        color: $ccorp;
+        @media(max-width: 1024px){
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .alfabet_services{
+      ul{
+        @extend .no-list;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        li{
+          a{
+            display: inline-flex;
+            padding: 2px 4px;
+            font-size: 14px;
+            color: $cdark;
+            transition: 0.4s;
+            border-radius: 8px;
+            &:hover{
+              background-color: $ccorp;
+            }
+          }
+        }
+      }
+    }
+  }
+}

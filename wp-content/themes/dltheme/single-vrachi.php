@@ -197,8 +197,8 @@
     
     <section class="what_doctor_can" id="zabolevania">
       <div class="container">
-        <h2 class="section_title">Что лечит гинеколог</h2>
-        <div class="section_text">В нашей клинике принимают высококвалифицированные врачи-гинекологи, имеющие большой опыт лечения заболеваний женской репродуктивной сферы: воспалительных и гормональных заболеваний, половых инфекций, патологий внутренних органов, возрастных изменений в женском организме и многих других.</div>
+        <h2 class="section_title"><?php echo $fieldsGroup['directions_title'] ?></h2>
+        <div class="section_text"><?php echo $fieldsGroup['tekst_bloka_chto_lechit_vrach'] ?></div>
         <div class="section_list">
           <div class="alfabet_list trans-all-4">
             <?php 

@@ -315,54 +315,55 @@
       color: $cbase;
       font-weight: 400;
     }
+    
+    ol{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      counter-reset: ol-counter 0;
+      margin-bottom: 25px;
+      @media(max-width: 1024px){
+        margin-bottom: 15px;
+        margin-left: 10px;
+      }
+      li{
+        counter-increment: ol-counter 1;
+        &::before{
+          content: counter(ol-counter);
+          float: left;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          background-color: $ccorp;
+          color: $cwhite;
+        }
+        strong{
+          &:first-of-type{
+            display: block;
+            margin-bottom: 20px;
+            margin-left: 50px;
+            top: 10px;
+          }
+        }
+      }
+    }
+    ul{
+      padding: 10px 20px 10px 40px;
+      background-color: $cgray;
+      margin: 0;
+      margin-bottom: 25px;
+      list-style-type: disc;
+      li{
+        all: unset;
+        display: list-item;
+        font-size: 17px;
+      }
+    }
     &.diseases{
       h3{
         font-size: 32px;
-      }
-      ol{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        counter-reset: ol-counter 0;
-        margin-bottom: 25px;
-        @media(max-width: 1024px){
-          margin-bottom: 15px;
-          margin-left: 10px;
-        }
-        li{
-          counter-increment: ol-counter 1;
-          &::before{
-            content: counter(ol-counter);
-            float: left;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: $ccorp;
-            color: $cwhite;
-          }
-          strong{
-            &:first-of-type{
-              display: block;
-              margin-bottom: 20px;
-              margin-left: 50px;
-              top: 10px;
-            }
-          }
-        }
-      }
-      ul{
-        padding: 10px 20px 10px 40px;
-        background-color: $cgray;
-        margin: 0;
-        margin-bottom: 25px;
-        list-style-type: disc;
-        li{
-          all: unset;
-          display: list-item;
-          font-size: 17px;
-        }
       }
     }
   }
