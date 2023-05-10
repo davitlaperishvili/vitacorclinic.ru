@@ -19,33 +19,32 @@
           </div>
       </div>
   </section>
+  <?php 
+    $alpaServices = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'zabolevania',
+        'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+    ) );
+  ?>
   <div class="main_wraper">
     <div class="sidebar_container">
       <div class="container">
         <aside>
           <div class="diseases_list">
             <ul>
-              <li>
-                <a href="">Вагинит</a>
-              </li>
-              <li>
-                <a href="">Вагиноз</a>
-              </li>
-              <li>
-                <a href="">Вагинизм</a>
-              </li>
-              <li>
-                <a href="">Вирус папилломы человека (ВПЧ)</a>
-              </li>
-              <li>
-                <a href="">Внематочная беременность</a>
-              </li>
-              <li>
-                <a href="">Вульвит</a>
-              </li>
-              <li>
-                <a href="">Гиперплазия эндометрия</a>
-              </li>
+              <?php 
+              foreach( $alpaServices as $post1 ){
+                  setup_postdata( $post1 );
+                  $workers1 = get_field("who_works", $post1->ID);
+                  if($workers1 && in_array(strval($pageID), $workers1)){
+                    ?>
+                      <li>
+                        <a href="<?php echo get_the_permalink($post1->ID) ?>"><?php echo get_the_title($post1->ID) ?></a>
+                      </li>
+                    <?php
+                  }
+              }
+              ?>
             </ul>
           </div>
         </aside>
@@ -162,39 +161,132 @@
     <?php  
         $banner_list = get_field('vrachi_banner_slider'); 
     ?>
-    <section class="vrachi_banner_list">
-        <div class="container">
-          <div class="banners_slider custom_banners_slider custom_swiper">
-            <div class="swiper-wrapper">
-              <?php 
-                foreach($banner_list['banner_list'] as $banner){
-                  ?>
-                    <div class="swiper-slide">
-                      <figure>
-                        <img src="<?php echo $banner['banner_image']['url'] ?>" alt="<?php echo $banner['banner_image']['alt'] ?>">
-                      </figure>
-                      <div class="banner_content">
-                        <div class="banner_title"><?php echo $banner['banner_title'] ?></div>
-                        <div class="banner_text"><?php echo $banner['banner_text'] ?></div>
-                        <div class="theme_button white">
-                          <a href="<?php echo $banner['banner_button_url'] ?>"><?php echo $banner['banner_button_text'] ?></a>
-                        </div>
-                      </div>
-                    </div>
-                  <?php
-                }
-              ?>
-            </div>
-            <div class="swiper-pagination-banner_list"></div>
-          </div>
-        </div>
-    </section>
+    <?php 
+      if($banner_list){
+        ?>
+          <section class="vrachi_banner_list">
+              <div class="container">
+                <div class="banners_slider custom_banners_slider custom_swiper">
+                  <div class="swiper-wrapper">
+                    <?php 
+                      foreach($banner_list['banner_list'] as $banner){
+                        ?>
+                          <div class="swiper-slide">
+                            <figure>
+                              <img src="<?php echo $banner['banner_image']['url'] ?>" alt="<?php echo $banner['banner_image']['alt'] ?>">
+                            </figure>
+                            <div class="banner_content">
+                              <div class="banner_title"><?php echo $banner['banner_title'] ?></div>
+                              <div class="banner_text"><?php echo $banner['banner_text'] ?></div>
+                              <div class="theme_button white">
+                                <a href="<?php echo $banner['banner_button_url'] ?>"><?php echo $banner['banner_button_text'] ?></a>
+                              </div>
+                            </div>
+                          </div>
+                        <?php
+                      }
+                    ?>
+                  </div>
+                  <div class="swiper-pagination-banner_list"></div>
+                </div>
+              </div>
+          </section>
+        <?php
+      }
+    ?>
     
     <section class="what_doctor_can" id="zabolevania">
       <div class="container">
         <h2 class="section_title">Что лечит гинеколог</h2>
         <div class="section_text">В нашей клинике принимают высококвалифицированные врачи-гинекологи, имеющие большой опыт лечения заболеваний женской репродуктивной сферы: воспалительных и гормональных заболеваний, половых инфекций, патологий внутренних органов, возрастных изменений в женском организме и многих других.</div>
-        <div class="section_list"></div>
+        <div class="section_list">
+          <div class="alfabet_list trans-all-4">
+            <?php 
+                // sorting array
+                function abc($a,$b){
+                    $la = mb_substr($a,0,1,'utf-8');
+                    $lb = mb_substr($b,0,1,'utf-8');
+                    if(ord($la) > 122 && ord($lb) > 122){
+                        return $a > $b ? 1 : -1;
+                    }
+                    if(ord($la) > 122 || ord($lb) > 122) {
+                        return $a < $b ? 1 : -1;
+                    }
+                
+                }
+                // push in associative array
+                function array_push_assoc($array, $key, $value){
+                    $array[$key] = $value;
+                    return $array;
+                  }
+
+
+                
+
+                $servicesTitle = [];
+                //get all services title and permalink
+                foreach( $alpaServices as $post ){
+                    setup_postdata( $post );
+                    $title = get_the_title();
+                    $workers = get_post_meta(get_the_ID(), "who_works", true);
+                    if($workers && in_array(strval($pageID), $workers)){
+                      $servicesTitle = array_push_assoc($servicesTitle, get_the_permalink(), get_the_title());
+                    }
+                }
+                
+                wp_reset_postdata(); // сброс
+                // sort services 
+                uasort($servicesTitle, 'abc');
+
+                $firstChar;
+                $currentChar;
+
+                foreach($servicesTitle as $service){
+                    $firstChar = mb_substr($service, 0, 1);
+                    $currentChar = $currentChar.$firstChar;
+
+                    // check if first character goes twice, if yes put firstChar to currentChar 
+                    if(mb_strlen($currentChar) > 1 && $firstChar !== mb_substr($currentChar, 0, 1)){
+                        $currentChar = $firstChar;
+                    }
+
+                    //
+                    if( mb_strlen($currentChar) == 1){
+                        $count = 0;
+                        foreach($servicesTitle as $serviceCount){
+                            if($currentChar == mb_substr($serviceCount, 0, 1)){
+                                $count++;
+                            }
+                        }
+                        ?>
+                            <div class="alfabet_item">
+                                <div class="alfabet_title">
+                                    <div class="letter"><?php echo $currentChar ?></div>
+                                </div>
+                                <div class="alfabet_services">
+                                    <ul>
+                                        <?php 
+                                            foreach($servicesTitle as $url => $serviceName){
+                                                if($currentChar == mb_substr($serviceName, 0, 1)){
+                                                    ?>
+                                                        <li>
+                                                            <a href="<?php echo $url ?>"><?php echo $serviceName ?></a>
+                                                        </li>
+                                                    <?php
+                                                }
+                                            }
+                                        ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        <?php
+                    }else{
+                        
+                    }
+                }
+            ?>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -333,10 +425,10 @@
           </div>
           <div class="block_buttons">
             <div class="theme_button">
-              <a href="#">Перейти в раздел лицензии</a>
+              <a href="https://vitacorclinic.ru/company/licenses/">Перейти в раздел лицензии</a>
             </div>
             <div class="theme_button white">
-              <a href="#">Перейти в раздел Контролирующие организации</a>
+              <a href="https://vitacorclinic.ru/company/kontroliruyushchie-organizatsii/">Перейти в раздел Контролирующие организации</a>
             </div>
           </div>
         </div>

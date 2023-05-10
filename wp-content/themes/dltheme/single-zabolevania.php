@@ -64,42 +64,32 @@
       <div class="container">
         <aside>
           <div class="diseases_list">
-          <?php
-            $doctorsCounter1 = [];
-              // параметры по умолчанию
-              
+          <?php 
+              $alpaServices = get_posts( array(
+                  'numberposts' => -1,
+                  'post_type'   => 'zabolevania',
+                  'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+              ) );
+            ?>
+            <ul>
+              <?php
 
-            foreach( $doctorsPosts as $post ){
-                setup_postdata( $post );
-                $directions = get_post_meta(get_the_ID(), "napravleniya", true);
-                foreach($who_works as $workerID1) {
-                  if(!in_array($workerID1, $doctorsCounter1)){
-                    if($directions && in_array(strval($workerID1), $directions)){
-                      array_push($doctorsCounter1, $workerID1);
-                      $deseases = get_field("vrachi_fileds_group", $workerID1);
+                foreach( $alpaServices as $post ){
+                    setup_postdata( $post );
+                    $kto_lechit = get_post_meta(get_the_ID(), "who_works", true);
+                    if(count(array_intersect($who_works, $kto_lechit)) > 0){
                       ?>
-                        <div class="list_title">
-                          <a href="<?php echo get_the_permalink($workerID1) ?>"><?php echo get_the_title($workerID1) ?></a>
-                        </div>
-                        <ul>
-                          <?php 
-                            foreach($deseases['chto_lechit_vrach'] as $item ) {
-                              ?>
-                                <li>
-                                  <a href="<?php echo get_the_permalink($item) ?>"><?php echo get_the_title($item)?> </a>
-                                </li>
-                              <?php
-                            }
-                          ?>
-                        </ul>
+                        <li>
+                          <a href="<?php echo get_the_permalink() ?>"><?php echo get_the_title()?> </a>
+                        </li>
                       <?php
                     }
-                  }
+                    
                 }
-            }
-            
-            wp_reset_postdata(); // сброс
-          ?>
+                
+                wp_reset_postdata(); // сброс
+              ?>
+            </ul>
           </div>
           <div class="question_form">
             <figure>
@@ -232,10 +222,10 @@
           </div>
           <div class="block_buttons">
             <div class="theme_button">
-              <a href="#">Перейти в раздел лицензии</a>
+              <a href="https://vitacorclinic.ru/company/licenses/">Перейти в раздел лицензии</a>
             </div>
             <div class="theme_button white">
-              <a href="#">Перейти в раздел Контролирующие организации</a>
+              <a href="https://vitacorclinic.ru/company/kontroliruyushchie-organizatsii/">Перейти в раздел Контролирующие организации</a>
             </div>
           </div>
         </div>
