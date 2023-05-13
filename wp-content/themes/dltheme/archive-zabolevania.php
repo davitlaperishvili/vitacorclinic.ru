@@ -111,8 +111,6 @@ $currentTax = get_queried_object();
     </div>
     <section class="what_doctor_can" id="zabolevania">
       <div class="container">
-        <h2 class="section_title"><?php echo $fieldsGroup['directions_title'] ?></h2>
-        <div class="section_text"><?php echo $fieldsGroup['tekst_bloka_chto_lechit_vrach'] ?></div>
         <div class="section_list">
           <div class="alfabet_list trans-all-4">
               <div class="alfabet_item filter-is-active text_filter">

@@ -209,6 +209,12 @@
             }
           }
         }
+        
+        &.ready_sidebar{
+          ul.bellows-submenu{
+            display: none;
+          }
+        }
         .question_form{
           display: flex;
           align-items: center;
