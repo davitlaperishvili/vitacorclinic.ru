@@ -25,6 +25,11 @@
         'post_type'   => 'zabolevania',
         'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
     ) );
+    $vrachiPosts = get_posts( array(
+      'numberposts' => -1,
+      'post_type'   => 'vrachi',
+      'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+  ) );
   ?>
   <div class="main_wraper">
     <div class="sidebar_container">
@@ -32,7 +37,7 @@
         <aside>
           <div class="diseases_list">
             <ul>
-              <?php 
+              <!-- <?php 
               foreach( $alpaServices as $post1 ){
                   setup_postdata( $post1 );
                   $workers1 = get_field("who_works", $post1->ID);
@@ -44,6 +49,18 @@
                     <?php
                   }
               }
+              ?> -->
+              <?php 
+                foreach( $vrachiPosts as $post1 ){
+                    setup_postdata( $post1 );
+                    if($pageID !== $post1->ID){
+                      ?>
+                        <li>
+                          <a href="<?php echo get_the_permalink($post1->ID) ?>"><?php echo get_the_title($post1->ID) ?></a>
+                        </li>
+                      <?php
+                    }
+                }
               ?>
             </ul>
           </div>

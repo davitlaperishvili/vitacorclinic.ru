@@ -27,7 +27,41 @@ section.what_doctor_can{
     grid-gap: 15px;
     grid-template-columns: 1fr;
   }
+  &.filtered{
+    grid-template-columns: 1fr;
+    .alfabet_item{
+      display: none;
+      .alfabet_title{
+        display: none;
+      }
+      &.filter-is-active{
+        display: block;
+        width: 100%;
+        .alfabet_services{
+          ul{
+            display: grid;
+            grid-gap: 50px;
+            grid-template-columns: repeat(4, 1fr);
+            @media(max-width: 1280px){
+              grid-template-columns: repeat(3, 1fr);
+            }
+            @media(max-width: 1024px){
+              grid-gap: 30px;
+              grid-template-columns: repeat(2, 1fr);
+            }
+            @media(max-width: 768px){
+              grid-gap: 15px;
+              grid-template-columns: 1fr;
+            }
+          }
+        }
+      }
+    }
+  }
   .alfabet_item{
+    &.text_filter{
+      display: none;
+    }
     .alfabet_title{
       .letter{
         margin-bottom: 30px;
