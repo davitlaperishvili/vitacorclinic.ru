@@ -64,7 +64,20 @@ $currentTax = get_queried_object();
           <?php get_sidebar(); ?>
         </aside>
         <div class="main_content">
-          
+          <div class="vrachi_archive_banner">
+            <figure>
+              <img src="<?php echo get_field('vrachi_archive_banner', 'option')['url']; ?>" alt="<?php echo get_field('vrachi_archive_banner', 'option')['alt']; ?>">
+            </figure>
+            <div class="buttons">
+              <div class="theme_button">
+                <a href="#" class="pop1 pum-trigger">Записаться на прием</a>
+              </div>
+              
+              <div class="theme_button">
+                <a href="/zabolevania" class="">Справочник заболеваний</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -133,6 +146,47 @@ $currentTax = get_queried_object();
       </div>
     </div>
   </section>
+  <section class="search_doctor">
+    <div class="container">
+      <h2 class="section_title">Поиск специалиста</h2>
+      <div class="doctor_search_form">
+        <form action="">
+          <div class="form_items">Выберите тип специалиста
+            <div class="form_item">
+              <input type="text" placeholder="Поиск по ФИО">
+            </div>
+            <div class="form_item">
+              <select name="" id="" class="selectori" data-placeholder="Выберите тип специалиста">
+                <option value="adult">Взрослые</option>
+                <option value="kids">Дети</option>
+              </select>
+            </div>
+            <div class="form_item">
+              <?php 
+                $services = get_posts( array(
+                  'numberposts' => -1,
+                  'post_type'   => 'vrachi',
+                  'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+              ) );
+              ?>
+              <select name="" id="" class="selectori" data-placeholder="Выберите направление">
+                  <?php 
+                    foreach( $services as $post ){
+                      setup_postdata( $post );
+                      ?>
+                        <option value="<?php echo get_the_ID() ?>"><?php the_title() ?></option>
+                      <?php
+                    }
+                    
+                    wp_reset_postdata(); // сброс
+                  ?>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
   <section class="doctors_slider" id="vrachi">
       <div class="container">
         <div class="doctors_list">
@@ -145,9 +199,24 @@ $currentTax = get_queried_object();
             ) );
 
             foreach( $doctorsPosts as $post ){
+              $directionID = get_post_meta(get_the_ID(), "napravleniya", true);
+              $tipSpecialista = get_post_meta(get_the_ID(), "tip_speczialista", true);
+              $idList = "";
+              if($directionID){
+                foreach($directionID as $key => $id){
+                  if($key == 0){
+                    $idList = $id;
+                  }else{
+                    
+                    $idList = $id. "," . $idList;
+                  }
+                }
+              }else{
+                $idList = "none";
+              }
                 setup_postdata( $post );
                 ?>
-                  <div class="doctor_item">
+                  <div class="doctor_item" data-direction="<?php echo $idList ?>" data-type="<?php echo $tipSpecialista[0]; echo $tipSpecialista[1] ?>">
                     <figure>
                       <?php the_post_thumbnail() ?>
                     </figure>

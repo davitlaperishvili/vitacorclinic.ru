@@ -36,3 +36,15 @@ section.doctors_slider{
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+section.search_doctor{
+  .doctor_search_form{
+    .form_items{
+      .form_item{
+        input{
+          
+        }
+      }
+    }
+  }
+}

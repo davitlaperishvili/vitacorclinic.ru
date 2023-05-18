@@ -1,4 +1,4 @@
-// import 'select2';
+import "select2";
 // import 'magnific-popup';
 
 // import hamburderMenu from "./libs/hamburger_menu.js";

@@ -13,10 +13,10 @@ section.vrachi_price{
         tr{
           display: flex;
           justify-content: space-between;
-          padding-left: 40px;
+          padding: 0 40px;
           border-bottom: 1px solid $cdark;
           @media(max-width: 1024px){
-            padding-left: 0;
+            padding: 0 0;
           }
           th{
             display: flex;
@@ -30,17 +30,17 @@ section.vrachi_price{
         }
       }
       tbody{
-        padding-left: 40px;
+        padding: 0 40px;
         @media(max-width: 1024px){
-          padding-left: 0;
+          padding: 0 0;
         }
         tr{
           display: flex;
           justify-content: space-between;
           width: 100%;
-          padding-left: 40px;
+          padding: 0 40px;
           @media(max-width: 1024px){
-            padding-left: 0;
+            padding: 0 0;
             border-bottom: 1px solid rgba($cbase, 0.3);
           }
           td{
