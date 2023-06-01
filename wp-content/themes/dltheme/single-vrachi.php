@@ -133,7 +133,7 @@
             ) );
           ?>
           <?php 
-            if(count($servicesPosts) == 0) {
+            if(count($servicesPosts) != 0) {
               ?>
                 
                 <section class="services" id="uslugi">
@@ -165,12 +165,12 @@
               <?php
             }
           ?>
-          <!-- <script>
+          <script>
             const services = document.querySelectorAll(".services .service_list_item ul li");
             if(services.length === 0) {
               document.querySelector(".services").remove()
             }
-          </script> -->
+          </script>
         </div>
       </div>
     </div>
@@ -401,9 +401,9 @@
                     <div class="swiper-slide">
                         <div class="doctor_item">
                           <figure>
-                            <?php the_post_thumbnail() ?>
+                            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?></a>
                           </figure>
-                          <div class="doctor_name"><?php the_title() ?></div>
+                          <div class="doctor_name"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></div>
                           <div class="doctor_direction"><?php echo get_post_meta(get_the_ID(), "dolzhnost", true); ?></div>
                         </div>
                     </div>

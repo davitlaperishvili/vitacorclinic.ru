@@ -12,21 +12,51 @@ section.doctors_slider{
       figure{
         margin-bottom: 20px;
         max-height: 415px;
+        width: 100%;
+        @media(max-width: 1024px){
+          max-height: 360px;
+        }
+        a{
+          display: block;
+          max-height: 415px;
+          width: 100%;
+          @media(max-width: 1024px){
+            max-height: 360px;
+          }
+        }
         img{
           width: 100%;
           height: 100%;
           max-height: 415px;
           object-fit: cover;
+          @media(max-width: 1024px){
+            max-height: 360px;
+          }
         }
       }
       .doctor_name{
         margin-bottom: 10px;
-        font-size: 17px;
-        color: $cbase;
+        a{
+          font-size: 17px;
+          color: $cbase;
+          transition: 0.4s;
+          &:hover{
+            color: $ccorp;
+          }
+        }
       }
       .doctor_direction{
         font-size: 13px;
         text-align: center;
+      }
+      .theme_button{
+        &.mobile_only{
+          display: none;
+          margin-top: 20px;
+          @media(max-width: 1024px){
+            display: block;
+          }
+        }
       }
     }
   }
@@ -34,17 +64,71 @@ section.doctors_slider{
     display: grid;
     grid-gap: 60px;
     grid-template-columns: repeat(3, 1fr);
+    @media(max-width: 1440px){
+      grid-gap: 25px;
+    }
+    @media(max-width: 1024px){
+      grid-gap: 15px;
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 section.search_doctor{
+  margin-bottom: 40px;
+  @media(max-width: 1024px){
+    margin-bottom: 20px;
+  }
   .doctor_search_form{
+    background: #F7F9FA;
+    box-shadow: 0px 2px 4px rgba(22, 84, 69, 0.15);
+    border-radius: 15px;
+    padding: 20px 70px;
+    @media(max-width: 1024px){
+      padding: 15px;
+    }
     .form_items{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      @media(max-width: 1024px){
+        flex-direction: column;
+        grid-gap: 10px;
+      }
       .form_item{
-        input{
-          
+        margin-bottom: 0;
+        flex: 1;
+        @media(max-width: 1024px){
+          width: 100%;
+        }
+        input,.select2{
+          width: 100%;
+          background-color: $cwhite;
+          border-radius: 15px;
+          border: 1px solid $ccorp;
+          @media(max-width: 1024px){
+            width: 100% !important;
+          }
+          &.select2-container--open{
+            border-radius: 5px;
+          }
+        }
+        .select2-selection{
+          border: none;
+          border-radius: 15px;
         }
       }
+    }
+  }
+}
+.select2-results__options{
+  li{
+    width: 100%;
+    &:before{
+      display: none;
+    }
+    &.select2-results__option--highlighted{
+      background-color: $ccorp !important;
     }
   }
 }

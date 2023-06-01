@@ -54,6 +54,8 @@ section.vrachi_price{
             &:last-child{
               font-weight: 700;
               text-align: end;
+              min-width: 65px;
+              justify-content: flex-end;
             }
           }
         }

@@ -113,4 +113,76 @@ $(window).on("load", function () {
       $(".alfabet_list").removeClass("filtered");
     }
   });
+
+  // Doctors filter
+
+  const doctorsFilterItems = $(".doctor_filter_item");
+  const filteredDoctors = $(".filter_doctors .doctors_list .doctor_item");
+  if (filteredDoctors.length > 0 && doctorsFilterItems.length > 0) {
+    doctorsFilterItems.on("change", function (item) {
+      let valueDirection = "";
+      let valueType = "";
+      let valueName = "";
+      doctorsFilterItems.each(function () {
+        if ($(this).attr("name") === "name") {
+          valueName = $(this).val();
+        } else if ($(this).attr("name") === "type") {
+          valueType = $(this).val();
+        } else if ($(this).attr("name") === "direction") {
+          valueDirection = $(this).val();
+        }
+        if (!$(this).val() || $(this).val() == "none" || $(this).val() == "") {
+          $(this).addClass("is-empty");
+        } else {
+          $(this).removeClass("is-empty");
+        }
+        console.log(valueDirection, valueType, valueName);
+      });
+      filteredDoctors.each(function () {
+        // get doctors filter values
+        const directionID = $(this).attr("data-direction");
+        const type = $(this).attr("data-type");
+        const doctorName = $(this).find(".doctor_name").text();
+
+        let filtered = true;
+        doctorsFilterItems.each(function () {
+          if (!$(this).hasClass("is-empty")) {
+            console.log("NOT EMPTY: ", $(this).attr("name"));
+            if (
+              $(this).attr("name") === "name" &&
+              !doctorName.includes(valueName)
+            ) {
+              filtered = false;
+            } else if (
+              $(this).attr("name") === "type" &&
+              !type.includes(valueType)
+            ) {
+              filtered = false;
+            } else if (
+              $(this).attr("name") === "direction" &&
+              !directionID.includes(valueDirection)
+            ) {
+              filtered = false;
+            }
+          }
+        });
+        if (filtered) {
+          $(this).css("display", "flex");
+          $(this).addClass("is-active");
+        } else {
+          $(this).css("display", "none");
+          $(this).removeClass("is-active");
+        }
+      });
+
+      // show no result
+      if (
+        $(".filter_doctors .doctors_list .doctor_item.is-active").length == 0
+      ) {
+        $(".no_result").addClass("is-active");
+      } else {
+        $(".no_result").removeClass("is-active");
+      }
+    });
+  }
 });

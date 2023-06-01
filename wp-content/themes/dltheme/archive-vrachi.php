@@ -150,13 +150,14 @@ $currentTax = get_queried_object();
     <div class="container">
       <h2 class="section_title">Поиск специалиста</h2>
       <div class="doctor_search_form">
-        <form action="">
-          <div class="form_items">Выберите тип специалиста
+        <form action="" onsubmit="return false;">
+          <div class="form_items">
             <div class="form_item">
-              <input type="text" placeholder="Поиск по ФИО">
+              <input type="text" placeholder="Поиск по ФИО" class="doctor_filter_item" name="name">
             </div>
             <div class="form_item">
-              <select name="" id="" class="selectori" data-placeholder="Выберите тип специалиста">
+              <select name="type" id="" class="selectori doctor_filter_select doctor_filter_item" data-placeholder="Выберите тип специалиста">
+                <option value="">Выберите тип специалиста</option>
                 <option value="adult">Взрослые</option>
                 <option value="kids">Дети</option>
               </select>
@@ -169,7 +170,8 @@ $currentTax = get_queried_object();
                   'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
               ) );
               ?>
-              <select name="" id="" class="selectori" data-placeholder="Выберите направление">
+              <select name="direction" id="" class="selectori doctor_filter_select doctor_filter_item" data-placeholder="Выберите направление">
+                <option value="">Выберите направление</option>
                   <?php 
                     foreach( $services as $post ){
                       setup_postdata( $post );
@@ -187,7 +189,7 @@ $currentTax = get_queried_object();
       </div>
     </div>
   </section>
-  <section class="doctors_slider" id="vrachi">
+  <section class="doctors_slider filter_doctors" id="vrachi">
       <div class="container">
         <div class="doctors_list">
         <?php
@@ -218,16 +220,20 @@ $currentTax = get_queried_object();
                 ?>
                   <div class="doctor_item" data-direction="<?php echo $idList ?>" data-type="<?php echo $tipSpecialista[0]; echo $tipSpecialista[1] ?>">
                     <figure>
-                      <?php the_post_thumbnail() ?>
+                      <a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?></a>
                     </figure>
-                    <div class="doctor_name"><?php the_title() ?></div>
+                    <div class="doctor_name"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></div>
                     <div class="doctor_direction"><?php echo get_post_meta(get_the_ID(), "dolzhnost", true); ?></div>
+                    <div class="theme_button mobile_only">
+                      <a href="#" class="pop1 pum-trigger" style="cursor: pointer;">Запись онлайн</a>
+                    </div>
                   </div>
                 <?php
             }
             
             wp_reset_postdata(); // сброс
             ?>
+            <div class="no_result">Не удалось найти специалиста</div>
         </div>
       </div>
     </section>
