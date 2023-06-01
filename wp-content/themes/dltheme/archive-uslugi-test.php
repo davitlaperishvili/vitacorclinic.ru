@@ -22,7 +22,7 @@ $currentTax = get_queried_object();
     <?php 
       $alpaServices = get_posts( array(
           'numberposts' => -1,
-          'post_type'   => 'zabolevania',
+          'post_type'   => 'uslugi-test',
           'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
       ) );
       $servicesTitle = [];
@@ -39,12 +39,12 @@ $currentTax = get_queried_object();
       <div class="container">
         <div class="text_field">
             <form class="form_item">
-              <input type="text" name="textField" placeholder="Поиск по заболеваниям">
+              <input type="text" name="textField" placeholder="Поиск по услугам">
               <button type="submit" class="gilaki"><i class="ri-search-line"></i></button>
             </form>
             <div class="reset_all_filter">
               <div class="theme_button">
-                <a href="javascript:void(0)">Все заболевания</a>
+                <a href="javascript:void(0)">Все услуги</a>
               </div>
             </div>
         </div>
@@ -176,7 +176,7 @@ $currentTax = get_queried_object();
     </section>
     <section class="text_block">
       <div class="container">
-          <div class="section_text"><?php echo get_field('zabolevania_text', 'option'); ?></div>
+          <div class="section_text"><?php echo get_field('uslugi-text', 'option'); ?></div>
       </div>
     </section>
 

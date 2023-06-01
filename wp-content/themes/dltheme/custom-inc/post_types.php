@@ -158,7 +158,7 @@ function uslugi_post_type(){
 		'show_in_rest'       => true,
 		'show_admin_column'  => true,
 		'query_var'          => true,
-		'rewrite'            => ['slug' => 'uslugi-test/%kategorii%', 'with_front' => false]
+		'rewrite'            => ['slug' => 'uslugi-test', 'with_front' => true]
 	] );
 }
 add_action('init', 'uslugi_post_type');
@@ -168,15 +168,26 @@ add_filter( 'post_type_link', 'replace_post_link_uslugi_test', 1, 3 );
 function replace_post_link_uslugi_test( $link, $post = 0 ) {
 	if ( $post->post_type == 'uslugi-test' ) {
 		$terms = wp_get_object_terms( $post->ID, 'kategorii' );
+    $taxonomy_name = 'kategorii';
     if ($terms) {
       $taxonomy_slug = $terms[0]->slug;
-      $taxonomy_name = 'kategorii';
       $link = str_replace('%' . $taxonomy_name . '%', $taxonomy_slug, $link);
+
+      // Get the position of the first occurrence of "vzrosloe-otdelenie"
+      $pos = strpos($link, $taxonomy_slug);
+      // echo "hey djnvcaso nvpau nvopa nbovnsdofnv on ndfnbojsdnob nfbn odfnbj";
+      if ($pos !== false) {
+          // Check if there is a second occurrence of "vzrosloe-otdelenie"
+          if (strpos($link, $taxonomy_slug, $pos + 1) !== false) {
+              // Remove the second occurrence by replacing it with an empty string
+              $link = str_replace($taxonomy_slug, '', $link);
+          }
+      }
   } else {
-      $taxonomy_name = 'kategorii';
-      $link = str_replace('/%' . $taxonomy_name . '%/', '', $link);
+      $link = str_replace('/%' . $taxonomy_name . '%/', '/', $link);
   }
 	}
+    
 	return $link;
 }
 function flush_rewrite_rules_once() {
