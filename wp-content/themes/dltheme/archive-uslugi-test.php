@@ -29,8 +29,7 @@ $currentTax = get_queried_object();
       //get all services title and permalink
       foreach( $alpaServices as $post ){
           setup_postdata( $post );
-          $title = get_the_title();
-          $servicesTitle = array_push_assoc($servicesTitle, get_the_permalink(), get_the_title());
+          $servicesTitle = array_push_assoc($servicesTitle, get_the_permalink().'|'.get_the_ID(), get_the_title());
       }
       
       wp_reset_postdata(); // сброс
@@ -46,6 +45,9 @@ $currentTax = get_queried_object();
               <div class="theme_button">
                 <a href="javascript:void(0)">Все услуги</a>
               </div>
+            </div>
+            <div class="theme_button small">
+              <a href="https://vitacorclinic.ru/zabolevania/">Справочник заболеваний</a>
             </div>
         </div>
       </div>
@@ -123,51 +125,78 @@ $currentTax = get_queried_object();
             <?php 
                 // sorting array
                 
-
-                $firstChar;
-                $currentChar;
-                foreach($servicesTitle as $service){
-                    $firstChar = mb_substr($service, 0, 1);
-                    $currentChar = $currentChar.$firstChar;
-
-                    // check if first character goes twice, if yes put firstChar to currentChar 
-                    if(mb_strlen($currentChar) > 1 && $firstChar !== mb_substr($currentChar, 0, 1)){
-                        $currentChar = $firstChar;
-                    }
-
-                    //
-                    if( mb_strlen($currentChar) == 1){
-                        $count = 0;
-                        foreach($servicesTitle as $serviceCount){
-                            if($currentChar == mb_substr($serviceCount, 0, 1)){
-                                $count++;
-                            }
+                
+                $kategoriiTerms = get_terms( array(
+                    'taxonomy'   => 'kategorii',
+                    'hide_empty' => false,
+                ) );
+                foreach($kategoriiTerms as $category){
+                  $firstChar = "";
+                  $currentChar = "";
+                  $categoryID = $category->term_id;
+                  if($category->count != 0){
+                    ?>
+                    <h2 class="filter_category_title" style="grid-column: 1 / span 4;"><?php echo $category->name ?></h2>
+                  <?php
+                  foreach($servicesTitle as $url => $service){
+                    preg_match('/\|(\d+)/', $url, $matches);
+                    $numberID = $matches[1]; // Extracted number
+                    $itemTerms = get_the_terms($numberID, "kategorii");
+                    
+                    // Remove the number from the original string
+                    $resultUrl = preg_replace('/\|\d+/', '', $url);
+                    if($categoryID == $itemTerms[0]->term_id) {
+                      $firstChar = mb_substr($service, 0, 1);
+                      $currentChar = $currentChar.$firstChar;
+                        // check if first character goes twice, if yes put firstChar to currentChar 
+                        if(mb_strlen($currentChar) > 1 && $firstChar !== mb_substr($currentChar, 0, 1)){
+                            $currentChar = $firstChar;
                         }
-                        ?>
-                            <div class="alfabet_item">
-                                <div class="alfabet_title">
-                                    <div class="letter"><?php echo $currentChar ?></div>
-                                </div>
-                                <div class="alfabet_services">
-                                    <ul>
-                                        <?php 
-                                            foreach($servicesTitle as $url => $serviceName){
-                                                if($currentChar == mb_substr($serviceName, 0, 1)){
-                                                    ?>
-                                                        <li>
-                                                            <a href="<?php echo $url ?>"><?php echo $serviceName ?></a>
-                                                        </li>
-                                                    <?php
+    
+                        //
+                        if( mb_strlen($currentChar) == 1){
+                            $count = 0;
+                            foreach($servicesTitle as $serviceCount){
+                                if($currentChar == mb_substr($serviceCount, 0, 1)){
+                                    $count++;
+                                }
+                            }
+                            // var_dump($itemTerms);
+                            
+                            ?>
+                                <div class="alfabet_item">
+                                    <div class="alfabet_title">
+                                        <div class="letter"><?php echo $currentChar ?></div>
+                                    </div>
+                                    <div class="alfabet_services">
+                                        <ul>
+                                            <?php 
+                                                foreach($servicesTitle as $url2 => $serviceName2){
+                                                  preg_match('/\|(\d+)/', $url2, $matches2);
+                                                    $numberID2 = $matches2[1]; // Extracted number
+                                                    $itemTerms2 = get_the_terms($numberID2, "kategorii");
+                                                    
+                                                    // Remove the number from the original string
+                                                    $resultUrl2 = preg_replace('/\|\d+/', '', $url2);
+                                                    if($currentChar == mb_substr($serviceName2, 0, 1) && $categoryID == $itemTerms2[0]->term_id){
+                                                        ?>
+                                                            <li>
+                                                                <a href="<?php echo $resultUrl2 ?>"><?php echo $serviceName2 ?></a>
+                                                            </li>
+                                                        <?php
+                                                    }
                                                 }
-                                            }
-                                        ?>
-                                    </ul>
+                                            ?>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                        <?php
-                    }else{
-                        
+                              <?php
+                        }else{
+                            
+                        }
                     }
+                  }
+                  }
                 }
             ?>
           </div>

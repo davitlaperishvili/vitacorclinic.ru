@@ -17,7 +17,7 @@
 
 ?>
 <?php 
-  $who_works = get_field("who_works");
+  $who_works = get_field("napravleniya");
 ?>
 <main class="directions_page dl_page">
   <section class="page-top maxwidth-theme ">
@@ -29,7 +29,7 @@
         bcn_display();
       }?>
               </div>
-              <div class="page-top-main">
+              <div class="page-top-main" style="margin-top: 15px">
                   <h1 id="pagetitle"><?php single_post_title(); ?></h1>
               </div>
           </div>
@@ -38,8 +38,53 @@
   <div class="main_wraper">
     <div class="sidebar_container">
       <div class="container">
-        <aside class="sidebar ready_sidebar">
-          <?php get_sidebar(); ?>
+        
+        <?php 
+            $terms = get_the_terms( $post->ID, 'kategorii' ); 
+        ?>
+        <aside>
+          <div class="diseases_list">
+          <?php 
+              $uslugiByCategory = get_posts( array(
+                  'numberposts' => -1,
+                  'post_type'   => 'uslugi-test',
+                  'tax_query' => array(
+                      array(
+                          'taxonomy' => 'kategorii',
+                          'field' => 'term_id',
+                          'terms' => $terms[0]->term_id,
+                      )
+                      ),
+                  'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+              ) );
+            ?>
+            <ul>
+              <?php
+
+                foreach( $uslugiByCategory as $post ){
+                    setup_postdata( $post );
+                    if($pageID != get_the_ID()){
+                      ?>
+                        <li>
+                          <a href="<?php echo get_the_permalink() ?>"><?php echo get_the_title()?> </a>
+                        </li>
+                      <?php
+                    }
+                }
+                
+                wp_reset_postdata(); // сброс
+              ?>
+            </ul>
+          </div>
+          <div class="question_form">
+            <figure>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/letter.png" alt="letter">
+            </figure>
+            <div class="desc">Наши администраторы ответят на любой интересующий вопрос по услуге</div>
+            <div class="theme_button">
+              <a href="#" class="pop1 btn btn-default btn-lg pum-trigger">Задать вопрос</a>
+            </div>
+          </div>
         </aside>
         <div class="main_content">
           <div class="custom_table_of_content" id="tableOfContent">

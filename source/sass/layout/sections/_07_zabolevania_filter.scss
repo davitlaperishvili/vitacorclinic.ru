@@ -53,6 +53,21 @@ div.text_filter{
         }
       }
     }
+    
+    .theme_button.small{
+      @media(max-width: 1024px){
+        width: 100%;
+      }
+      a{
+        color: $cdark;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: rgba($ccorp, 0.5);
+        @media(max-width: 1024px){
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -76,9 +91,16 @@ div.alfabet_filter{
       font-size: 16px;
       cursor: pointer;
       transition: 0.4s;
-      &:hover{
+      &:hover,&.is-active{
         color: $ccorp;
       }
+    }
+  }
+}
+.filtered {
+  .filter_category_title{
+    &.is-hide{
+      display: none;
     }
   }
 }

@@ -61,6 +61,8 @@ $(window).on("load", function () {
     alfabetFilterItems.on("click", function (e) {
       $(".alfabet_list").addClass("filtered");
       const letter = $(this).text();
+      $(".alfabet_filter_item").removeClass("is-active");
+      $(this).parent(".alfabet_filter_item").addClass("is-active");
       console.log(letter);
       $(".alfabet_list .alfabet_item").each(function () {
         console.log($(this).find(".letter").text());
@@ -80,6 +82,7 @@ $(window).on("load", function () {
     const textFiledForm = $(".text_filter .text_field .form_item");
     textFiledForm.on("click", function (e) {
       e.preventDefault();
+      $(".filter_category_title").addClass("is-hide");
       const inputText = $(this).find("input").val();
       console.log("INPUT VALUE: ", inputText);
       if (inputText) {
@@ -111,6 +114,8 @@ $(window).on("load", function () {
     if ($(".filter-is-active")) {
       $(".filter-is-active").removeClass("filter-is-active");
       $(".alfabet_list").removeClass("filtered");
+      $(".alfabet_filter_item").removeClass("is-active");
+      $(".filter_category_title").removeClass("is-hide");
     }
   });
 

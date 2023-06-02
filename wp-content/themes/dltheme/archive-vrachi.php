@@ -76,6 +76,9 @@ $currentTax = get_queried_object();
               <div class="theme_button">
                 <a href="/zabolevania" class="">Справочник заболеваний</a>
               </div>
+              <div class="theme_button">
+                <a href="/services" class="">Наши услуги</a>
+              </div>
             </div>
           </div>
         </div>
