@@ -136,7 +136,7 @@ $currentTax = get_queried_object();
                   $categoryID = $category->term_id;
                   if($category->count != 0){
                     ?>
-                    <h2 class="filter_category_title" style="grid-column: 1 / span 4;"><?php echo $category->name ?></h2>
+                    <h2 class="filter_category_title" style="grid-column: 1 / span 4;"><a href="./kategorii/<?php echo $category->slug ?>"><?php echo $category->name ?></a></h2>
                   <?php
                   foreach($servicesTitle as $url => $service){
                     preg_match('/\|(\d+)/', $url, $matches);

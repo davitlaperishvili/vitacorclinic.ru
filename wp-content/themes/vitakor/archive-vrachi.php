@@ -58,7 +58,7 @@ $currentTax = get_queried_object();
       uasort($servicesTitle, 'abc');
     ?>
   <div class="main_wraper">
-    <div class="sidebar_container">
+  <div class="sidebar_container">
       <div class="container">
         <aside class="sidebar ready_sidebar">
           <?php get_sidebar(); ?>
@@ -84,7 +84,7 @@ $currentTax = get_queried_object();
         </div>
       </div>
     </div>
-    <section class="what_doctor_can" id="zabolevania">
+  <section class="what_doctor_can" id="zabolevania">
     <div class="container">
       <div class="section_list">
         <div class="alfabet_list trans-all-4">
@@ -148,8 +148,8 @@ $currentTax = get_queried_object();
         </div>
       </div>
     </div>
-    </section>
-    <section class="search_doctor">
+  </section>
+  <section class="search_doctor">
     <div class="container">
       <h2 class="section_title">Поиск специалиста</h2>
       <div class="doctor_search_form">
@@ -191,8 +191,8 @@ $currentTax = get_queried_object();
         </form>
       </div>
     </div>
-    </section>
-    <section class="doctors_slider filter_doctors" id="vrachi">
+  </section>
+  <section class="doctors_slider filter_doctors" id="vrachi">
       <div class="container">
         <div class="doctors_list">
         <?php

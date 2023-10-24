@@ -123,7 +123,7 @@
     <div class="maxwidth-theme">
         <div class="bottom_footer">
             <div class="col-md-3 col-sm-3 copy twosmallfont">
-                © 2022 Все права защищены.			</div>
+                © 2023 Все права защищены.			</div>
             <div class="confidentiality_wrap pull-right text-right">
                 <div class="confidentiality twosmallfont pull-left text-right">
                     <div class="bottom-menu2">
@@ -144,7 +144,7 @@
                                 <a href="/company/kontroliruyushchie-organizatsii.php">Контролирующие организации</a>
                             </div>
                             <div class="item">
-                                <a href="company/obrabotka-personalnykh-dannykh/">Обработка персональных данных</a>
+                                <a href="/company/obrabotka-personalnykh-dannykh/">Обработка персональных данных</a>
                             </div>
                         </div>
                     </div>

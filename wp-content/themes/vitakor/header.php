@@ -204,123 +204,16 @@
                                                                     class="arrow"><i></i></span></a>
                                                         <ul class="dropdown-menu">
                                                             <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/lor-otolaringolog/"
-                                                                   title="ЛОР (отоларинголог)">ЛОР (отоларинголог)</a>
+                                                                <a href="/kategorii/diagnostika/"
+                                                                   title="Диагностика">Диагностика</a>
                                                             </li>
                                                             <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/gastroskopiya/"
-                                                                   title="Гастроскопия ">Гастроскопия </a>
+                                                                <a href="/kategorii/proczedury/"
+                                                                   title="Процедуры ">Процедуры</a>
                                                             </li>
                                                             <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/kolonoskopiya/"
-                                                                   title="Колоноскопия">Колоноскопия</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/proktologiya/"
-                                                                   title="Проктология">Проктология</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/proktologicheskie-operaczii/"
-                                                                   title="Проктологические операции">Проктологические операции</a>
-                                                            </li>															
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/urolog/"
-                                                                   title="Уролог">Уролог</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/ginekologiya/"
-                                                                   title="Гинекология">Гинекология</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/ginekologicheskie-operatsii/"
-                                                                   title="Гинекологические операции">Гинекологические
-                                                                    операции</a>
-                                                            </li>
-	                                                       <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/girudoterapiya/"
-                                                                   title="Гирудотерапия">Гирудотерапия</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/laparoskopiya/"
-                                                                   title="Лапароскопия">Лапароскопия</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/gastroenterologiya/"
-                                                                   title="Гастроэнтерология">Гастроэнтерология</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/terapevt/"
-                                                                   title="Терапевт">Терапевт</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/kardiologiya/"
-                                                                   title="Кардиология">Кардиология</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/flebologiya/"
-                                                                   title="Флеболог">Флеболог</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/khirurgicheskoe-otdelenie/"
-                                                                   title="Хирургическое отделение">Хирургическое
-                                                                    отделение</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/travmatolog-ortoped/"
-                                                                   title="Травматолог-ортопед">Травматолог-ортопед</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/neyrokhirurgiya/"
-                                                                   title="Нейрохирургия">Нейрохирургия</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/nevrologiya/"
-                                                                   title="Невролог">Невролог</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/mammolog-onkolog/"
-                                                                   title="Маммолог-онколог">Маммолог-онколог</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/endokrinologiya/"
-                                                                   title="Эндокринолог">Эндокринолог</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/funktsionalnaya-diagnostika/"
-                                                                   title="Функциональная диагностика">Функциональная
-                                                                    диагностика</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/diagnostika-valeoskan/"
-                                                                   title="Диагностика Валеоскан">Диагностика
-																Валеоскан</a>
-                                                            </li>															
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/ultrazvukovoe-issledovanie-uzi/"
-                                                                   title="Ультразвуковое исследование (УЗИ)">Ультразвуковое
-                                                                    исследование (УЗИ)</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/protsedurnyy-kabinet/"
-                                                                   title="Процедурный кабинет">Процедурный кабинет</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/endoskopiya/"
-                                                                   title="Эндоскопия">Эндоскопия</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/massazh/"
-                                                                   title="Массаж">Массаж</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/pulsovaya-diagnostika/"
-                                                                   title="Пульсовая диагностика">Пульсовая
-                                                                    диагностика</a>
-                                                            </li>
-                                                            <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/vnutrivennoe-lazernoe-obluchenie/"
-                                                                   title="Внутривенное лазерное облучение">Внутривенное
-                                                                    лазерное облучение</a>
+                                                                <a href="/kategorii/stomatologiya/"
+                                                                   title="Стоматология">Стоматология</a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -423,26 +316,65 @@
                                         </td>
                                         <td class="menu-item unvisible dropdown  ">
                                             <div class="wrap">
-                                                <a class="dropdown-toggle" href="/staff/">
-                                                    Специалисты </a>
+                                                <a class="dropdown-toggle" href="/vrachi/">
+                                                    Врачи </a>
                                                 <span class="tail"></span>
                                                 <ul class="dropdown-menu">
                                                     <li class=" ">
-                                                        <a href="/staff/rukovoditeli/"
-                                                           title="Руководители">Руководители</a>
+                                                        <a href="/vrachi/gastroenterolog/"
+                                                           title="Гастроэнтеролог">Гастроэнтеролог</a>
                                                     </li>
                                                     <li class=" ">
-                                                        <a href="/staff/terapevty-i-uzkie-spetsialisty/"
-                                                           title="Терапевты, узкие специалисты, детские врачи">Терапевты,
-                                                            узкие специалисты, детские врачи</a>
+                                                        <a href="/vrachi/ginekolog/"
+                                                           title="Гинеколог">Гинеколог</a>
                                                     </li>
                                                     <li class=" ">
-                                                        <a href="/staff/proczedurnyj-kabinet-staff/"
-                                                           title="Процедурный кабинет">Процедурный кабинет</a>
+                                                        <a href="/vrachi/otolaringolog-lor/"
+                                                           title="Отоларинголог (ЛОР)">Отоларинголог (ЛОР)</a>
                                                     </li>
                                                     <li class=" ">
-                                                        <a href="/staff/administrativnyy-otdel/"
-                                                           title="Административный отдел">Административный отдел</a>
+                                                        <a href="/vrachi/terapevt/"
+                                                           title="Терапевт">Терапевт</a>
+                                                    </li>
+													<li class=" ">
+                                                        <a href="/vrachi/xirurg/"
+                                                           title="Хирург">Хирург</a>
+                                                    </li>
+													<li class=" ">
+                                                        <a href="/vrachi/endokrinolog/"
+                                                           title="Эндокринолог">Эндокринолог</a>
+                                                    </li>
+													<li class=" ">
+                                                        <a href="/vrachi/kardiolog/"
+                                                           title="Кардиолог">Кардиолог</a>
+                                                    </li>
+													<li class=" ">
+                                                        <a href="/vrachi/mammolog/"
+                                                           title="Маммолог">Маммолог</a>
+                                                    </li>
+													<li class=" ">
+                                                        <a href="/vrachi/nevrolog/"
+                                                           title="Невролог">Невролог</a>
+                                                    </li>
+													<li class=" ">
+                                                        <a href="/vrachi/proktolog/"
+                                                           title="Проктолог">Проктолог</a>
+                                                    </li>
+													<li class=" ">
+                                                        <a href="/vrachi/flebolog/"
+                                                           title="Флеболог">Флеболог</a>
+                                                    </li>
+													<li class=" ">
+                                                        <a href="/vrachi/urolog/"
+                                                           title="Уролог">Уролог</a>
+                                                    </li>
+													<li class=" ">
+                                                        <a href="/vrachi/travmatolog-ortoped/"
+                                                           title="Травматолог-ортопед">Травматолог-ортопед</a>
+                                                    </li>
+													<li class=" ">
+                                                        <a href="/vrachi/stomatolog/"
+                                                           title="Стоматолог">Стоматолог</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -680,182 +612,21 @@
                                                     отделение</a></li>
                                             <li>
                                                 <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/lor-otolaringolog/"
-                                                   title="ЛОР (отоларинголог)">
-                                                    <span>ЛОР (отоларинголог)</span>
+                                                   href="/kategorii/diagnostika/"
+                                                   title="Диагностика">
+                                                    <span>Диагностика</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/gastroskopiya/"
-                                                   title="Гастроскопия ">
-                                                    <span>Гастроскопия </span>
+                                                <a class="dark-color" href="/kategorii/proczedury/"
+                                                   title="Процедуры">
+                                                    <span>Процедуры</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/kolonoskopiya/"
-                                                   title="Колоноскопия">
-                                                    <span>Колоноскопия</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/proktologiya/"
-                                                   title="Проктология">
-                                                    <span>Проктология</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/proktologicheskie-operaczii/"
-                                                   title="Проктологические операции">
-                                                    <span>Проктологические операции</span>
-                                                </a>
-                                            </li>											
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/urologiya/"
-                                                   title="Уролог">
-                                                    <span>Уролог</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/ginekologiya/"
-                                                   title="Гинекология">
-                                                    <span>Гинекология</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/ginekologicheskie-operatsii/"
-                                                   title="Гинекологические операции">
-                                                    <span>Гинекологические операции</span>
-                                                </a>
-                                            </li>
-	                                        <li class=" ">
-                                                                <a href="/services/vzrosloe-otdelenie/girudoterapiya/"
-                                                                   title="Гирудотерапия">Гирудотерапия</a>
-                                            </li>											
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/laparoskopiya/"
-                                                   title="Лапароскопия">
-                                                    <span>Лапароскопия</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/gastroenterologiya/"
-                                                   title="Гастроэнтерология">
-                                                    <span>Гастроэнтерология</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/terapevt/"
-                                                   title="Терапевт">
-                                                    <span>Терапевт</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/kardiologiya/"
-                                                   title="Кардиология">
-                                                    <span>Кардиология</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/flebologiya/"
-                                                   title="Флеболог">
-                                                    <span>Флеболог</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/khirurgicheskoe-otdelenie/"
-                                                   title="Хирургическое отделение">
-                                                    <span>Хирургическое отделение</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/travmatolog-ortoped/"
-                                                   title="Травматолог-ортопед">
-                                                    <span>Травматолог-ортопед</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/neyrokhirurgiya/"
-                                                   title="Нейрохирургия">
-                                                    <span>Нейрохирургия</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/nevrologiya/"
-                                                   title="Невролог">
-                                                    <span>Невролог</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/mammolog-onkolog/"
-                                                   title="Маммолог-онколог">
-                                                    <span>Маммолог-онколог</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/endokrinologiya/"
-                                                   title="Эндокринолог">
-                                                    <span>Эндокринолог</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/funktsionalnaya-diagnostika/"
-                                                   title="Функциональная диагностика">
-                                                    <span>Функциональная диагностика</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/diagnostika-valeoskan/"
-                                                   title="Диагностика Валеоскан">
-                                                    <span>Диагностика Валеоскан</span>
-                                                </a>
-                                            </li>											
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/ultrazvukovoe-issledovanie-uzi/"
-                                                   title="Ультразвуковое исследование (УЗИ)">
-                                                    <span>Ультразвуковое исследование (УЗИ)</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/protsedurnyy-kabinet/"
-                                                   title="Процедурный кабинет">
-                                                    <span>Процедурный кабинет</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/endoskopiya/"
-                                                   title="Эндоскопия">
-                                                    <span>Эндоскопия</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color" href="/services/vzrosloe-otdelenie/massazh/"
-                                                   title="Массаж">
-                                                    <span>Массаж</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/pulsovaya-diagnostika/"
-                                                   title="Пульсовая диагностика">
-                                                    <span>Пульсовая диагностика</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/vzrosloe-otdelenie/vnutrivennoe-lazernoe-obluchenie/"
-                                                   title="Внутривенное лазерное облучение">
-                                                    <span>Внутривенное лазерное облучение</span>
+                                                <a class="dark-color" href="/kategorii/stomatologiya/"
+                                                   title="Стоматология">
+                                                    <span>Стоматология</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -922,41 +693,35 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dark-color" href="/services/stomatologiya/parodontologiya/"
-                                                   title="Пародонтология">
-                                                    <span>Пародонтология</span>
+                                                <a class="dark-color" href="/services/implantacziya-zubov/"
+                                                   title="Имплантация зубов">
+                                                    <span>Имплантация зубов</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="dark-color"
-                                                   href="/services/stomatologiya/esteticheskaya-stomatologiya/"
-                                                   title="Эстетическая стоматология">
-                                                    <span>Эстетическая стоматология</span>
+                                                   href="/services/ispravlenie-prikusa/"
+                                                   title="Исправление прикуса">
+                                                    <span>Исправление прикуса</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="dark-color"
-                                                   href="/services/stomatologiya/diagnostika-i-lechenie-zubov/"
-                                                   title="Диагностика и лечение зубов">
-                                                    <span>Диагностика и лечение зубов</span>
+                                                   href="/services/brekety/"
+                                                   title="Брекеты">
+                                                    <span>Брекеты</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dark-color" href="/services/stomatologiya/khirurgiya/"
-                                                   title="Хирургия">
-                                                    <span>Хирургия</span>
+                                                <a class="dark-color" href="/services/protezirovanie-zubov/"
+                                                   title="Протезирование зубов">
+                                                    <span>Протезирование зубов</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dark-color" href="/services/stomatologiya/implantatsiya/"
-                                                   title="Имплантация">
-                                                    <span>Имплантация</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dark-color" href="/services/stomatologiya/protezirovanie/"
-                                                   title="Протезирование">
-                                                    <span>Протезирование</span>
+                                                <a class="dark-color" href="/services/udalenie-zubov/"
+                                                   title="Удаление зубов">
+                                                    <span>Удаление зубов</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -1017,35 +782,95 @@
                                 </ul>
                             </li>
                             <li>
-                                <a class="dark-color parent" href="/staff/" title="Специалисты">
-                                    <span>Специалисты</span>
+                                <a class="dark-color parent" href="/vrachi/" title="Врачи">
+                                    <span>Врачи</span>
                                     <span class="arrow"><i class="svg svg_triangle_right"></i></span>
                                 </a>
                                 <ul class="dropdown">
                                     <li class="menu_back"><a href="" class="dark-color" rel="nofollow"><i
                                                     class="svg svg-arrow-right"></i>Назад</a></li>
-                                    <li class="menu_title"><a class="dark-color" href="/staff/">Специалисты</a></li>
+                                    <li class="menu_title"><a class="dark-color" href="/staff/">Все направления</a></li>
                                     <li>
-                                        <a class="dark-color" href="/staff/rukovoditeli/" title="Руководители">
-                                            <span>Руководители</span>
+                                        <a class="dark-color" href="/vrachi/gastroenterolog/" title="Гастроэнтеролог">
+                                            <span>Гастроэнтеролог</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dark-color" href="/staff/terapevty-i-uzkie-spetsialisty/"
-                                           title="Терапевты, узкие специалисты, детские врачи">
-                                            <span>Терапевты, узкие специалисты, детские врачи</span>
+                                        <a class="dark-color" href="/vrachi/ginekolog/"
+                                           title="Гинеколог">
+                                            <span>Гинеколог</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dark-color" href="/staff/proczedurnyj-kabinet-staff/"
-                                           title="Процедурный кабинет">
-                                            <span>Процедурный кабинет</span>
+                                        <a class="dark-color" href="/vrachi/otolaringolog-lor/"
+                                           title="Отоларинголог (ЛОР)">
+                                            <span>Отоларинголог (ЛОР)</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dark-color" href="/staff/administrativnyy-otdel/"
-                                           title="Административный отдел">
-                                            <span>Административный отдел</span>
+                                        <a class="dark-color" href="/vrachi/terapevt/"
+                                           title="Терапевт">
+                                            <span>Терапевт</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="dark-color" href="/vrachi/xirurg/"
+                                           title="Хирург">
+                                            <span>Хирург</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="dark-color" href="/vrachi/endokrinolog/"
+                                           title="Эндокринолог">
+                                            <span>Эндокринолог</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="dark-color" href="/vrachi/kardiolog/"
+                                           title="Кардиолог">
+                                            <span>Кардиолог</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="dark-color" href="/vrachi/mammolog/"
+                                           title="Маммолог">
+                                            <span>Маммолог</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="dark-color" href="/vrachi/nevrolog/"
+                                           title="Невролог">
+                                            <span>Невролог</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="dark-color" href="/vrachi/proktolog/"
+                                           title="Проктолог">
+                                            <span>Проктолог</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="dark-color" href="/vrachi/flebolog/"
+                                           title="Флеболог">
+                                            <span>Флеболог</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="dark-color" href="/vrachi/urolog/"
+                                           title="Уролог">
+                                            <span>Уролог</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="dark-color" href="/vrachi/travmatolog-ortoped/"
+                                           title="Травматолог-ортопед">
+                                            <span>Травматолог-ортопед</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="dark-color" href="/vrachi/stomatolog/"
+                                           title="Стоматолог">
+                                            <span>Стоматолог</span>
                                         </a>
                                     </li>
                                 </ul>
