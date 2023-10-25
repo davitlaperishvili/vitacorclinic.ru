@@ -1,0 +1,57 @@
+.dl_page{
+  section.reviews{
+    margin-bottom: 40px;
+    @media(max-width: 1024px){
+      margin-bottom: 30px;
+    }
+    .review_text{
+      margin-bottom: 20px;
+      font-size: 32px;
+      @media(max-width: 1024px){
+        font-size: 24px;
+      }
+      h2{
+        line-height: 46px;
+        @media(max-width: 1024px){
+          line-height: 35px;
+        }
+        br{
+          @media(max-width: 1024px){
+            display: none;
+          }
+        }
+      }
+    }
+    .ratings-items{
+      display: grid;
+      grid-gap: 40px;
+      grid-template-columns: repeat(6, 1fr);
+      @media(max-width: 1024px){
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .rating-item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        .rating-value{
+          font-weight: 700;
+          font-size: 30px;
+          text-align: center;
+          @media(max-width: 1024px){
+            font-size: 36px;
+          }
+        }
+        .rating-stars{
+          margin: 10px auto;
+        }
+        .rating-item__img{
+          @media(max-width: 1024px){
+            padding: 0 30px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -58,16 +58,23 @@
         </div>
       </div>
     </section>
+    <section class="front_title">
+      <div class="container">
+        <h1 class="page_title"><?php echo get_field("page_title") ?></h1>
+      </div>
+    </section>
     <section class="what_doctor_can front_services" id="zabolevania">
       <?php 
         $front_our_services = get_field("front_our_services");
       ?>
       <div class="container">
+        <h2 class="section_title"><?php $front_our_services['section_title'] ?></h2>
+        <div class="section_subtitle"><?php $front_our_services['section_subtitle'] ?></div>
         <div class="services_tabs">
           <?php 
             foreach($front_our_services['services_tabs'] as $key => $tabContent){
               ?>
-                <div class="tab_item"><?php echo $tabContent['tab_title'] ?></div>
+                <div class="tab_item" data-tab="tab<?php echo $key ?>"><?php echo $tabContent['tab_title'] ?></div>
               <?php
             }
           ?>
@@ -92,7 +99,7 @@
             }
             foreach($front_our_services['services_tabs'] as $key => $tabContent){
               ?>
-                <div class="alfabet_list tab_content trans-all-4" tab-content="tab<?php echo $key ?>Content">
+                <div class="alfabet_list tab_content trans-all-4" data-content="tab<?php echo $key ?>Content">
                   
                   <?php 
                       
@@ -160,54 +167,239 @@
         </div>
       </div>
     </section>
-    <section class="doctors_slider" id="vrachi">
+    <section class="front_banner">
+      <?php 
+        $front_banner = get_field("front_banner");
+      ?>
       <div class="container">
-        <h2 class="section_title"><?php echo $fieldsGroup['doctors_section_title'] ?></h2>
+        <div class="banner_wrap">
+          <div class="left">
+            <div class="banner_title"><?php echo $front_banner['banner_title'] ?></div>
+            <div class="banner_text"><?php echo $front_banner['banner_text'] ?></div>
+            <div class="theme_button">
+              <?php 
+                if($front_banner['banner_button']['url'] == "#" || !$front_banner['banner_button']['url']){
+                  ?>
+                    <a href="<?php echo $front_banner['banner_button']['url'] ?>" class="pop1 btn btn-default btn-lg pum-trigger" style="cursor: pointer;"><?php echo $front_banner['banner_button']['title'] ?></a>
+                  <?php
+                }else{
+                  ?>
+                    <a href="<?php echo $front_banner['banner_button']['url'] ?>"><?php echo $front_banner['banner_button']['title'] ?></a>
+                  <?php
+                }
+              ?>
+            </div>
+          </div>
+          <figure>
+            <img src="<?php echo $front_banner['banner_image']['url'] ?>" alt="<?php echo $front_banner['banner_image']['alt'] ?>">
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="front_why_us">
+      <?php 
+        $why_us = get_field("why_us");
+      ?>
+      <div class="container">
+        <div class="section_header">
+          <h2 class="section_title"><?php echo $why_us['section_title'] ?></h2>
+          <div class="why_navigation">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <div class="section_wrap">
+          <div class="section_slider swiper">
+            <div class="swiper-wrapper">
+              <?php 
+                foreach($why_us['slider_items'] as $item){
+                  ?>
+                    <div class="swiper-slide">
+                      <div class="why_item">
+                        <div class="why_title"><?php echo $item['slide_title'] ?></div>
+                        <figure>
+                          <img src="<?php echo $item['slide_image']['url'] ?>" alt="<?php echo $item['slide_image']['alt'] ?>">
+                        </figure>
+                      </div>
+                    </div>
+                  <?php
+                }
+              ?>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="front_text_block">
+      <div class="container">
+        <h2 class="section_title">О клинике</h2>
+        <div class="block_wrap">
+          <div class="left">
+            <div class="section_text">
+              <p>Клиника «Витакор» – это частный медицинский центр для всей семьи. Есть детское и взрослое направление, отделение диагностики, собственная операционная.У нас наблюдаются целыми семьями, начиная с планирования и ведения беременности. Прием ведут врачи с богатой практикой и узкие специалисты.</p>
+              <p>Мы верим, что крепкое здоровье – совместный труд доктора и пациента. Врачи «Витакор» говорят на одном языке, объясняют каждое назначение и никогда не назначают лечение «на всякий случай» или потому, что так принято.</p>
+              <p>Записаться на прием врача можно по телефону или онлайн. Сохраните здоровье на долгие годы вместе с клиникой «Витакор»!</p>
+            </div>
+            <div class="section_button">
+              <a href="#">Подробнее о нас →</a>
+            </div>
+          </div>
+          <div class="right">
+            <div class="right_wrap">
+              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                  </div>
+                </div>
+                <div class="images_navigation">
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+              <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <?php
+        $reviews = get_field('reviews');
+      ?>
+      <div class="container">
+        <div class="review_text">
+            <?php echo $reviews['reviews_text'] ?>
+        </div>
+        <div class="ratings-items ">
+            <?php
+              foreach ($reviews['review_items'] as $item) {
+                ?>
+                  <div class="rating-item rating-item--v2">
+                    <div class="rating-value rating-value--v2"><?php echo $item['eval'] ?></div>
+                    <div class="rating-stars rating--v2">
+                      <?php
+                        if ($item['stars']['url']) {
+                          ?>
+                            <img src="<?php echo $item['stars']['url'] ?>" alt="">
+                          <?php
+                        }
+                      ?>
+                    </div>
+                    <div class="rating-item__img rating-item__img--v2">
+                      <a href="<?php echo $item['review_url'] ?>" rel="noreferrer" title="" target="_blank">				
+                        <img src="<?php echo $item['review_img']['url'] ?>" alt="<?php echo $item['review_img']['alt'] ?>">
+                      </a>
+                    </div>
+                  </div>
+                <?php
+              }
+            ?>
+        </div>
+      </div>
+    </section>
+    <section class="doctors_slider" id="vrachi">
+      <?php 
+        $front_doctors = get_field("front_doctors_section");
+      ?>
+      <div class="container">
+        <div class="section_header">
+          <h2 class="section_title"><?php echo $front_doctors['section_title'] ?></h2>
+          <div class="header_link">
+            <a href="<?php echo $front_doctors['section_button']['url'] ?>"><?php echo $front_doctors['section_button']['title'] ?></a>
+          </div>
+        </div>
+        <div class="section_subtitle"><?php echo $front_doctors['section_subtitle'] ?></div>
         <div class="doctors_slider_wrap custom_swiper">
           <div class="swiper-wrapper">
             <?php
               // параметры по умолчанию
-              $doctorsPosts = get_posts( array(
-                'numberposts' => -1,
-                'category'    => 0,
-                'orderby'     => 'date',
-                'order'       => 'DESC',
-                'include'     => array(),
-                'exclude'     => array(),
-                'meta_key'    => '',
-                'meta_value'  =>'',
-                'post_type'   => 'staff',
-                'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-            ) );
+            $doctorsPosts = $front_doctors["front_doctors"];
 
-            foreach( $doctorsPosts as $post ){
-                setup_postdata( $post );
-                $directions = get_post_meta(get_the_ID(), "napravleniya", true);
-                if($directions && in_array(strval($pageID), $directions)){
-                  ?>
-                    <div class="swiper-slide">
-                        <div class="doctor_item">
-                          <figure>
-                            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?></a>
-                          </figure>
-                          <div class="doctor_name"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></div>
-                          <div class="doctor_direction"><?php echo get_post_meta(get_the_ID(), "dolzhnost", true); ?></div>
-                        </div>
-                    </div>
-                  <?php
-                }
+            foreach( $doctorsPosts as $postID ){
+                $directions = get_post_meta($postID, "napravleniya", true);
+                ?>
+                  <div class="swiper-slide">
+                      <div class="doctor_item">
+                        <figure>
+                          <a href="<?php echo get_the_permalink($postID) ?>"><?php echo get_the_post_thumbnail($postID) ?></a>
+                        </figure>
+                        <div class="doctor_name"><a href="<?php echo get_the_permalink($postID) ?>"><?php echo get_the_title($postID) ?></a></div>
+                        <div class="doctor_direction"><?php echo get_post_meta($postID, "dolzhnost", true); ?></div>
+                      </div>
+                  </div>
+                <?php
             }
-            
-            wp_reset_postdata(); // сброс
             ?>
           </div>
         </div>
       </div>
     </section>
-    <?php 
-      $nashi_liczenzii = get_field('nashi_liczenzii', 'option');
-    ?>
     <section class="licenses">
+      <?php 
+        $nashi_liczenzii = get_field('nashi_liczenzii', 'option');
+      ?>
       <div class="container">
         <h2 class="section_title"><?php echo $nashi_liczenzii['block_title'] ?></h2>
         <div class="block_wrap">
@@ -246,7 +438,7 @@
               <div class="title">
                 <h2>Адрес клиники</h2>
                 <div class="switcher-wrap">
-                  <span class="show_list">Списком</span>
+                  <span class="show_map">На карте</span>
                   <div class="on-off-switch" style="width: 43px; height: 23px;">
                     <div class="on-off-switch-track" style="border-radius: 11.5px; border-width: 1px; width: 41px; height: 21px;">
                       <div style="position: absolute; height: 21px; width: 59px; left: -20px;">
@@ -267,11 +459,11 @@
                       <div class="on-off-switch-thumb-color on-off-switch-thumb-off" style="border-radius: 11px; width: 21px; height: 21px; left: 1px; top: 1px;"></div>
                     </div>
                   </div>
-                  <span class="show_map">На карте</span>
+                  <span class="show_list">Списком</span>
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div class="item-views front contacts table-type-block blocks">
+              <div class="item-views front contacts table-type-block blocks item_views_right">
                 <div class="unstyled row dark-nav view-control navigation-vcenter">
                   <div class="flex-viewport">
                     <ul class="slides items" data-slice="Y">
