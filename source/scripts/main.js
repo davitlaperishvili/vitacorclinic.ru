@@ -190,4 +190,30 @@ $(window).on("load", function () {
       }
     });
   }
+
+  // front services tabs
+  const frontServicesTabs = document.querySelectorAll(
+    ".front_services .services_tabs .tab_item"
+  );
+  const frontServicesTabsContent = document.querySelectorAll(
+    ".front_services .tab_content"
+  );
+  if (frontServicesTabs.length > 0) {
+    frontServicesTabs.forEach((tab) => {
+      tab.addEventListener("click", (e) => {
+        const tabValue = e.target.dataset.tab;
+        frontServicesTabsContent.forEach((item) => {
+          item.classList.remove("is-active");
+        });
+        frontServicesTabs.forEach((item) => {
+          item.classList.remove("is-active");
+        });
+        e.target.classList.add("is-active");
+        e.target
+          .closest(".front_services")
+          .querySelector(`.tab_content[data-content="${tabValue}Content"]`)
+          .classList.add("is-active");
+      });
+    });
+  }
 });

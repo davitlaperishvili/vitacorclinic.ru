@@ -11,6 +11,60 @@ section.what_doctor_can{
       margin-top: 30px;
     }
   }
+  &.front_services{
+    background-color: transparent;
+    padding: 0;
+    .section_list{
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 10px;
+      background-color: $cgray;
+      @media(max-width: 1024px){
+        margin-top: 20px;
+      }
+      .alfabet_list{
+        .alfabet_item{
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+  }
+  .services_tabs{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 42px;
+    margin-top: 20px;
+    @media(max-width: 1024px){
+      gap: 10px;
+    }
+    .tab_item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      min-width: 180px;
+      padding: 15px 20px;
+      background-color: #F2F6F7;
+      font-size: 19px;
+      color: #666666;
+      cursor: pointer;
+      transition: 0.4s;
+      @media(max-width: 1024px){
+        padding: 7px 10px;
+        min-width: max-content;
+        font-size: 16px;
+      }
+      &.is-active{
+        background-color: $ccorp;
+        color: $cwhite;
+      }
+      &:hover{
+        background-color: lighten($ccorp, 20);
+      }
+    }
+  }
 }
 .alfabet_list{
   display: grid;
@@ -93,6 +147,12 @@ section.what_doctor_can{
           }
         }
       }
+    }
+  }
+  &.tab_content{
+    display: none;
+    &.is-active{
+      display: grid;
     }
   }
 }

@@ -120,7 +120,18 @@
     }
   }
   // Container
-
+  .page_title{
+    margin-bottom: 45px;
+    font-size: 36px;
+    color: #333333;
+    text-align: center;
+    @media(max-width: 1024px){
+      font-size: 29px;
+      margin-bottom: 20px;
+      text-align: start;
+      color: #666666;
+    }
+  }
   // show more
   .morecontent span {
     display: none;
@@ -281,6 +292,9 @@
     @media(max-width: 1024px){
       margin-bottom: 25px;
       font-size: 20px;
+    }
+    &.front{
+      margin-bottom: 20px;
     }
   }
   .text_block{

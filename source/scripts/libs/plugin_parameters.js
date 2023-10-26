@@ -56,6 +56,42 @@ export default function plugindParameters() {
     },
   });
 
+  let section_slider = new Swiper(".section_slider", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: false,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+    navigation: {
+      nextEl: ".why_navigation .swiper-button-next",
+      prevEl: ".why_navigation .swiper-button-prev",
+    },
+  });
+
+  var images_thumb = new Swiper(".images_thumb", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var images_main = new Swiper(".images_main", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".images_navigation .swiper-button-next",
+      prevEl: ".images_navigation .swiper-button-prev",
+    },
+    thumbs: {
+      swiper: images_thumb,
+    },
+  });
   // Gallery
   $(".magnific").each(function () {
     $(this).magnificPopup({

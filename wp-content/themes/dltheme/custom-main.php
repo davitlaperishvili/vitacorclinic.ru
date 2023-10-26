@@ -68,13 +68,13 @@
         $front_our_services = get_field("front_our_services");
       ?>
       <div class="container">
-        <h2 class="section_title"><?php $front_our_services['section_title'] ?></h2>
-        <div class="section_subtitle"><?php $front_our_services['section_subtitle'] ?></div>
+        <h2 class="section_title front"><?php echo $front_our_services['section_title'] ?></h2>
+        <div class="section_subtitle"><?php echo $front_our_services['section_subtitle'] ?></div>
         <div class="services_tabs">
           <?php 
             foreach($front_our_services['services_tabs'] as $key => $tabContent){
               ?>
-                <div class="tab_item" data-tab="tab<?php echo $key ?>"><?php echo $tabContent['tab_title'] ?></div>
+                <div class="tab_item <?php echo $key == 0 ? "is-active" : "" ?>" data-tab="tab<?php echo $key ?>"><?php echo $tabContent['tab_title'] ?></div>
               <?php
             }
           ?>
@@ -98,8 +98,9 @@
                 return $array;
             }
             foreach($front_our_services['services_tabs'] as $key => $tabContent){
+
               ?>
-                <div class="alfabet_list tab_content trans-all-4" data-content="tab<?php echo $key ?>Content">
+                <div class="alfabet_list tab_content <?php echo $key == 0 ? "is-active" : "" ?> trans-all-4" data-content="tab<?php echo $key ?>Content">
                   
                   <?php 
                       
@@ -233,90 +234,47 @@
     </section>
     <section class="front_text_block">
       <div class="container">
-        <h2 class="section_title">О клинике</h2>
+        <?php 
+          $front_text_block = get_field("front_text_block");
+        ?>
+        <h2 class="section_title front"><?php echo $front_text_block['section_title'] ?></h2>
         <div class="block_wrap">
           <div class="left">
-            <div class="section_text">
-              <p>Клиника «Витакор» – это частный медицинский центр для всей семьи. Есть детское и взрослое направление, отделение диагностики, собственная операционная.У нас наблюдаются целыми семьями, начиная с планирования и ведения беременности. Прием ведут врачи с богатой практикой и узкие специалисты.</p>
-              <p>Мы верим, что крепкое здоровье – совместный труд доктора и пациента. Врачи «Витакор» говорят на одном языке, объясняют каждое назначение и никогда не назначают лечение «на всякий случай» или потому, что так принято.</p>
-              <p>Записаться на прием врача можно по телефону или онлайн. Сохраните здоровье на долгие годы вместе с клиникой «Витакор»!</p>
-            </div>
+            <div class="section_text"><?php echo $front_text_block['section_text'] ?></div>
             <div class="section_button">
-              <a href="#">Подробнее о нас →</a>
+              <a href="<?php echo $front_text_block['section_button']['url'] ?>"><?php echo $front_text_block['section_button']['title'] ?></a>
             </div>
           </div>
           <div class="right">
             <div class="right_wrap">
-              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper images_main">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                  </div>
+                  <?php 
+                    foreach($front_text_block['section_images'] as $image ){
+                      ?>
+                        <div class="swiper-slide">
+                          <img src="<?php echo $image['image']['url'] ?>" alt="<?php echo $image['image']['alt'] ?>"/>
+                        </div>
+                      <?php
+                    }
+                  ?>
                 </div>
                 <div class="images_navigation">
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>
                 </div>
               </div>
-              <div thumbsSlider="" class="swiper mySwiper">
+              <div thumbsSlider="" class="swiper images_thumb">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                  </div>
+                  <?php 
+                    foreach($front_text_block['section_images'] as $image ){
+                      ?>
+                        <div class="swiper-slide">
+                          <img src="<?php echo $image['image']['url'] ?>" alt="<?php echo $image['image']['alt'] ?>"/>
+                        </div>
+                      <?php
+                    }
+                  ?>
                 </div>
               </div>
             </div>
@@ -329,7 +287,7 @@
         $reviews = get_field('reviews');
       ?>
       <div class="container">
-        <div class="review_text">
+        <div class="section_title front">
             <?php echo $reviews['reviews_text'] ?>
         </div>
         <div class="ratings-items ">
@@ -365,7 +323,7 @@
       ?>
       <div class="container">
         <div class="section_header">
-          <h2 class="section_title"><?php echo $front_doctors['section_title'] ?></h2>
+          <h2 class="section_title front"><?php echo $front_doctors['section_title'] ?></h2>
           <div class="header_link">
             <a href="<?php echo $front_doctors['section_button']['url'] ?>"><?php echo $front_doctors['section_button']['title'] ?></a>
           </div>
@@ -401,7 +359,7 @@
         $nashi_liczenzii = get_field('nashi_liczenzii', 'option');
       ?>
       <div class="container">
-        <h2 class="section_title"><?php echo $nashi_liczenzii['block_title'] ?></h2>
+        <h2 class="section_title front"><?php echo $nashi_liczenzii['block_title'] ?></h2>
         <div class="block_wrap">
           <div class="licenses_slider custom_swiper">
             <div class="swiper-wrapper">

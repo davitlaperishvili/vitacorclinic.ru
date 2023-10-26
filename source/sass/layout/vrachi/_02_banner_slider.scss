@@ -2,12 +2,17 @@ section.vrachi_banner_list{
   margin-bottom: 40px;
   margin-top: 50px;
   .banners_slider{
+    .swiper-wrapper{
+      display: flex;
+      align-items: stretch;
+    }
     .swiper-slide{
       display: grid;
       grid-gap: 20px;
       grid-template-columns: 1fr 2fr;
       background-color: rgba($ccorp, 0.5);
       border-radius: 20px;
+      height: auto;
       @media(max-width: 1024px){
         grid-template-columns: 1fr;
       }
@@ -42,6 +47,11 @@ section.vrachi_banner_list{
             margin-bottom: 20px;
           }
         }
+        .promo_date{
+          margin-top: 20px;
+          font-size: 12px;
+          color: #666666;
+        }
         .theme_button{
           a{
             @media(max-width: 1024px){
@@ -59,7 +69,7 @@ section.vrachi_banner_list{
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     z-index: 99;
     @media(max-width: 1024px){
       bottom: 20px;
