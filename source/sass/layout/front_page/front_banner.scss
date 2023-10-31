@@ -1,0 +1,48 @@
+.dl_page{
+  section.front_banner{
+    margin-bottom: 40px;
+    .container{
+      .banner_wrap{
+        padding: 50px;
+        background-color: $cgray;
+        border-radius: 10px;
+        .left{
+          .banner_title{
+            margin-bottom: 15px;
+            font-size: 36px;
+            color: $cdark;
+            span{
+              color: $ccorp;
+            }
+          }
+          .banner_text{
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: $cdark;
+            a{
+              color: $cdark;
+              &:hover{
+                color: $ccorp;
+              }
+            }
+          }
+          .theme_button{
+            a{
+
+            }
+          }
+        }
+        figure{
+          position: absolute;
+          bottom: 0;
+          right: 50px;
+          height: calc(100% + 60px);
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

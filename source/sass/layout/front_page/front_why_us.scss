@@ -1,0 +1,65 @@
+.dl_page{
+  section.front_why_us{
+    margin-bottom: 40px;
+    .section_header{
+      display: flex;
+      align-items: center;
+      margin-bottom: 45px;
+      .section_title{
+        margin-bottom: 0;
+        font-size: 36px;
+        color: $cdark;
+      }
+      .why_navigation{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 14px;
+        margin-left: 90px;
+        .arrow{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: static;
+          width: 46px;
+          height: 46px;
+          border: 1px solid $ccorp;
+          &:after{
+            color: $cbase;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    .section_wrap{
+      width: calc(100% + (100vw - 100%) / 2);
+      .section_slider{
+        width: 100%;
+        .swiper-wrapper{
+          align-items: stretch;
+          .swiper-slide{
+            height: auto;
+            .why_item{
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              background-color: $cgray;
+              border-radius: 15px;
+              overflow: hidden;
+              .why_title{
+                padding: 15px 15px 25px;
+              }
+              figure{
+                width: 100%;
+                flex: 1;
+                img{
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

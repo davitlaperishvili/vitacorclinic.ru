@@ -60,13 +60,15 @@ export default function plugindParameters() {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: false,
+    freeMode: true,
+    centerInsufficientSlides: true,
     breakpoints: {
       768: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
       1024: {
-        slidesPerView: 5,
+        slidesPerView: 4.5,
         spaceBetween: 30,
       },
     },
@@ -77,13 +79,14 @@ export default function plugindParameters() {
   });
 
   var images_thumb = new Swiper(".images_thumb", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
+    spaceBetween: 3,
+    slidesPerView: 9,
+    centerInsufficientSlides: true,
+    loop: false,
   });
   var images_main = new Swiper(".images_main", {
-    spaceBetween: 10,
+    slidesPerView: 1,
+    loop: false,
     navigation: {
       nextEl: ".images_navigation .swiper-button-next",
       prevEl: ".images_navigation .swiper-button-prev",

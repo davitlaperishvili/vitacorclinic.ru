@@ -205,12 +205,12 @@
         <div class="section_header">
           <h2 class="section_title"><?php echo $why_us['section_title'] ?></h2>
           <div class="why_navigation">
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next arrow"></div>
+            <div class="swiper-button-prev arrow"></div>
           </div>
         </div>
         <div class="section_wrap">
-          <div class="section_slider swiper">
+          <div class="section_slider custom_swiper">
             <div class="swiper-wrapper">
               <?php 
                 foreach($why_us['slider_items'] as $item){
@@ -219,7 +219,7 @@
                       <div class="why_item">
                         <div class="why_title"><?php echo $item['slide_title'] ?></div>
                         <figure>
-                          <img src="<?php echo $item['slide_image']['url'] ?>" alt="<?php echo $item['slide_image']['alt'] ?>">
+                          <img src="<?php echo $item['slide_image']['url'] ?>" width="300" height="475" alt="<?php echo $item['slide_image']['alt'] ?>">
                         </figure>
                       </div>
                     </div>
@@ -247,7 +247,7 @@
           </div>
           <div class="right">
             <div class="right_wrap">
-              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper images_main">
+              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="custom_swiper images_main">
                 <div class="swiper-wrapper">
                   <?php 
                     foreach($front_text_block['section_images'] as $image ){
@@ -260,11 +260,11 @@
                   ?>
                 </div>
                 <div class="images_navigation">
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next arrow"></div>
+                  <div class="swiper-button-prev arrow"></div>
                 </div>
               </div>
-              <div thumbsSlider="" class="swiper images_thumb">
+              <div thumbsSlider="" class="custom_swiper images_thumb">
                 <div class="swiper-wrapper">
                   <?php 
                     foreach($front_text_block['section_images'] as $image ){
