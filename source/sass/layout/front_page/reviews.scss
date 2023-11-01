@@ -4,8 +4,14 @@
     @media(max-width: 1024px){
       margin-bottom: 30px;
     }
+    .section_title{
+      margin-bottom: 40px;
+      @media(max-width: 1024px){
+        margin-bottom: 20px;
+      }
+    }
     .review_text{
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       font-size: 32px;
       @media(max-width: 1024px){
         font-size: 24px;
@@ -40,11 +46,11 @@
           font-size: 30px;
           text-align: center;
           @media(max-width: 1024px){
-            font-size: 36px;
+            font-size: 30px;
+            font-weight: 400;
+            color: #333333;
+            margin-bottom: 30px;
           }
-        }
-        .rating-stars{
-          margin: 10px auto;
         }
         .rating-item__img{
           @media(max-width: 1024px){

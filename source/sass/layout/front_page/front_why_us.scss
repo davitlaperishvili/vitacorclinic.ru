@@ -5,16 +5,29 @@
       display: flex;
       align-items: center;
       margin-bottom: 45px;
+      @media(max-width: 1024px){
+        margin-bottom: 20px;
+        justify-content: space-between;
+        gap: 10px;
+      }
       .section_title{
         margin-bottom: 0;
         font-size: 36px;
         color: $cdark;
+        @media(max-width: 1024px){
+          font-size: 20px;
+          color: $cbase;
+        }
       }
       .why_navigation{
         display: flex;
         flex-direction: row-reverse;
         gap: 14px;
         margin-left: 90px;
+        @media(max-width: 1024px){
+          margin-left: 0;
+          gap: 5px;
+        }
         .arrow{
           display: flex;
           align-items: center;
@@ -23,9 +36,16 @@
           width: 46px;
           height: 46px;
           border: 1px solid $ccorp;
+          @media(max-width: 1024px){
+            width: 36px;
+            height: 36px;
+          }
           &:after{
             color: $cbase;
             font-size: 24px;
+            @media(max-width: 1024px){
+              font-size: 20px;
+            }
           }
         }
       }

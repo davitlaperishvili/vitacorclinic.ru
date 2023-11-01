@@ -3,6 +3,37 @@ section.doctors_slider{
   @media(max-width: 1024px){
     margin-bottom: 25px;
   }
+  .section_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @media(max-width: 1024px){
+      margin-bottom: 20px;
+    }
+    .section_title{
+      margin-bottom: 0;
+    }
+    .header_link{
+      @media(max-width: 1024px){
+        display: none;
+      }
+      
+    }
+  }
+  .section_subtitle{
+    margin-bottom: 40px;
+    @media(max-width: 1024px){
+      margin-bottom: 20px;
+    }
+  }
+  &.front_slider{
+    padding: 70px 0;
+    background-color: $cgray;
+    @media(max-width: 1024px){
+      padding: 15px 0;
+    }
+  }
   .doctors_slider_wrap,
   .doctors_list{
     .doctor_item{

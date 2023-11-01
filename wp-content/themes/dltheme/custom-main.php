@@ -33,17 +33,7 @@
                       <div class="banner_title"><?php echo $banner_title ?></div>
                       <div class="banner_text"><?php echo $banner_text ?></div>
                       <div class="theme_button white">
-                        <?php 
-                          if($banner_button['url'] == "#" || !$banner_button['url']){
-                            ?>
-                              <a href="<?php echo $banner_button['url'] ?>" class="pop1 btn btn-default btn-lg pum-trigger" style="cursor: pointer;"><?php echo $banner_button['title'] ?></a>
-                            <?php
-                          }else{
-                            ?>
-                              <a href="<?php echo $banner_button['url'] ?>"><?php echo $banner_button['title'] ?></a>
-                            <?php
-                          }
-                        ?>
+                        <a href="<?php the_permalink() ?>">Подробнее</a>
                       </div>
                       <div class="promo_date"><?php echo $promo_date ?></div>
                     </div>
@@ -170,7 +160,7 @@
     </section>
     <section class="front_banner">
       <?php 
-        $front_banner = get_field("front_banner");
+        $front_banner = get_field("front_banner", "option");
       ?>
       <div class="container">
         <div class="banner_wrap">
@@ -264,6 +254,7 @@
                   <div class="swiper-button-prev arrow"></div>
                 </div>
               </div>
+              <div class="swiper-pagination-gallery"></div>
               <div thumbsSlider="" class="custom_swiper images_thumb">
                 <div class="swiper-wrapper">
                   <?php 
@@ -317,7 +308,7 @@
         </div>
       </div>
     </section>
-    <section class="doctors_slider" id="vrachi">
+    <section class="doctors_slider front_slider" id="vrachi">
       <?php 
         $front_doctors = get_field("front_doctors_section");
       ?>

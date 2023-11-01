@@ -57,14 +57,14 @@ export default function plugindParameters() {
   });
 
   let section_slider = new Swiper(".section_slider", {
-    slidesPerView: 1,
+    slidesPerView: 1.5,
     spaceBetween: 10,
     loop: false,
     freeMode: true,
     centerInsufficientSlides: true,
     breakpoints: {
       768: {
-        slidesPerView: 2,
+        slidesPerView: 2.5,
         spaceBetween: 20,
       },
       1024: {
@@ -90,6 +90,10 @@ export default function plugindParameters() {
     navigation: {
       nextEl: ".images_navigation .swiper-button-next",
       prevEl: ".images_navigation .swiper-button-prev",
+    },
+    pagination: {
+      clickable: true,
+      el: ".swiper-pagination-gallery",
     },
     thumbs: {
       swiper: images_thumb,
