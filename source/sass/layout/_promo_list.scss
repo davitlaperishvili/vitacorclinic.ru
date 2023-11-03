@@ -14,10 +14,19 @@
       background-color: $cgray;
       box-shadow: 0 4px 4px rgba(#8D8D8D, 0.2);
       border-radius: 20px;
+      @media(max-width: 1024px){
+        flex-direction: column;
+        gap: 20px;
+      }
       .tabs{
         display: flex;
         align-items: center;
         gap: 12px;
+        @media(max-width: 1024px){
+          flex-direction: column;
+          width: 100%;
+          gap: 10px;
+        }
         .promo_tab{
           display: flex;
           align-items: center;
@@ -29,6 +38,9 @@
           color: $cbase;
           cursor: pointer;
           transition: 0.4s;
+          @media(max-width: 1024px){
+            width: 100%;
+          }
           &:hover{
             background-color: darken($cwhite, 10);
           }
@@ -59,10 +71,15 @@
           grid-template-columns: 1fr;
         }
         .promo_item{
+          display: none;
+          flex-direction: column;
           border: 1px solid $ccorp;
           border-radius: 20px;
           overflow: hidden;
-          height: max-content;
+          height: 100%;
+          &.is-active{
+            display: flex;
+          }
           figure{
             width: 100%;
             height: 100%;
@@ -75,13 +92,17 @@
               width: 100%;
               height: 100%;
               max-height: 310px;
+              object-fit: cover;
               @media(max-width: 1024px){
                 max-height: 216px;
               }
             }
           }
           .promo_content{
+            display: flex;
+            flex-direction: column;
             padding: 0 30px 40px;
+            flex: 1;
             @media(max-width: 1024px){
               padding: 0 20px 20px;
             }
@@ -103,8 +124,15 @@
             }
             .promo_buttons{
               display: flex;
-              align-items: center;
-              justify-content: space-between;
+              align-items: flex-end;
+              flex: 1;
+              margin-top: auto;
+              .buttons_wrap{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+              }
               .text_link{
                 a{
   
@@ -114,7 +142,11 @@
           }
           .promo_date{
             position: absolute;
-
+            background-color: $ccorp;
+            color: $cwhite;
+            padding: 10px 20px;
+            top: 0;
+            left: 0;
           }
         }
       }

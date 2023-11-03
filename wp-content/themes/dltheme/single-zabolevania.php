@@ -2,6 +2,8 @@
 <?php 
   $pageID = get_the_ID();
   $fieldsGroup = get_field("zabolevania_fileds_group");
+  $who_works = get_field("who_works");
+
   $doctorsPosts = get_posts( array(
     'numberposts' => -1,
     'category'    => 0,
@@ -14,6 +16,22 @@
     'post_type'   => 'staff',
     'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
 ) );
+$promo_posts = get_posts( array(
+  'numberposts' => -1,
+  'post_type'   => 'promo',
+  'suppress_filters' => true,
+) );
+
+$dirPromo = Array();
+foreach($promo_posts as $promo ){
+  $promo_direction = get_post_meta($promo->ID, "promo_direction", true);
+  $directionIDStr = Array();
+  foreach($promo_direction as $dir ){
+    if(in_array($dir, $who_works)){
+      array_push($dirPromo, $promo->ID);
+    }
+  }
+}
 ?>
 <main class="directions_page dl_page">
   <section class="page-top maxwidth-theme ">
@@ -29,9 +47,6 @@
                   <h1 id="pagetitle"><?php single_post_title(); ?></h1>
               </div>
               <div class="who_works">
-                <?php 
-                  $who_works = get_field("who_works");
-                ?>
                 <div class="who_works_wrap">
                   <span class="inc">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +129,44 @@
       </div>
     </div>
 
-
+    <?php 
+      if(count($dirPromo) > 0){
+        ?>
+          <section class="vrachi_banner_list">
+              <div class="container">
+                <div class="banners_slider custom_banners_slider custom_swiper">
+                  <div class="swiper-wrapper">
+                    <?php 
+                      foreach($dirPromo as $bannerID){
+                        $banner_title = get_post_meta($bannerID, "banner_title", true);
+                        $banner_text = get_post_meta($bannerID, "banner_text", true);
+                        $banner_image = get_post_meta($bannerID, "banner_image", true);
+                        $promo_date = get_post_meta($bannerID, "promo_date", true);
+                        ?>
+                          <div class="swiper-slide">
+                            <figure>
+                              <img src="<?php echo wp_get_attachment_url($banner_image) ?>" alt="<?php echo $banner_title ?>">
+                            </figure>
+                            <div class="banner_content">
+                              <div class="banner_title"><?php echo $banner_title ?></div>
+                              <div class="banner_text"><?php echo $banner_text ?></div>
+                              <div class="theme_button white">
+                                <a href="<?php echo get_the_permalink($bannerID) ?>">Подробнее</a>
+                              </div>
+                              <div class="promo_date"><?php echo $promo_date ?></div>
+                            </div>
+                          </div>
+                        <?php
+                      }
+                    ?>
+                  </div>
+                  <div class="swiper-pagination-banner_list"></div>
+                </div>
+              </div>
+          </section>
+        <?php
+      }
+    ?>
     <?php 
         if( have_rows('zabolevaniya') ):
 
@@ -122,10 +174,8 @@
             while ( have_rows('zabolevaniya') ) : the_row();
         
                 // Case: Paragraph layout.
-                if( get_row_layout() == 'zabolevaniya_banner_slider' ):
-                    include(TEMPLATEPATH.'/acf-widgets/zabolevania/widget-banner_slider.php');
                 
-                elseif( get_row_layout() == 'zabolevaniya_price_list' ):
+                if( get_row_layout() == 'zabolevaniya_price_list' ):
                     include(TEMPLATEPATH.'/acf-widgets/zabolevania/widget-price_list.php');
                     
                 elseif( get_row_layout() == 'text_block' ):

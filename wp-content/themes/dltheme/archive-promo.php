@@ -5,6 +5,17 @@
     'post_type'   => 'promo',
     'suppress_filters' => true,
   ) );
+
+  // promo Directions
+  $allPromoDirections = Array();
+  foreach($promo_posts as $promo){
+    $promo_dirs = get_post_meta($promo->ID, "promo_direction", true);
+    foreach($promo_dirs as $id ){
+      array_push($allPromoDirections, $id);
+    }
+  }
+  $uniquePromoDirections = array_unique($allPromoDirections);
+
 ?>
 <main class="promos_page dl_page">
   <section class="vrachi_banner_list">
@@ -58,10 +69,14 @@
       <div class="section_wrap">
         <div class="promo_tabs_wrap">
           <div class="tabs">
-            <div class="promo_tab is-active" data-tab="">Все акции</div>
-            <div class="promo_tab" data-tab="">Гинекология</div>
-            <div class="promo_tab" data-tab="">Стоматология</div>
-            <div class="promo_tab" data-tab="">Урология</div>
+            <div class="promo_tab is-active" data-tab="all">Все акции</div>
+            <?php 
+              foreach($uniquePromoDirections as $serviceID ){
+                ?>
+                  <div class="promo_tab" data-tab="<?php echo $serviceID ?>"><?php echo get_the_title($serviceID) ?></div>
+                <?php
+              }
+            ?>
           </div>
           <div class="all_promo">Всего <span><?php echo count($promo_posts) ?></span> акций</div>
         </div>
@@ -75,30 +90,38 @@
                 $banner_button = get_post_meta(get_the_ID(), "banner_button", true);
                 $promo_date = get_post_meta(get_the_ID(), "promo_date", true);
                 $promo_direction = get_post_meta(get_the_ID(), "promo_direction", true);
+                $directionStr = Array();
+                $directionIDStr = Array();
+                foreach($promo_direction as $dir ){
+                  array_push($directionStr, get_the_title($dir));
+                  array_push($directionIDStr, $dir);
+                }
                 ?>
-                  <div class="promo_item">
+                  <div class="promo_item is-active" data-content="<?php echo join(",",$directionIDStr) ?>">
                     <figure>
                       <img src="<?php echo wp_get_attachment_url($banner_image) ?>" alt="<?php echo $banner_title ?>">
                     </figure>
                     <div class="promo_content">
                       <div class="promo_title"><?php echo $banner_title ?></div>
-                      <div class="promo_direction"><span>Акция по направлению:</span> Гинеколог, УЗИ, терапевт, маммолог..</div>
+                      <div class="promo_direction"><span>Акция по направлению:</span> <?php echo join(", ",$directionStr) ?></div>
                       <div class="promo_buttons">
-                        <div class="theme_button">
-                          <?php 
-                            if($banner_button['url'] == "#" || !$banner_button['url']){
-                              ?>
-                                <a href="<?php echo $banner_button['url'] ?>" class="pop1 btn btn-default btn-lg pum-trigger" style="cursor: pointer;"><?php echo $banner_button['title'] ?></a>
-                              <?php
-                            }else{
-                              ?>
-                                <a href="<?php echo $banner_button['url'] ?>"><?php echo $banner_button['title'] ?></a>
-                              <?php
-                            }
-                          ?>
-                        </div>
-                        <div class="text_link">
-                          <a href="<?php the_permalink() ?>">Подробнее</a>
+                        <div class="buttons_wrap">
+                          <div class="theme_button">
+                            <?php 
+                              if($banner_button['url'] == "#" || !$banner_button['url']){
+                                ?>
+                                  <a href="<?php echo $banner_button['url'] ?>" class="pop1 btn btn-default btn-lg pum-trigger" style="cursor: pointer;"><?php echo $banner_button['title'] ?></a>
+                                <?php
+                              }else{
+                                ?>
+                                  <a href="<?php echo $banner_button['url'] ?>"><?php echo $banner_button['title'] ?></a>
+                                <?php
+                              }
+                            ?>
+                          </div>
+                          <div class="text_link">
+                            <a href="<?php the_permalink() ?>">Подробнее</a>
+                          </div>
                         </div>
                       </div>
                     </div>

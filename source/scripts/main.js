@@ -216,4 +216,42 @@ $(window).on("load", function () {
       });
     });
   }
+
+  // promo list Tabs
+
+  const promoTabs = document.querySelectorAll(
+    ".promo_tabs_wrap .tabs .promo_tab"
+  );
+  if (promoTabs.length > 0) {
+    const promoTabContents = document.querySelectorAll(
+      ".promo_list_wrap .promo_item"
+    );
+    promoTabs.forEach((tab) => {
+      tab.addEventListener("click", (e) => {
+        const target = e.target;
+        const dataTab = target.dataset.tab;
+
+        document
+          .querySelector(".promo_tabs_wrap .tabs .promo_tab.is-active")
+          .classList.remove("is-active");
+        target.classList.add("is-active");
+
+        if (dataTab == "all") {
+          promoTabContents.forEach((content) => {
+            content.classList.add("is-active");
+          });
+          return;
+        }
+
+        promoTabContents.forEach((tabContent) => {
+          const dataContent = tabContent.dataset.content;
+          if (dataContent.includes(dataTab)) {
+            tabContent.classList.add("is-active");
+          } else {
+            tabContent.classList.remove("is-active");
+          }
+        });
+      });
+    });
+  }
 });

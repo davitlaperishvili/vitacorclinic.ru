@@ -175,38 +175,48 @@
     </div>
 
     <?php  
-        $banner_list = get_field('vrachi_banner_slider'); 
+      $promo_posts = get_posts( array(
+        'numberposts' => -1,
+        'post_type'   => 'promo',
+        'suppress_filters' => true,
+      ) );
+      $dirPromo = Array();
+      foreach($promo_posts as $promo ){
+        $promo_direction = get_post_meta($promo->ID, "promo_direction", true);
+        $directionIDStr = Array();
+        foreach($promo_direction as $dir ){
+          if($dir == $pageID){
+
+            array_push($dirPromo, $promo->ID);
+          }
+        }
+      }
     ?>
     <?php 
-      if($banner_list){
+      if(count($dirPromo) > 0){
         ?>
           <section class="vrachi_banner_list">
               <div class="container">
                 <div class="banners_slider custom_banners_slider custom_swiper">
                   <div class="swiper-wrapper">
                     <?php 
-                      foreach($banner_list['banner_list'] as $banner){
+                      foreach($dirPromo as $bannerID){
+                        $banner_title = get_post_meta($bannerID, "banner_title", true);
+                        $banner_text = get_post_meta($bannerID, "banner_text", true);
+                        $banner_image = get_post_meta($bannerID, "banner_image", true);
+                        $promo_date = get_post_meta($bannerID, "promo_date", true);
                         ?>
                           <div class="swiper-slide">
                             <figure>
-                              <img src="<?php echo $banner['banner_image']['url'] ?>" alt="<?php echo $banner['banner_image']['alt'] ?>">
+                              <img src="<?php echo wp_get_attachment_url($banner_image) ?>" alt="<?php echo $banner_title ?>">
                             </figure>
                             <div class="banner_content">
-                              <div class="banner_title"><?php echo $banner['banner_title'] ?></div>
-                              <div class="banner_text"><?php echo $banner['banner_text'] ?></div>
+                              <div class="banner_title"><?php echo $banner_title ?></div>
+                              <div class="banner_text"><?php echo $banner_text ?></div>
                               <div class="theme_button white">
-                              <?php 
-                                if($banner['banner_button_url'] == "#" || !$banner['banner_button_url']){
-                                  ?>
-                                    <a href="<?php echo $banner['banner_button_url'] ?>" class="pop1 btn btn-default btn-lg pum-trigger" style="cursor: pointer;"><?php echo $banner['banner_button_text'] ?></a>
-                                  <?php
-                                }else{
-                                    ?>
-                                      <a href="<?php echo $banner['banner_button_url'] ?>"><?php echo $banner['banner_button_text'] ?></a>
-                                    <?php
-                                  }
-                                ?>
+                                <a href="<?php echo get_the_permalink($bannerID) ?>">Подробнее</a>
                               </div>
+                              <div class="promo_date"><?php echo $promo_date ?></div>
                             </div>
                           </div>
                         <?php

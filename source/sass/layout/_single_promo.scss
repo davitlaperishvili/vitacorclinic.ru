@@ -1,0 +1,172 @@
+.dl_page{
+  section.single_banner{
+    margin-top: 50px;
+    
+    .single_banner_item{
+      display: grid;
+      grid-gap: 25px;
+      grid-template-columns: 1fr 1fr;
+      background-color: rgba($ccorp, 0.5);
+      border-radius: 20px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      height: auto;
+      @media(max-width: 1024px){
+        grid-gap: 0;
+        grid-template-columns: 1fr;
+      }
+      figure{
+        @media(max-width: 1024px){
+          display: flex;
+          justify-content: center;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .banner_content{
+        padding: 50px 140px 50px 0;
+        @media(max-width: 1024px){
+          display: flex;
+          flex-direction: column;
+          padding: 20px 20px 60px;
+          position: static;
+        }
+        .custom_labels{
+          margin-bottom: 50px;
+          @media(max-width: 1024px){
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            margin-bottom: 0;
+          }
+          .custom_label{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background-color: $cgray;
+            color: $cbase;
+            font-size: 24px;
+            @media(max-width: 1024px){
+              font-size: 18px;
+            }
+          }
+        }
+        .banner_title{
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          font-size: 54px;
+          border-bottom: 2px solid $cwhite;
+          color: $cwhite;
+          line-height: 45px;
+          @media(max-width: 1024px){
+            font-size: 30px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            line-height: 30px;
+          }
+        }
+        .banner_text{
+          margin-bottom: 35px;
+          font-size: 16px;
+          color: $cwhite;
+          @media(max-width: 1024px){
+            margin-bottom: 20px;
+            font-size: 12px;
+            line-height: 19px;
+          }
+        }
+        .promo_date{
+          margin-top: 20px;
+          font-size: 12px;
+          color: #666666;
+          @media(max-width: 1024px){
+            order: -1;
+            margin-top: 0;
+            margin-bottom: 10px;
+          }
+          
+        }
+        .theme_button{
+          a{
+            @media(max-width: 1024px){
+              width: 100%;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+  section.promo_info{
+    margin-bottom: 40px;
+    background-color: $cgray;
+    .info_list{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px 0;
+      @media(max-width: 1024px){
+        flex-direction: column;
+        grid-gap: 34px;
+        align-items: flex-start;
+      }
+      .info_item{
+        display: grid;
+        grid-gap: 20px;
+        align-items: center;
+        grid-template-columns: auto 1fr;
+        figure{
+
+        }
+        .info_content{
+          .info_title{
+
+          }
+          .value{
+
+          }
+        }
+      }
+    }
+  }
+  section.promo_content{
+    margin-bottom: 40px;
+    .section_text{
+      margin-bottom: 40px;
+    }
+    .vrachi_price{
+      table{
+        tr{
+          &.promo{
+            color: $ccorp;
+            td{
+              &:first-child{
+                display: inline;
+              }
+              span{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $ccorp;
+                color: $cwhite;
+                padding: 0 10px;
+                margin-left: 15px;
+                border-radius: 3px;
+                font-size: 12px;
+                line-height: 18px;
+                @media(max-width: 1024px){
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
