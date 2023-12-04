@@ -225,13 +225,13 @@
                             <a class="show_all twosmallfont" href="<?php echo get_category_link( 81 ); ?>"><span>Все специалисты центра</span></a>
                             <h2>Лучшие врачи Москвы и МО</h2>
                             <div class="text_before_items">
-                        <p>
+                                <p>
                                     Попасть в команду «Витакор» могут только лучшие специалисты с многолетней практикой
                                     и доказанным опытом.<br>
                                     Наши врачи не только лечат. Они помогают сохранить здоровье и находят подход и к
                                     взрослым, и детям.
                                 </p>
-					</div>
+					                    </div>
                             <div class="flexslider unstyled row dark-nav view-control navigation-vcenter"
                                  data-plugin-options='{"directionNav": true, "controlNav" :true, "animationLoop": true, "slideshow": false, "slideshowSpeed": 5000, "animationSpeed": 600, "counts": [3, 2, 1]}'>
 

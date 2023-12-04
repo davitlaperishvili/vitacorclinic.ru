@@ -5,16 +5,16 @@
     'post_type'   => 'promo',
     'suppress_filters' => true,
   ) );
-
+  $terms = get_terms( array(
+    'taxonomy' => 'rubriki-akcii',
+    'hide_empty' => true,
+  ) );
   // promo Directions
-  $allPromoDirections = Array();
-  foreach($promo_posts as $promo){
-    $promo_dirs = get_post_meta($promo->ID, "promo_direction", true);
-    foreach($promo_dirs as $id ){
-      array_push($allPromoDirections, $id);
-    }
+  $allPromoCategories = Array();
+  foreach($terms as $term){
+    array_push($allPromoCategories, $term->slug);
   }
-  $uniquePromoDirections = array_unique($allPromoDirections);
+  $uniquePromoCategories = array_unique($allPromoCategories);
 
 ?>
 <main class="promos_page dl_page">
@@ -71,9 +71,9 @@
           <div class="tabs">
             <div class="promo_tab is-active" data-tab="all">Все акции</div>
             <?php 
-              foreach($uniquePromoDirections as $serviceID ){
+              foreach($uniquePromoCategories as $serviceID ){
                 ?>
-                  <div class="promo_tab" data-tab="<?php echo $serviceID ?>"><?php echo get_the_title($serviceID) ?></div>
+                  <div class="promo_tab" data-tab="<?php echo $serviceID ?>"><?php echo get_term_by("slug", $serviceID, "rubriki-akcii")->name ?></div>
                 <?php
               }
             ?>
@@ -94,7 +94,10 @@
                 $directionIDStr = Array();
                 foreach($promo_direction as $dir ){
                   array_push($directionStr, get_the_title($dir));
-                  array_push($directionIDStr, $dir);
+                }
+                $selectedTerms = wp_get_post_terms(get_the_ID(),'rubriki-akcii');
+                foreach($selectedTerms as $term){
+                  array_push($directionIDStr, $term->slug);
                 }
                 ?>
                   <div class="promo_item is-active" data-content="<?php echo join(",",$directionIDStr) ?>">

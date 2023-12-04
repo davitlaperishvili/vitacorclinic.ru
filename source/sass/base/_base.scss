@@ -119,6 +119,7 @@
       display: none;
     }
   }
+  
   // Container
   .page_title{
     margin-bottom: 45px;
@@ -264,10 +265,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 15px 50px;
+      padding: 10px 17px 11px;
       background-color: $ccorp;
       color: $cwhite;
-      border-radius: 8px;
+      border-radius: 19px;
       font-size: 18px;
       @media(max-width: 1024px){
         padding: 10px 35px;
@@ -448,4 +449,50 @@
       display: block;
     }
   }
+  div.main-doctors{
+    margin-bottom: 40px;
+    .col-md-12{
+      @media(max-width: 768px){
+        padding: 0 15px;
+      }
+    }
+    ol.flex-control-paging{
+      @media(max-width: 768px){
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    ul{
+      margin: 0;
+    }
+    ul.slides {
+      // margin: 0 15px;
+    }
+    .slides {
+      .item{
+        .button {
+          .pum-trigger{
+            padding: 10px 17px 11px;
+          }
+        }
+      }
+    }
+  }
+  .front_location{
+    padding-bottom: 170px;
+  }
 }
+// .main_wraper.dl_page{
+//   div.container{
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     @media(max-width: 1280px){
+//       max-width: 1024px;
+//     }
+//     @media(max-width: 1024px){
+//       width: auto;
+//       padding-left: 20px;
+//       padding-right: 20px;
+//     }
+//   }
+// } 

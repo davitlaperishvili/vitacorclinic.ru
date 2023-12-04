@@ -233,5 +233,17 @@ function promo_post_type(){
 		'rewrite'			=> true,
 		'query_var'			=> true,
 	]);
+  register_taxonomy( 'rubriki-akcii', [ 'promo' ], [
+		"label"              => 'Категории',
+		'hierarchical'       => true,
+    'public'                => true,
+		'show_ui'            => true,
+		'show_in_rest'       => true,
+		'show_admin_column'  => true,
+		'query_var'          => true,
+    'has_archive' => true,
+		// 'rewrite'            => ['slug' => 'services', 'with_front' => true]
+		// 'rewrite'            => false
+	] );
 }
 add_action('init', 'promo_post_type');

@@ -2,6 +2,8 @@
   //Template Name: Front Page
 ?>
 <?php get_header(); ?>
+
+
   <div class="main_wraper dl_page">
     <section class="vrachi_banner_list">
       <div class="container">
@@ -308,7 +310,7 @@
         </div>
       </div>
     </section>
-    <section class="doctors_slider front_slider" id="vrachi">
+    <!-- <section class="doctors_slider front_slider" id="vrachi">
       <?php 
         $front_doctors = get_field("front_doctors_section");
       ?>
@@ -344,7 +346,101 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+    <div class="body index" style="min-height: 445px;">
+    <div class="body_media"></div>
+    <div role="main" class="main banner-AUTO">
+        <div id="content" class="">
+            <div class="greyline row margin0 border-bottom main-doctors">
+                <div class="maxwidth-theme">
+                    <div class="col-md-12">
+                        <div class="item-views front staff-items staff-type-1 table-type-block blocks">
+                            <a class="show_all twosmallfont" href="<?php echo get_category_link( 81 ); ?>"><span>Все специалисты центра</span></a>
+                            <h2>Лучшие врачи Москвы и МО</h2>
+                            <div class="text_before_items">
+                                <p>
+                                    Попасть в команду «Витакор» могут только лучшие специалисты с многолетней практикой и доказанным опытом.<br />
+                                    Наши врачи не только лечат. Они помогают сохранить здоровье и находят подход и к взрослым, и детям.
+                                </p>
+                            </div>
+                            <div
+                                class="flexslider unstyled row dark-nav view-control navigation-vcenter"
+                                data-plugin-options='{"directionNav": true, "controlNav" :true, "animationLoop": true, "slideshow": false, "slideshowSpeed": 5000, "animationSpeed": 600, "counts": [3, 2, 1]}'
+                            >
+                                <ul class="slides items" data-slice="Y">
+                                    <?php
+		                            $featured_posts = get_field('slaider_best', 2);
+		                            if( $featured_posts ): ?>
+                                    <?php foreach( $featured_posts as $featured_post ):
+
+				                            $permalink = get_permalink( $featured_post->ID ); $title = get_the_title( $featured_post->ID ); $doc_field = get_field( 'dolzhnost', $featured_post->ID ); ?>
+                                    <li class="col-md-4 col-sm-6">
+                                        <div class="item shadow1 clearfix">
+                                            <div class="wrap">
+                                                <div class="wrap">
+                                                    <div class="image">
+                                                        <div class="wrap">
+                                                            <a href="<?php echo $permalink; ?>">
+                                                                <img
+                                                                    data-lazyload=""
+                                                                    class="img-responsive"
+                                                                    src="<?php echo get_the_post_thumbnail_url( $featured_post->ID, 'full' ); ?>"
+                                                                    data-src="<?php echo get_the_post_thumbnail_url( $featured_post->ID, 'full' ); ?>"
+                                                                    alt="<?php echo $title; ?>"
+                                                                    title="<?php echo $title; ?>"
+                                                                />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="body-info">
+                                                        <div class="top-block-wrapper">
+                                                            <div class="title">
+                                                                <a href="<?php echo $permalink; ?>">
+                                                                    <?php echo $title; ?>
+                                                                </a>
+                                                            </div>
+                                                            <div class="post twosmallfont">
+                                                                <?php
+											                            if ($doc_field):
+												                            echo $doc_field;
+											                            endif;
+											                            ?>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bottom-block">
+                                                            <div class="wrap">
+                                                                <div class="button text-right no_address">
+                                                                    <span class="pop1 btn btn-default">Запись онлайн</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <?php endforeach; ?>
+
+                                    <?php endif; ?>
+                                </ul>
+                                <ol class="flex-control-nav flex-control-paging" style="z-index: 2;">
+                                    <li><a href="#" class="flex-active">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                </ol>
+                                <ul class="flex-direction-nav opacity1">
+                                    <li class="flex-nav-prev"><a class="flex-prev" href="#">Назад</a></li>
+                                    <li class="flex-nav-next"><a class="flex-next" href="#">Вперед</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="greyline"></div>
+        </div>
+    </div>
+</div>
     <section class="licenses">
       <?php 
         $nashi_liczenzii = get_field('nashi_liczenzii', 'option');
