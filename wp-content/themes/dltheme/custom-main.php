@@ -6,9 +6,46 @@
 
   <div class="main_wraper dl_page">
     <section class="vrachi_banner_list">
+    <?php 
+        $front_banners = get_field("front_banners");
+        $bannersPosition = $front_banners['show_before_promo'] ? "-1" : "2";
+      ?>  
+      
       <div class="container">
         <div class="banners_slider custom_banners_slider custom_swiper">
           <div class="swiper-wrapper">
+            <?php 
+              if($front_banners['banners']){
+                foreach( $front_banners['banners'] as $banner ){
+                  ?>
+                    <div class="swiper-slide" style="order: <?php echo $bannersPosition ?>">
+                      <figure>
+                        <img src="<?php echo $banner['banner_image']['url'] ?>" alt="<?php echo $banner['banner_image']['alt'] ?>">
+                      </figure>
+                      <div class="banner_content">
+                        <div class="banner_title"><?php echo $banner['banner_title'] ?></div>
+                        <div class="banner_text"><?php echo $banner['banner_text'] ?></div>
+                        <?php 
+                          if($banner['banner_button']){
+                            ?>
+                            <div class="theme_button white">
+                              <a href="<?php echo $banner['banner_button']['url'] ?>"><?php echo $banner['banner_button']['title'] ?></a>
+                            </div>
+                            <?php
+                          }
+                          if($banner['promo_date']){
+                            ?>
+                              <div class="promo_date"><?php echo $banner['promo_date'] ?></div>
+                            <?php
+                          }
+                        ?>
+                        
+                      </div>
+                    </div>
+                  <?php
+                }
+              }
+            ?>
             <?php 
               // параметры по умолчанию
               $promo_posts = get_posts( array(
