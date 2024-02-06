@@ -58,6 +58,9 @@
 						$meta_link = get_field( 'facebook_link', 2 );
 						$inst_link = get_field( 'instagram_link', 2 );
 						$nomer_telefona = get_field( 'nomer_telefona', 2 );
+            $nomer_telefona_formated = preg_replace("/[^0-9]/", "", $nomer_telefona);
+						$nomer_telefona_2 = get_field( 'nomer_telefona_2', 2 );
+            $nomer_telefona_2_formated = preg_replace("/[^0-9]/", "", $nomer_telefona_2);
 						?>
 						<?php
 						if ( $vk_link ):
@@ -152,8 +155,8 @@
 			?>
 
             <div class="top-block-item pull-right">
-                <div class="phone-block">
-                    <div class="inline-block">
+                <div class="phone-block header_phone_numbers_wrap">
+                    <div class="inline-block header_phone_numbers">
                         <div class="nobg phone">
                             <i class="svg inline  svg-inline- svg-phone" aria-hidden="true">
                                 <svg id="Phone_small.svg" xmlns="http://www.w3.org/2000/svg" width="8" height="11"
@@ -171,6 +174,29 @@
                                           transform="translate(-1234 -61)"></path>
                                 </svg>
                             </i> <a href="tel:<?php echo $nomer_telefona; ?>"><?php echo $nomer_telefona; ?></a>
+                        </div>
+                        <div class="nobg phone">
+                            <i class="svg inline  svg-inline- svg-phone" aria-hidden="true">
+                                <svg id="Phone_small.svg" xmlns="http://www.w3.org/2000/svg" width="8" height="11"
+                                     viewBox="0 0 8 11">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #666;
+                                                fill-rule: evenodd;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <path id="Shape_51_copy_11" data-name="Shape 51 copy 11" class="cls-1"
+                                          d="M1239.82,68.651a19.725,19.725,0,0,0,1.87,1.081,0.557,0.557,0,0,1,.28.758l-0.11.382a0.859,0.859,0,0,1-.51.643,3.844,3.844,0,0,1-1.34.488c-1.29.028-2.44-1.081-3.24-2.007a11.824,11.824,0,0,1-2.3-4.042c-0.4-1.164-.77-2.718-0.11-3.837a3.912,3.912,0,0,1,1.1-.935,0.847,0.847,0,0,1,.8-0.124l0.38,0.1a0.559,0.559,0,0,1,.49.64c0,0.849-.02,1.459.01,2.158,0.01,0.29-.1.33-0.36,0.433-0.16.066-.28,0.114-0.41,0.164a0.507,0.507,0,0,0-.41.621,7.587,7.587,0,0,0,.8,2.135,7.693,7.693,0,0,0,1.43,1.77,0.5,0.5,0,0,0,.74-0.046c0.1-.087.21-0.169,0.34-0.281,0.22-.175.31-0.242,0.55-0.1h0Z"
+                                          transform="translate(-1234 -61)"></path>
+                                </svg>
+                            </i> <a href="tel:<?php echo $nomer_telefona_2; ?>"><?php echo $nomer_telefona_2; ?></a>
+                        </div>
+                        <div class="dl_custom_arrow">
+                          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0H14L7 9.27827L0 0Z" fill="#666666"/>
+                          </svg>
                         </div>
                     </div>
                     <div class="inline-block">
@@ -900,7 +926,7 @@
                 <div class="menu middle">
                     <ul>
                         <li>
-                            <a href="tel:+74952482180" class="dark-color">
+                            <a href="tel:<?php echo $nomer_telefona_formated ?>" class="dark-color">
                                 <i class="svg inline  svg-inline- svg-phone" aria-hidden="true">
                                     <svg id="Phone_small.svg" xmlns="http://www.w3.org/2000/svg" width="8" height="11"
                                          viewBox="0 0 8 11">
@@ -916,7 +942,27 @@
                                               d="M1239.82,68.651a19.725,19.725,0,0,0,1.87,1.081,0.557,0.557,0,0,1,.28.758l-0.11.382a0.859,0.859,0,0,1-.51.643,3.844,3.844,0,0,1-1.34.488c-1.29.028-2.44-1.081-3.24-2.007a11.824,11.824,0,0,1-2.3-4.042c-0.4-1.164-.77-2.718-0.11-3.837a3.912,3.912,0,0,1,1.1-.935,0.847,0.847,0,0,1,.8-0.124l0.38,0.1a0.559,0.559,0,0,1,.49.64c0,0.849-.02,1.459.01,2.158,0.01,0.29-.1.33-0.36,0.433-0.16.066-.28,0.114-0.41,0.164a0.507,0.507,0,0,0-.41.621,7.587,7.587,0,0,0,.8,2.135,7.693,7.693,0,0,0,1.43,1.77,0.5,0.5,0,0,0,.74-0.046c0.1-.087.21-0.169,0.34-0.281,0.22-.175.31-0.242,0.55-0.1h0Z"
                                               transform="translate(-1234 -61)"></path>
                                     </svg>
-                                </i> <span>+7 (495) 248-21-80</span>
+                                </i> <span><?php echo $nomer_telefona ?></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:<?php echo $nomer_telefona_2_formated ?>" class="dark-color">
+                                <i class="svg inline  svg-inline- svg-phone" aria-hidden="true">
+                                    <svg id="Phone_small.svg" xmlns="http://www.w3.org/2000/svg" width="8" height="11"
+                                         viewBox="0 0 8 11">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #666;
+                                                    fill-rule: evenodd;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path id="Shape_51_copy_11" data-name="Shape 51 copy 11" class="cls-1"
+                                              d="M1239.82,68.651a19.725,19.725,0,0,0,1.87,1.081,0.557,0.557,0,0,1,.28.758l-0.11.382a0.859,0.859,0,0,1-.51.643,3.844,3.844,0,0,1-1.34.488c-1.29.028-2.44-1.081-3.24-2.007a11.824,11.824,0,0,1-2.3-4.042c-0.4-1.164-.77-2.718-0.11-3.837a3.912,3.912,0,0,1,1.1-.935,0.847,0.847,0,0,1,.8-0.124l0.38,0.1a0.559,0.559,0,0,1,.49.64c0,0.849-.02,1.459.01,2.158,0.01,0.29-.1.33-0.36,0.433-0.16.066-.28,0.114-0.41,0.164a0.507,0.507,0,0,0-.41.621,7.587,7.587,0,0,0,.8,2.135,7.693,7.693,0,0,0,1.43,1.77,0.5,0.5,0,0,0,.74-0.046c0.1-.087.21-0.169,0.34-0.281,0.22-.175.31-0.242,0.55-0.1h0Z"
+                                              transform="translate(-1234 -61)"></path>
+                                    </svg>
+                                </i> <span><?php echo $nomer_telefona_2 ?></span>
                             </a>
                         </li>
                     </ul>
