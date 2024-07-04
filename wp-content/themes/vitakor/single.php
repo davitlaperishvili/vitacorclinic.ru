@@ -18,12 +18,12 @@ while ( have_posts() ) :
     if($cat[0]->parent == 81): get_template_part( 'custom-single/single', 'specialists' );
 	else: get_template_part( 'template-parts/content', get_post_type() );
     endif;
-	the_post_navigation(
-		array(
-			'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Назад:', 'vitakor' ) . '</span> <span class="nav-title">%title</span>',
-			'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Вперед:', 'vitakor' ) . '</span> <span class="nav-title">%title</span>',
-		)
-	);
+    the_post_navigation(
+      array(
+        'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Назад:', 'vitakor' ) . '</span> <span class="nav-title">%title</span>',
+        'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Вперед:', 'vitakor' ) . '</span> <span class="nav-title">%title</span>',
+      )
+    );
 
 endwhile; // End of the loop.
 ?>

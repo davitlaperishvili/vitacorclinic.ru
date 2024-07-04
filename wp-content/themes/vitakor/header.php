@@ -23,6 +23,18 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400italic,700italic,400,700&subset=latin,cyrillic-ext"
           rel="stylesheet"/>
+          <style>
+            .custom_banners_slider .swiper-slide figure{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .custom_banners_slider .swiper-slide figure img{
+              width: 300px;
+              height: 300px;
+              object-fit: cover;
+            }
+          </style>
 	<?php wp_head(); ?>
 </head>
 
@@ -233,6 +245,10 @@
                                                                 <a href="/kategorii/diagnostika/"
                                                                    title="Диагностика">Диагностика</a>
                                                             </li>
+															<li class=" ">
+                                                                <a href="/kategorii/uzi/"
+                                                                   title="УЗИ">УЗИ</a>
+                                                            </li>
                                                             <li class=" ">
                                                                 <a href="/kategorii/proczedury/"
                                                                    title="Процедуры ">Процедуры</a>
@@ -249,7 +265,7 @@
                                                                     class="arrow"><i></i></span></a>
                                                         <ul class="dropdown-menu">
                                                             <li class=" ">
-                                                                <a href="/services/detskoe-otdelenie/detskaya-stomatologiya-det/"
+                                                                <a href="/vrachi/detskij-stomatolog/"
                                                                    title="Детская стоматология">Детская стоматология</a>
                                                             </li>
                                                             <li class=" ">
@@ -257,8 +273,8 @@
                                                                    title="Детский массаж">Детский массаж</a>
                                                             </li>
                                                             <li class=" ">
-                                                                <a href="/services/detskoe-otdelenie/detskaya-nevrologiya/"
-                                                                   title="Детская неврология">Детская неврология</a>
+                                                                <a href="/vrachi/detskij-vrach-uzi/"
+                                                                   title="Детский врач УЗИ">Детский врач УЗИ</a>
                                                             </li>
                                                             <li class=" ">
                                                                 <a href="/services/detskoe-otdelenie/detskaya-kardiologiya/"
@@ -271,7 +287,7 @@
                                                                     class="arrow"><i></i></span></a>
                                                         <ul class="dropdown-menu">
                                                             <li class=" ">
-                                                                <a href="/services/stomatologiya/detskaya-stomatologiya/"
+                                                                <a href="/vrachi/detskij-stomatolog/"
                                                                    title="Детская стоматология">Детская стоматология</a>
                                                             </li>
                                                             <li class=" ">
@@ -412,8 +428,8 @@
                                         </td>
                                         <td class="menu-item unvisible   ">
                                             <div class="wrap">
-                                                <a class="" href="/news/">
-                                                    Новости и акции </a>
+                                                <a class="" href="/promo/">
+                                                    Акции </a>
                                             </div>
                                         </td>										
                                         <td class="menu-item unvisible   ">
@@ -676,13 +692,7 @@
                                                     <span>Детская стоматология</span>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a class="dark-color"
-                                                   href="/services/detskoe-otdelenie/detskiy-massazh/"
-                                                   title="Детский массаж">
-                                                    <span>Детский массаж</span>
-                                                </a>
-                                            </li>
+                                            
                                             <li>
                                                 <a class="dark-color"
                                                    href="/services/detskoe-otdelenie/detskaya-nevrologiya/"

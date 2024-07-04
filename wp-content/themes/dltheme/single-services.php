@@ -26,7 +26,7 @@ foreach($promo_posts as $promo ){
   $promo_direction = get_post_meta($promo->ID, "promo_direction", true);
   $directionIDStr = Array();
   foreach($promo_direction as $dir ){
-    if(in_array($dir, $who_works)){
+    if(in_array($dir, $who_works) && !in_array($promo->ID, $dirPromo)){
       array_push($dirPromo, $promo->ID);
     }
   }

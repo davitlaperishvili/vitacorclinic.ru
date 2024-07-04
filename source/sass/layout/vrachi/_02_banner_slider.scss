@@ -80,7 +80,7 @@ section.vrachi_banner_list{
   }
   .swiper-pagination-banner_list{
     display: flex;
-    gap: 15px ;
+    gap: 10px ;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -90,8 +90,8 @@ section.vrachi_banner_list{
       bottom: 20px;
     }
     .swiper-pagination-bullet {
-      width: 20px;
-      height: 20px;
+      width: 16px;
+      height: 16px;
       background-color: $cwhite;
       opacity: 1;
       margin: 0;

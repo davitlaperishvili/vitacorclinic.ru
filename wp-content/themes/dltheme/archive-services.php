@@ -7,10 +7,10 @@ $currentTax = get_queried_object();
       <div class="row">
           <div class="col-md-12">
               <div class="breadcrumb" id="navigation">
-      <?php if(function_exists('bcn_display'))
-      {
-        bcn_display();
-      }?>
+                <?php if(function_exists('bcn_display'))
+                {
+                  bcn_display();
+                }?>
               </div>
               <div class="page-top-main">
                   <h1 id="pagetitle"><?php echo $currentTax->label ?></h1>

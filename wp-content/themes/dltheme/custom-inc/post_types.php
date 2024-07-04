@@ -247,3 +247,45 @@ function promo_post_type(){
 	] );
 }
 add_action('init', 'promo_post_type');
+
+function journal_post_type(){
+	register_post_type('journal', [
+		'label'  => null,
+		'labels' => [
+			'name'				=> 'Журнал',
+			'singular_name'		=> 'Журнал',
+			'add_new'			=> 'Добавить Журнал',
+			'add_new_item'		=> 'Добавить Журнал',
+			'edit_item'			=> 'Редактировать Журнал',
+			'new_item'			=> 'New Журнал',
+			'view_item'			=> 'Watch Журнал',
+			'search_items'		=> 'Search Журнал',
+			'not_found'			=> 'Not found',
+		],
+		'description'		=> 'Post for Журнал',
+		'public'			=> true,
+		'show_in_menu'		=> true,
+		'show_in_rest'		=> true,
+		'rest_base'			=> true,
+		'menu_position'		=> true,
+		'menu_icon'			=> 'dashicons-megaphone',
+		'hierarchical'		=> true,
+		'supports'			=> ['title', 'thumbnail', 'excerpt'],
+		'taxonomies'          => [ 'type' ],
+		'has_archive'         => 'journal',
+		'rewrite'             => ['slug' => '/', 'with_front' => false],
+		'query_var'			=> true,
+	]);
+  // Now register the taxonomy
+	register_taxonomy( 'type', [ 'journal' ], [
+		"label"              => 'Тип',
+		'hierarchical'       => true,
+    'public'                => true,
+		'show_ui'            => true,
+		'show_in_rest'       => true,
+		'show_admin_column'  => true,
+		'query_var'          => true,
+    'has_archive' => true
+	] );
+}
+add_action('init', 'journal_post_type');

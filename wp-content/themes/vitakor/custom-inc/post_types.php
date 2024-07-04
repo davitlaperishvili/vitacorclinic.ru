@@ -204,3 +204,46 @@ function custom_rewrite_rule() {
   );
 }
 add_action('init', 'custom_rewrite_rule');
+
+function promo_post_type(){
+	register_post_type('promo', [
+		'label'  => null,
+		'labels' => [
+			'name'				=> 'Акции',
+			'singular_name'		=> 'Акция',
+			'add_new'			=> 'Добавить Акцию',
+			'add_new_item'		=> 'Добавить Акцию',
+			'edit_item'			=> 'Редактировать Акцию',
+			'new_item'			=> 'New Акции',
+			'view_item'			=> 'Watch Акции',
+			'search_items'		=> 'Search Акции',
+			'not_found'			=> 'Not found',
+		],
+		'description'		=> 'Post for Акции',
+		'public'			=> true,
+		'show_in_menu'		=> true,
+		'show_in_rest'		=> true,
+		'rest_base'			=> true,
+		'menu_position'		=> true,
+		'menu_icon'			=> 'dashicons-megaphone',
+		'hierarchical'		=> true,
+		'supports'			=> ['title', 'thumbnail', 'editor'],
+		'taxonomies'		=> [],
+		'has_archive'		=> true,
+		'rewrite'			=> true,
+		'query_var'			=> true,
+	]);
+  register_taxonomy( 'rubriki-akcii', [ 'promo' ], [
+		"label"              => 'Категории',
+		'hierarchical'       => true,
+    'public'                => true,
+		'show_ui'            => true,
+		'show_in_rest'       => true,
+		'show_admin_column'  => true,
+		'query_var'          => true,
+    'has_archive' => true,
+		// 'rewrite'            => ['slug' => 'services', 'with_front' => true]
+		// 'rewrite'            => false
+	] );
+}
+add_action('init', 'promo_post_type');
