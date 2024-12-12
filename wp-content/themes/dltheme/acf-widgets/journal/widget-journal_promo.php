@@ -8,7 +8,6 @@
       if($promo){
         ?>
           <section class="journal_journal_promo" id="content<?php echo $rowIndex ?>">
-            <div class="container">
               <div class="promo_wrap">
                 <div class="promo_top">
                   <figure>
@@ -32,7 +31,6 @@
                   </div>
                 </div>
               </div>
-            </div>
           </section>
         <?php
       }

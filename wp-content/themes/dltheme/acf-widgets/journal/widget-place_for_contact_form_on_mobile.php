@@ -5,8 +5,6 @@
     ?>
     
     <section class="journal_place_for_contact_form_on_mobile" id="content<?php echo $rowIndex ?>">
-        <div class="container">
-            <div class="place_for_contact_form_on_mobile"></div>
-        </div>
+      <div class="place_for_contact_form_on_mobile"></div>
     </section>
 

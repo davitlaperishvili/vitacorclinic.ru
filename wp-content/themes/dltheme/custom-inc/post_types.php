@@ -273,7 +273,7 @@ function journal_post_type(){
 		'supports'			=> ['title', 'thumbnail', 'excerpt'],
 		'taxonomies'          => [ 'type' ],
 		'has_archive'         => 'journal',
-		'rewrite'             => ['slug' => '/', 'with_front' => false],
+		// 'rewrite'             => ['slug' => '/', 'with_front' => true],
 		'query_var'			=> true,
 	]);
   // Now register the taxonomy

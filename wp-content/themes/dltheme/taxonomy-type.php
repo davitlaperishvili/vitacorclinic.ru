@@ -21,8 +21,8 @@
   <div class="text_filter">
     <div class="container">
       <div class="text_field">
-          <form class="form_item">
-            <input type="text" name="textField" placeholder="Поиск статьи">
+          <form class="search_form" action="https://vitacorclinic.ru/" method="get" role="search">
+            <input type="text" name="s" placeholder="Поиск статьи">
             <button type="submit" class="gilaki"><i class="ri-search-line"></i></button>
           </form>
       </div>
@@ -63,8 +63,7 @@
         <div class="blog_posts_listing">
             <!-- Blog Post -->
             <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            $args = array('post_type' => 'journal', 'posts_per_page' => 9, 'paged' => $paged,
+            $args = array('post_type' => 'journal', 'posts_per_page' => 9, 'paged' => 1,
             'tax_query' => array(
               array(
                   'taxonomy' => 'type',
@@ -73,11 +72,8 @@
               )
               ), );
             $post_type_data = new WP_Query($args);
-            set_query_var('page',$paged);
             while ($post_type_data->have_posts()):
-            $post_type_data->the_post();
-            global $more;
-                $more = 0; ?>
+            $post_type_data->the_post();?>
                 <?php 
                   $terms = get_the_terms( $post_id, "type" );
                 ?>
@@ -116,51 +112,21 @@
             <?php endwhile; ?>
             <!-- //Blog Post// -->
         </div>  
-        <div class="pagination">
-            <?php 
-                echo paginate_links( array(
-                    'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
-                    'total'        => $post_type_data->max_num_pages,
-                    'current'      => max( 1, get_query_var( 'paged' ) ),
-                    'format'       => '',
-                    'show_all'     => false,
-                    'type'         => 'list',
-                    'end_size'     => null,
-                    'mid_size'     => 1,
-                    'prev_next'    => false,
-                    'prev_text'    => __('«'),
-                    'next_text'    => __('»'),
-                    'add_args'     => false,
-                    'add_fragment' => '',
-                ) );
+        <?php
+          if ($post_type_data->max_num_pages > 1){
             ?>
-        </div>
+              <div class="theme_button load_more">
+                <button id="load-more" data-maxpage="<?php echo $post_type_data->max_num_pages ?>" data-type="<?php echo $currentTax->term_id ?>">Показать еще</button>
+              </div>
+            <?php
+          }
+        ?>
       </div>
     </div>
   </section> 
   <section class="dl_contact_form">
     <div class="container">
-      <div class="form_wrap">
-        <div class="form_top">
-          <div class="form_title">Остались вопросы?</div>
-          <div class="form_subtitle">Оставьте заявку и мы свяжемся с вами!</div>
-        </div>
-        <div class="form_items">
-          <div class="form_item grid-6">
-            <input type="text" placeholder="Имя">
-          </div>
-          <div class="form_item grid-6">
-            <input type="text" placeholder="+7 999 999-99-99">
-          </div>
-          <div class="form_item grid-12">
-            <textarea name="" placeholder="Ваш вопрос"></textarea>
-          </div>
-          <div class="form_item form_submit grid-12">
-            <button type="submit" class="gilaki">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="note">Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
-      </div>
+      <?php echo do_shortcode('[contact-form-7 id="2383" title="Blog Contact form Big"]') ?>
     </div>
   </section>
 </main>

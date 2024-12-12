@@ -5,8 +5,6 @@
     ?>
     
     <section class="journal_text_block" id="content<?php echo $rowIndex ?>">
-        <div class="container">
-            <div class="journal_text"><?php echo $text ?></div>
-        </div>
+      <div class="journal_text"><?php echo $text ?></div>
     </section>
 

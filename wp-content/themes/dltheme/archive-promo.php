@@ -92,12 +92,16 @@
                 $promo_direction = get_post_meta(get_the_ID(), "promo_direction", true);
                 $directionStr = Array();
                 $directionIDStr = Array();
-                foreach($promo_direction as $dir ){
-                  array_push($directionStr, get_the_title($dir));
+                if($promo_direction){
+                  foreach($promo_direction as $dir ){
+                    array_push($directionStr, get_the_title($dir));
+                  }
                 }
                 $selectedTerms = wp_get_post_terms(get_the_ID(),'rubriki-akcii');
-                foreach($selectedTerms as $term){
-                  array_push($directionIDStr, $term->slug);
+                if($selectedTerms){
+                  foreach($selectedTerms as $term){
+                    array_push($directionIDStr, $term->slug);
+                  }
                 }
                 ?>
                   <div class="promo_item is-active" data-content="<?php echo join(",",$directionIDStr) ?>">

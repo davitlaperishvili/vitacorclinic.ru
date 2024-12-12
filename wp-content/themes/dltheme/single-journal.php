@@ -3,7 +3,7 @@
 <?php 
   $postID = get_the_ID(); 
   $terms = get_the_terms( $postID, "type" );
-  $time_to_read = get_field("time_to_read");
+  $time_to_read = get_field("read_time");
 ?>
 <main class="blog_post_page dl_page">
 
@@ -20,7 +20,7 @@
     </div>
   </section>
 
-  <section class="single_post_content">
+  <section class="single_post_content journal_single">
     <div class="container">
       <div class="post_header">
         <div class="post_wrap">
@@ -55,7 +55,7 @@
                 </div>
               </div>
             </div>
-            <h1 id="pagetitle"><?php the_title() ?></h1>
+            <h1 class="pagetitle"><?php the_title() ?></h1>
             <div class="ecxerpt"><?php the_excerpt() ?></div>
           </div>
         </div>
@@ -88,18 +88,7 @@
         </div>
         <aside>
           <div class="contact_form_widget">
-            <div class="form_wrap">
-              <div class="form_title">Запишитесь на приём в ВИТАКОР</div>
-              <div class="form_items">
-                <div class="form_item">
-                  <input type="text" placeholder="+7 999 999-99-99">
-                </div>
-                <div class="form_item form_submit">
-                  <button type="submit" class="gilaki">Записаться</button>
-                </div>
-              </div>
-              <div class="note">Нажимая на кнопку вы даёте согласие на обработку данных</div>
-            </div>
+            <?php echo do_shortcode('[contact-form-7 id="2384" title="Blog Contact Form Single"]') ?>
           </div>
         </aside>
       </div>
@@ -108,29 +97,10 @@
 
   <section class="dl_contact_form">
     <div class="container">
-      <div class="form_wrap">
-        <div class="form_top">
-          <div class="form_title">Остались вопросы?</div>
-          <div class="form_subtitle">Оставьте заявку и мы свяжемся с вами!</div>
-        </div>
-        <div class="form_items">
-          <div class="form_item grid-6">
-            <input type="text" placeholder="Имя">
-          </div>
-          <div class="form_item grid-6">
-            <input type="text" placeholder="+7 999 999-99-99">
-          </div>
-          <div class="form_item grid-12">
-            <textarea name="" placeholder="Ваш вопрос"></textarea>
-          </div>
-          <div class="form_item form_submit grid-12">
-            <button type="submit" class="gilaki">Оставить заявку</button>
-          </div>
-        </div>
-        <div class="note">Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
-      </div>
+      <?php echo do_shortcode('[contact-form-7 id="2383" title="Blog Contact form Big"]') ?>
     </div>
   </section>
 </main>
 
 <?php get_footer(); ?>
+

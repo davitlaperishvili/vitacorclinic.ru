@@ -200,7 +200,17 @@ $currentTax = get_queried_object();
     </section>
     <section class="text_block">
       <div class="container">
-          <div class="section_text"><?php echo $terms[0]->description ?></div>
+        <?php 
+
+          // Get the processed AIOSEO description
+        ?>
+        <?php 
+        // var_dump(get_metadata("term",$terms[0]->term_id, "_aioseo_description", true));
+          // wp_title();
+        ?>
+          <div class="section_text">
+            <?php echo get_term_meta($terms[0]->term_id, 'verhnee_opisanie_kategorii', true); ?>
+          </div>
       </div>
     </section>
 

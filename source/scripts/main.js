@@ -254,4 +254,80 @@ $(window).on("load", function () {
       });
     });
   }
+
+  // table of content on the single page of journal
+  const tableOfContent = document.querySelectorAll(
+    ".journal_table_of_content .table_of_content_wrap"
+  );
+  if (tableOfContent.length > 0) {
+    // create table of content
+    let tableItems = "";
+    const headers = document.querySelectorAll("h2");
+    headers.forEach((header, index) => {
+      header.setAttribute("id", `headerContent${index}`);
+      tableItems += `
+      <li>
+        <a href="#headerContent${index}">${header.innerText}</a>
+      </li>`;
+    });
+    let tableOfContentHTML = `<ol>${tableItems}</ol>`;
+
+    tableOfContent.forEach((table) => {
+      table.innerHTML = tableOfContentHTML;
+    });
+  }
+
+  //journal_place_for_contact_form_on_mobile
+  const mobileContactFormContainer = document.querySelectorAll(
+    ".journal_place_for_contact_form_on_mobile"
+  );
+
+  if (window.outerWidth < 1024) {
+    if (mobileContactFormContainer.length > 0) {
+      const contact_form_widget = document.querySelector(
+        ".contact_form_widget"
+      );
+      if (contact_form_widget) {
+        mobileContactFormContainer.forEach((container) => {
+          container.querySelector(
+            ".place_for_contact_form_on_mobile"
+          ).innerHTML = contact_form_widget.innerHTML;
+        });
+      }
+    }
+  }
+
+  let page = 2;
+  const postsPerPage = 9;
+
+  $("#load-more").on("click", function () {
+    let button = $(this);
+    let type = $(this).attr("data-type") ?? "";
+    let maxPages = $(this).attr("data-maxpage");
+    $.ajax({
+      url: "/wp-admin/admin-ajax.php",
+      type: "POST",
+      data: {
+        action: "load_more_posts",
+        page: page,
+        posts_per_page: postsPerPage,
+        type: type,
+      },
+      beforeSend: function () {
+        button.text("Загрузка...");
+      },
+      success: function (response) {
+        if (response) {
+          $(".blog_posts_listing").append(response);
+          button.text("Показать еще");
+          page++;
+          if (page >= maxPages) {
+            button.css("display", "none");
+          }
+        } else {
+          button.css("display", "none");
+        }
+      },
+    });
+  });
 });
